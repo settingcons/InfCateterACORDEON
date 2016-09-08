@@ -1,0 +1,202 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.settingconsultoria.InfCateterACORDEON" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"  xmlns:android = "http://schemas.android.com/apk/res/android">
+    <name>InfCateterACORDEON</name>
+    <description>
+        Información sellado cateter (ACORDEON)
+    </description>
+    <author email="settingcons@gmail.com" href="http://www.settingconsultoria.com">
+        Setting Consultoria PhoneGap Team
+    </author>
+    <content src="index.html" />
+
+    <!--<preference name="phonegap-version" value="cli-6.3.0" />-->
+
+    <preference name="permissions" value="none" />
+
+    <!-- si se utiliza la versión de phonegap 3.6.3 no funciona la geolocalización -->
+    <preference name="phonegap-version" value="3.7.0" />
+
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+
+    <!--si se pone fullscreen a true se oculta la barra de estado de la parte superior -->
+    <preference name="fullscreen" value="true" />
+
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="false" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+<!-- IC    <preference name="KeepRunning" value="true"/>-->
+
+    <!-- IC  para grabar en las carpetas del sistema -->
+    <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
+    <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+<!-- IC   <feature name="http://api.phonegap.com/1.0/camera"/>-->
+    <feature name="http://api.phonegap.com/1.0/file"/>
+<!-- IC   <feature name="http://api.phonegap.com/1.0/geolocation"/>-->
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
+    <feature name="Media">
+<!-- IC   <param name="ios-package" value="CDVSound" />-->
+<!-- IC   <param name="android-package" value="org.apache.cordova.media.AudioHandler" />-->
+    </feature>
+    <gap:plugin name="org.apache.cordova.battery-status"/>
+    <!--<gap:plugin name="org.apache.cordova.camera"/>-->
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <!--<gap:plugin name="org.apache.cordova.console" />-->
+    <!--<gap:plugin name="org.apache.cordova.contacts"/>-->
+    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs"/>
+
+    <gap:plugin name="org.apache.cordova.file"/>
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+
+    <gap:plugin name="org.apache.cordova.globalization"/>
+    <gap:plugin name="org.apache.cordova.inappbrowser"/>
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information"  />
+<!-- IC   <gap:plugin name="org.apache.cordova.vibration"/>-->
+
+    <gap:plugin name="org.apache.cordova.file" />
+    <!--<preference name="iosPersistentFileLocation" value="Library" />-->
+    <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
+    <!--<preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />-->
+    <!--geolocalización para android-->
+    <preference name="android-build-tool" value="gradle" />
+<!-- IC   <plugin name="com.settingconsultoria.gpstracking" spec="1.0.22" source="pgb" />-->
+
+    <!--geolocalización para ios-->
+<!-- IC   <plugin name="settingconsultoria.geolocation.ios" spec="0.1" source="pgb" />-->
+
+    <!--<plugin name="settingconsultoria.cordova.plugins.geolocation" spec="0.1" source="pgb" />-->
+    <!--<feature name="Geolocation">-->
+        <!--<param name="ios-package" value="CDVLocation" />-->
+        <!--<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />-->
+    <!--</feature>-->
+
+    <!-- IC Plugin para visualizar PDF's-->
+    <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" />
+
+    <!--Plugin para llamar por teléfono-->
+<!--    <gap:plugin name="com.teamnemitoff.phonedialer" version="0.3.0" />-->
+
+    <!--Plugin para enviar email-->
+<!-- IC   <gap:plugin name="de.appplant.cordova.plugin.email-composer" version="0.8.0" />-->
+
+    <!-- ocultar statusbar en ios -->
+    <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0"/>
+
+    <!-- para activar la geolocalización en background para ios-->
+<!-- IC   <plugin name="com.wizital.plugins.backgroundlocationenabler" spec="1.0.2" source="pgb" />-->
+
+    <!-- para que la app funcione en background -->
+    <!--<plugin name="de.appplant.cordova.plugin.background-mode" spec="0.6.4" source="pgb" />-->
+
+    <!--<gap:plugin name="cordova.plugins.diagnostic" source="npm" />-->
+
+    <!--plugin para detectar si el GPS está activo-->
+<!-- IC   <gap:plugin name="settingconsultoria.cordova.plugins.diagnostic" version="0.0.1" />-->
+
+    <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
+    <plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />
+
+    <!--para utilizar el plugin de diagnóstico-->
+<!-- IC
+    <feature name="Diagnostic" >
+        <param name="ios-package" value="Diagnostic" />
+        <param name="android-package" value="cordova.plugins.diagnostic"/>
+    </feature>
+-->
+
+    <!--<plugin name="SplashScreen" value="”org.apache.cordova.SplashScreen"  source="npm"/>-->
+
+    <!--<feature name="http://api.phonegap.com/1.0/file" />-->
+    <feature name="File">
+    <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+    <param name="ios-package" value="CDVFile" />
+    </feature>
+    <!--<feature name="FileTransfer">-->
+    <!--<param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />-->
+    <!--<param name="ios-package" value="CDVFileTransfer" />-->
+    <!--</feature>-->
+    <!--<feature name="Storage">-->
+        <!--<param value="org.apache.cordova.Storage" name="android-package"/>-->
+    <!--</feature>-->
+
+    <!--<gap:plugin name="de.appplant.cordova.plugin.local-notification" />-->
+    <!--plugin para notificaciones-->
+    <plugin name="de.appplant.cordova.plugin.local-notification-ios9-fix" spec="0.8.2" source="pgb" />
+    <!--<plugin name="de.appplant.cordova.plugin.background-mode" spec="0.5.0" source="pgb" />-->
+    <!--<plugin name="com.badrit.backgroundjs" spec="0.1.0" source="pgb" />-->
+    <!--<feature name="BackgroundJS">-->
+    <!--<param name="ios-package" value="BackgroundJS" />-->
+    <!--</feature>-->
+
+    <!--plugin para limpiar la caché-->
+<!-- IC
+
+    <plugin name="com.sharinglabs.cordova.plugin.cache" spec="1.0.0" source="pgb" />
+    <feature name="Cache" >
+        <param name="ios-package" value="Cache" />
+        <param name="android-package" value="com.sharinglabs.cordova.plugin.cache.Cache"/>
+    </feature>
+-->
+
+    <!--para que no abra más de una instancia en android-->
+    <gap:config-file platform="android" parent="/manifest/application">
+        <activity android:launchMode="singleInstance" />
+    </gap:config-file>
+
+    <!--plugin pasra usar sqlite-->
+<!-- IC   <plugin name="com.brodysoft.sqliteplugin" spec="1.0.6" source="pgb" />-->
+
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+
+    <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+    <icon gap:platform="ios" height="57" src="icons/ios/icon-57.png" width="57" />
+    <icon gap:platform="ios" height="72" src="icons/ios/icon-72.png" width="72" />
+    <icon gap:platform="ios" height="114" src="icons/ios/icon-57-2x.png" width="114" />
+    <icon gap:platform="ios" height="144" src="icons/ios/icon-72-2x.png" width="144" />
+    <icon src="icons/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="icons/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="icons/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="icons/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+    <gap:splash src="splash.png" />
+    <gap:splash src="icons/ios/Default-Landscape~ipad.png" width="1024" height="768" />
+    <gap:splash src="icons/ios/Default-Portrait~ipad.png" width="768" height="1024" />
+    <gap:splash src="icons/android/splash-ldpi_port_(200-320).png" gap:platform="android" gap:density="ldpi" gap:qualifier="port-ldpi"  />
+    <gap:splash src="icons/android/splash-mdpi_port_(320-480).png" gap:platform="android" gap:density="mdpi" gap:qualifier="port-mdpi"/>
+    <gap:splash src="icons/android/splash-hdpi_port_(480-800).png" gap:platform="android" gap:density="hdpi" gap:qualifier="port-hdpi"/>
+    <gap:splash src="icons/android/splash-xhdpi_port_(720-1280).png" gap:platform="android" gap:density="xhdpi"  gap:qualifier="port-xhdpi"/>
+    <gap:splash src="icons/android/splash-ldpi_land_(320-200).png" gap:platform="android" gap:density="ldpi" gap:qualifier="land-ldpi"  />
+    <gap:splash src="icons/android/splash-mdpi_land_(480-320).png" gap:platform="android" gap:density="mdpi" gap:qualifier="land-mdpi"  />
+    <gap:splash src="icons/android/splash-hdpi_land_(800-480).png" gap:platform="android" gap:density="hdpi" gap:qualifier="land-hdpi"/>
+    <gap:splash src="icons/android/splash-xhdpi_land(1280-720).png" gap:platform="android" gap:density="xhdpi"  gap:qualifier="land-xhdpi" />
+
+
+    <access origin="*" />
+<!-- IC   <access origin="tel:*" launch-external="yes" />-->
+<!-- IC   <access origin="mailto:*" launch-external="yes" />-->
+</widget>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<farmacos>
+    <farmaco nom="CIPROFLOXACINO 2 MG/ML">
+        <fic>Ciprofloxacino.pdf</fic>
+    </farmaco>
+	<farmaco nom="GENTAMICINA 5 MG/ML">
+        <fic>Gentamicina.pdf</fic>
+    </farmaco>
+	<farmaco nom="PARACETAMOL 1 GR">
+        <fic>Paracetamol.pdf</fic>
+    </farmaco>
+</farmacos>

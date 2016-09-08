@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+  <itemMenu id="100">
+    <titol>Generalidades del sellado del catéter</titol>
+    <idPadre>100</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>0</nivel>
+    <esPadre>1</esPadre>
+  </itemMenu>
+  <itemMenu  id="110">
+    <titol>Generalidades</titol>
+    <idPadre>100</idPadre>
+    <ficAsociado>unPDF.pdf</ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu id="120">
+    <titol>Guidelines</titol>
+    <idPadre>100</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu  id="130">
+    <titol>Técnica</titol>
+    <idPadre>100</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu  id="140">
+    <titol>Duración</titol>
+    <idPadre>100</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu  id="150">
+    <titol>Reacciones adversas relacionadas</titol>
+    <idPadre>100</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu  id="160">
+    <titol>Conclusiones</titol>
+    <idPadre>100</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu  id="200">
+    <titol>Manejo de infecciones asociadas a catéteres</titol>
+    <idPadre>200</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>0</nivel>
+    <esPadre>1</esPadre>
+  </itemMenu>
+  <itemMenu  id="210">
+    <titol>Bacterias gram negativas</titol>
+    <idPadre>200</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>1</esPadre>
+  </itemMenu>
+  <itemMenu id="2100">
+    <titol>BGN</titol>
+    <idPadre>210</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>2</nivel>
+    <esPadre>1</esPadre>
+  </itemMenu>
+  <itemMenu id="2200">
+    <titol>BGN fermentadores: con más frecuencua aislamientos de E.coli, Klebsiella pneumanor, Enterobacter.</titol>
+    <idPadre>2100</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>3</nivel>
+    <esPadre>1</esPadre>
+  </itemMenu>
+  <itemMenu id="2300">
+    <titol>Cepas sensibles: amiklacina 2mg/ml, gentamicina 5mg/mo o ciprofloxacino 2mg/ml</titol>
+    <idPadre>2200</idPadre>
+    <ficAsociado>CepasSensibles.pdf</ficAsociado>
+    <nivel>4</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu id="2400">
+    <titol>Ceplas BLEE (betalactamaasas de espectro extendido) o con algún tipo de carbapenemasas asociada.</titol>
+    <idPadre>2200</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>4</nivel>
+    <esPadre>1</esPadre>
+  </itemMenu>
+  <itemMenu id="2500">
+    <titol>La indicación de retirada de mismo parece claro.</titol>
+    <idPadre>2400</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>5</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu id="2600">
+    <titol>BGN no fermentadores: es frecuente encontrarnos cepas de Acinetobactersp. y Stenotrophomonas maltophilia y Pseudomonas.</titol>
+    <idPadre>2100</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>3</nivel>
+    <esPadre>1</esPadre>
+  </itemMenu>
+  <itemMenu id="2700">
+    <titol>De forma general se deberá retirar el catéter.</titol>
+    <idPadre>2600</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>4</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu id="2800">
+    <titol>Si no está recomendada la retirada se deberá seleccionar antibiótico según antibiograma y un agente que favorezcan la destrucción del biofilm como pueden ser la heparina, N-acetilcisteina, EDTA, etc.</titol>
+    <idPadre>2600</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>4</nivel>
+    <esPadre>1</esPadre>
+  </itemMenu>
+  <itemMenu id="2900">
+    <titol>Stenotrophomonas maltophilia:ceztazidima o ciprofloxacino</titol>
+    <idPadre>2800</idPadre>
+    <ficAsociado>Stenotrophomonas.pdf</ficAsociado>
+    <nivel>5</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu id="2910">
+    <titol>Pseudomonas: agentes que favorezcan la destrucción del biofilm son necesariosd ada la gran faciliad de este microorganismo en producirlo.</titol>
+    <idPadre>2800</idPadre>
+    <ficAsociado>Pseudomonas.pdf</ficAsociado>
+    <nivel>5</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu id="220">
+    <titol>Bacterias gram positivas</titol>
+    <idPadre>200</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu  id="230">
+    <titol>Infección por hongos</titol>
+    <idPadre>200</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+  <itemMenu  id="300">
+    <titol>Fichas de preparación</titol>
+    <idPadre>300</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>0</nivel>
+    <esPadre>1</esPadre>
+  </itemMenu>
+  <itemMenu id="310">
+    <titol>Según fármaco</titol>
+    <idPadre>300</idPadre>
+    <ficAsociado></ficAsociado>
+    <nivel>1</nivel>
+    <esPadre>0</esPadre>
+  </itemMenu>
+</menu>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<IUtextes>
+    <label id="-1">
+        <txt></txt>
+    </label>
+    <label id="0">
+        <txt>InfCateter</txt>
+    </label>
+    <label id="1">
+        <txt>Información sellado catéter</txt>
+    </label>
+    <label id="10">
+        <txt>Menú</txt>
+    </label>
+    <label id="11">
+        <txt>Inicio</txt>
+    </label>
+    <label id="12">
+        <txt>Acerca de</txt>
+    </label>
+    <label id="13">
+        <txt>Info</txt>
+    </label>
+    <label id="14">
+        <txt>Salir</txt>
+    </label>
+    <label id="20">
+        <txt>Fármaco</txt>
+    </label>
+    <label id="21">
+        <txt>Buscar</txt>
+    </label>
+    <label id="30">
+        <txt>Salir</txt>
+    </label>
+    <label id="31">
+        <txt>¿Seguro que desea salir de la app?</txt>
+    </label>
+    <label id="32">
+        <txt>SI,NO</txt>
+    </label>
+    <label id="40">
+        <txt>Error</txt>
+    </label>
+    <label id="41">
+        <txt>processant arxiu XML</txt>
+    </label>
+    <label id="42">
+        <txt>PhoneGap no está funcionando</txt>
+    </label>
+    <label id="43">
+        <txt>creando carpeta con PDF</txt>
+    </label>
+</IUtextes>
+

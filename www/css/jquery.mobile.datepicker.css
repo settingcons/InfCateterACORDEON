@@ -1,0 +1,71 @@
+div.hasDatepicker{ display: block; padding: 0; overflow: visible;  margin: 8px 0; max-width:340px }
+.ui-datepicker {  overflow: visible; margin: 0; background-color: #ffffff !important; border:1px solid #dddddd !important; }
+.ui-datepicker .ui-datepicker-header
+{
+    background-color: #138ab6 !important;
+    position:relative;
+    padding:.5em 0;
+    border-bottom: 0;
+    font-weight: normal !important;
+    color: #ffffff !important;
+}
+/*.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { padding: 1px 0 1px 2px; position:absolute; top: .6em; margin-top: 0; text-indent: -9999px; }*/
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { padding: 1px 0 1px 2px; position:absolute; top: .6em; margin-top: 0; }
+
+.ui-datepicker .ui-datepicker-prev { left:9px; }
+.ui-datepicker .ui-datepicker-next { right:2px; }
+.ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year { width: 49%;}
+.ui-datepicker table {width: 100%; border-collapse: collapse; margin:0; }
+/*.ui-datepicker td { border-width: 1px; padding:0; text-align: center; }*/
+.ui-datepicker td
+{
+    border-width: 1px;
+    padding:0;
+    text-align: center;
+    background-color: #e8e8e8;
+    border: 1px solid #ffffff !important;
+    color: #313131 !important;
+}
+.ui-datepicker-week-end
+{
+    background-color: #f2f2f2 !important;
+}
+
+.ui-datepicker td span, .ui-datepicker td a { display: block; padding: .2em 0; font-weight: bold; margin: 0; border-width: 0; text-align: center; text-decoration: none; }
+
+.ui-datepicker-calendar th
+{
+    font-weight: normal !important;
+    color: #138ab6 !important;
+    background-color: #ffffff !important;
+}
+/*.ui-datepicker-calendar th span, .ui-datepicker-calendar span.ui-state-default { opacity: .7; }*/
+.ui-datepicker-calendar td a { padding:.5em .5em; }
+
+.ui-state-default
+{
+    color: #138ab6 !important;
+}
+.ui-state-highlight
+{
+    background-color: #b9d5df !important;
+}
+.ui-state-active
+{
+    color: #ffffff !important;
+    background-color: #138ab6 !important;
+}
+.ui-icon-circle-triangle-w{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+.ui-icon-circle-triangle-e{
+    width: 20px;
+    height: 20px;
+    display: block;
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>InfCateterACORDEON</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Setting Consultoria Phonegap Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--  IC      <meta http-equiv=”Cache-control” content=”no-cache”>-->
+
+        <!-- CSS -->
+        <link href="css/themes/base.css" rel="stylesheet" />
+        <link href="css/themes/jquery.mobile.icons.min.css" rel="stylesheet" />
+        <link href="css/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquery.mobile.datebox-1.0.1.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquery.mobile.datepicker.css" rel="stylesheet" type="text/css" />
+
+<!-- IC
+        <link href="css/rutas.css" rel="stylesheet" />
+        <link href="css/utiles.css" rel="stylesheet" />
+        <link href="css/pageini.css" rel="stylesheet" />
+        <link href="css/utiles_320.css" rel="stylesheet" media="only screen and  (max-width : 320px) , only screen and  (max-device-width : 320px) " />
+        <link href="css/utiles_320.css" rel="stylesheet" media="only screen and  (min-width : 320px) and (orientation: portrait), only screen and  (min-width : 480px) and (orientation: landscape)" />
+        <link href="css/utiles_360.css" rel="stylesheet" media="only screen and  (min-width : 360px) and (orientation: portrait), only screen and  (min-width : 640px) and (orientation: landscape)"/>
+        <link href="css/utiles_480.css" rel="stylesheet" media="only screen and  (min-width : 480px) and (orientation: portrait), only screen and  (min-width : 800px) and (orientation: landscape)"/>
+        <link href="css/utiles_600.css" rel="stylesheet" media="only screen and  (min-width : 540px) and (orientation: portrait),only screen and  (min-width : 960px) and (orientation: landscape)"/>
+        <link href="css/utiles_768.css" rel="stylesheet" media="only screen and  (min-width : 600px) and (orientation: portrait),only screen and  (min-width : 1024px) and (orientation: landscape)"/>
+        &lt;!&ndash;<link href="css/utiles_768.css" rel="stylesheet" media="screen and  (min-width : 768px) and (orientation: portrait), screen and  (min-width : 1024px) and (orientation: landscape)"/>&ndash;&gt;
+        <link href="css/utiles_800.css" rel="stylesheet" media="only screen and  (min-width : 800px) and (orientation: portrait), only screen and  (min-width : 1280px) and (orientation: landscape)"/>
+-->
+
+        <link rel="stylesheet" href="css/InfCateter.css" type="text/css">
+
+        <!-- jQuery -->
+        <script src="js/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="js/jquery/jquery.json-2.2.min.js" type="text/javascript"></script>
+        <script src="js/jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <script src="js/jquery/jquery.mobile.datebox-1.0.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery/jquery.ba-dotimeout.min.js" type="text/javascript"></script>
+        <script src="js/jquery/slidervertical.js" type="text/javascript"></script>
+<!--  IC      <script src="js/jquery/jquery.ui.datepicker.js" type="text/javascript"></script>-->
+<!--  IC      <script src="js/jquery/diagnostic.js" type="text/javascript"></script>-->
+<!--  IC      <script src="js/jquery/Cache.js" type="text/javascript"></script>-->
+
+        <!-- Base de dades (localStorage) -->
+        <script src="js/jquery/jstorage.js" type="text/javascript"></script>
+
+        <!-- clases -->
+<!-- IC
+        <script src="js/clases/clEntradaKm.js" type="text/javascript"></script>
+        <script src="js/clases/clNotificacion.js" type="text/javascript"></script>
+        <script src="js/clases/clRuta.js" type="text/javascript"></script>
+        <script src="js/clases/clRutaPunto.js" type="text/javascript"></script>
+        <script src="js/clases/clTexto.js" type="text/javascript"></script>
+        <script src="js/clases/clUsuario.js" type="text/javascript"></script>
+        <script src="js/clases/clVehiculoFlota.js" type="text/javascript"></script>
+        <script src="js/clases/clVehiculoPropio.js" type="text/javascript"></script>
+-->
+
+        <!-- Negocio  -->
+<!-- IC
+        <script src="js/negocio/BDSQLite.js" type="text/javascript"></script>
+        <script src="js/negocio/baseDatos.js" type="text/javascript"></script>
+        <script src="js/negocio/variables.js" type="text/javascript"></script>
+        <script src="js/negocio/mapa.js" type="text/javascript"></script>
+        <script src="js/negocio/AtencionCliente.js" type="text/javascript"></script>
+        <script src="js/negocio/nentradakm.js" type="text/javascript"></script>
+        <script src="js/negocio/ntextos.js" type="text/javascript"></script>
+        <script src="js/negocio/nusuarios.js" type="text/javascript"></script>
+        <script src="js/negocio/selvehiculos.js" type="text/javascript"></script>
+-->
+
+        <!-- Paginas  -->
+<!-- IC
+        <script src="js/paginas/pageInicio.js" type="text/javascript"></script>
+        <script src="js/paginas/pageCapturaRuta.js" type="text/javascript"></script>
+        <script src="js/paginas/pageListaRutas.js" type="text/javascript"></script>
+        <script src="js/paginas/pageConsultaRutas.js" type="text/javascript"></script>
+        <script src="js/paginas/pageDatosConductor.js" type="text/javascript"></script>
+        <script src="js/paginas/pageEntradaKm.js" type="text/javascript"></script>
+        <script src="js/paginas/pageRevisionKm.js" type="text/javascript"></script>
+        <script src="js/paginas/pageNotificacion.js" type="text/javascript"></script>
+        <script src="js/paginas/pageFichaRuta.js" type="text/javascript"></script>
+        <script src="js/paginas/pageEditarRuta.js" type="text/javascript"></script>
+        <script src="js/paginas/pageDatosVehiculo.js" type="text/javascript"></script>
+        <script src="js/paginas/pageResultados.js" type="text/javascript"></script>
+-->
+
+        <script src="js/negocio/utilidades.js" type="text/javascript"></script>
+        <script src="js/paginas/pageMENU.js" type="text/javascript"></script>
+
+    </head>
+
+    <body style="margin: auto; width: 100%;">
+
+    <!-- Página PRINCIPAL : CONTENIDO ÁRBOL nivel 0 **************************************************************** -->
+    <div data-role="page" id="pageMENU" class="mi-fondoPagina" >
+        <div data-role="header" style="border: 0px" class="mi-cabecera">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" class="tablacab">
+                <tr>
+                    <td width="5%" style="text-align: left;">
+                        <!--<img  id="imgHeaderAtras" src="images/back.png" width='14' height='14' onclick="Atras()" >-->
+                        <img id="imgHeaderAtras" alt="" src="images/back.png" width='30' height='30' onclick="Atras()"/>
+                    </td>
+                    <td width="90%" style="text-align: center;">
+                        <div style="width: 100%;">
+                            <h3 id="txtHeaderTitulo" style="margin: 0em">Información Sellado Catéter</h3>
+                        </div>
+                    </td>
+                    <td width="5%" style="text-align: left;">
+                        <img  id="imgHeaderMenu" src="images/menu.png" width='30' height='30' onclick="Menu()" >
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div data-role="main" class="mi-fondoPagina">
+
+            <H3 id="tituloMenu"></H3>
+
+            <div data-role="content" data-theme="c" class="mi-fondoPagina" style="width: 95%">
+
+                <ul data-role="listview" data-inset="true" id="ulMenu" ></ul>
+
+<!--            Prueba acordeon
+                <br/><br/>
+                <div data-role='collapsibleset' id='menuAcordeon' data-iconpos='left' data-theme='b' data-content-theme='b' data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'><div>
+-->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Página de filtro para mostrar fichas ************************************************************** -->
+    <div data-role="page" id="pageFiltro" class="mi-fondoPagina">
+
+        <div data-role="header" style="border: 0px" class="mi-cabecera">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td width="5%" style="text-align: left;">
+                        <img src="images/back.png" width='30' height='30' onclick="Atras()" >
+                    </td>
+                    <td width="90%" style="text-align: center;">
+                        <div style="width: 100%;">
+                            <h3 id="divTituloFiltro" style="margin: 0em"></h3>
+                        </div>
+                    </td>
+                    <td width="5%" style="text-align: left;">
+                        <img src="images/menu.png" width='30' height='30' onclick="Menu()" >
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div data-role="main" class="ui-content,mi-fondoPagina">
+            <table width="98%" cellspacing="3" cellpadding="3" border="0">
+                <tr>
+                    <td style="text-align: left; width: 20%" class="mi-fondoPagina">
+                        <label id="labelFiltro" for="inputFiltro" style="font-weight: bold;">Fármaco</label>
+                    </td>
+                    <td style="text-align: center; width: 80%" class="mi-fondoPagina">
+                        <input type="text" name="inputFiltro" id="inputFiltro" value=""  />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">&nbsp;</td>
+                    <td  style="width: 80%; text-align: center; vertical-align: top;" class="mi-fondoPagina">
+                        <!--<input type="button" value="buscar"onclick="filtroFichas('es-es')" style="width: 90%" />-->
+                        <a href="#" id="botonBuscar" onclick="filtroFichas('es-es')" data-role="button" data-inline="false" data-icon="search">buscar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" width="100%">
+                        <div data-role="content" data-theme="c" class="mi-fondoPagina">
+                            <div data-role="main" style="width: 97%">
+                                <ul data-role='listview' data-inset='true' id='ulFichas'></ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!--Página para mostrar los textos XML ************************************************************************* -->
+    <div data-role="page" id="pageInfoXML" class="mi-fondoPaginaTXT">
+
+        <div data-role="header" style="border: 0px" class="mi-cabecera">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" class="tablacab">
+                <tr>
+                    <td width="5%" style="text-align: left;">
+                        <img src="images/back.png" width='30' height='30' onclick="Atras()" >
+                    </td>
+                    <td width="90%" style="text-align: center;">
+                        <div style="width: 100%;">
+                            <h3 id="divTituloXML" style="margin: 0em"></h3>
+                        </div>
+                    </td>
+                    <td width="5%" style="text-align: left;">
+                        <img src="images/menu.png" width='30' height='30' onclick="Menu()" >
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div data-role="main" class="mi-fondoPaginaTXT" style="border:0px; height:100%;" >
+            <div id="divInfoXML" style="margin:8px; background-color: white; padding: 12px;">
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--Página que muestra el menu lateral ************************************************************************* -->
+    <div data-role="panel" id="pageMenuLateral" data-display="overlay" data-position="right" style="background-color:#f3f3f3;">
+        <div class="mi-cab-menu">
+            <!-- <img alt="" src="images/logo_menu.jpg" />-->
+            <div id="menuversion" style="float: right; color: #A83587; font-weight: bold;">InfCateterACORDEON v1.0<br/></div>
+        </div>
+        <div data-role="content">
+            <div data-role="main"><br/>
+                <ul id="ulMenuLateral" class="mi-ul">
+                    <li id="liMenuInicio"><a href="#" onclick="volverInicio('pageMENU',0,'');"><div><img alt="" src="images/Secciones.png" width='20' height='20'><div id="menuInicio">&nbsp;&nbsp;&nbsp;Inicio<br/></div></div></a></li>
+                    <br/>
+                    <li id="liMenuAcerca"><a href="#" onclick="abrirPagina('pageAYUDA',0,'Acerca de')"><div><img alt="" src="images/Acerca.png" width='20' height='20'><div id="menuAcerca">&nbsp;&nbsp;&nbsp;Acerca de<br/></div></div></a></li>
+                    <br/>
+                    <li id="liMenuInfo"><a href="#" onclick="abrirPagina('pageINFO',0,'Información')"><div ><img alt="" src="images/Info.png" width='20' height='20'><div id="menuInfo">&nbsp;&nbsp;&nbsp;Info<br/></div></div></a></li>
+                    <br/>
+                    <li id="liMenuSalir"><a href="#" onclick="salir()"><div id="menuSalir">Salir</div></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Página que muestra la ayuda ******************************************************************************** -->
+    <div data-role="page" id="pageAYUDA" class="mi-fondoPagina">
+
+        <div data-role="header" style="border: 0px" class="mi-cabecera">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td width="5%" style="text-align: left;">
+                        <img src="images/back.png" width='30' height='30' onclick="Atras()" >
+                    </td>
+                    <td width="90%" style="text-align: center;">
+                        <div style="width: 100%; text-align: center;">
+                            <h3 id="divTituloAyuda" style="margin: 0em"></h3>
+                        </div>
+                    </td>
+                    <td width="5%" style="text-align: left;">
+                        <img src="images/menu.png" width='30' height='30' onclick="Menu()" >
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div data-role="main" class="mi-fondoPagina"  style="border:0px; height:100%;" >
+            <div id="divAYUDA" style="margin:30px; background-color: white; padding: 12px;">
+                esto es la ayuda
+            </div>
+        </div>
+
+    </div>
+
+    <!--Página que muestra la info ********************************************************************************* -->
+    <div data-role="page" id="pageINFO" class="mi-fondoPagina">
+
+        <div data-role="header" style="border: 0px" class="mi-cabecera">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td width="5%" style="text-align: left;">
+                        <img src="images/back.png" width='30' height='30' onclick="Atras()" >
+                    </td>
+                    <td width="90%" style="text-align: center;">
+                        <div style="width: 100%; text-align: center;">
+                            <h3 id="divTituloInfo" style="margin: 0em"></h3>
+                        </div>
+                    </td>
+                    <td width="5%" style="text-align: left;">
+                        <img src="images/menu.png" width='30' height='30' onclick="Menu()" >
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div data-role="main" class="mi-fondoPagina"  style="border:0px; height:100%;">
+            <div id="divINFO" style="margin:30px; background-color: white; padding: 12px;">
+                esto es la info
+            </div>
+        </div>
+
+    </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/paginas/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+    </body>
+</html>
