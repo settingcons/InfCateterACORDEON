@@ -165,16 +165,16 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                         else
                         {
                             if (idPadre == 0)
-                                sItem = tipoItem('DESPLEGA_NO_PADRE',idioma,id,titol);
+                                sItem = tipoItem(false,'DESPLEGA_NO_PADRE',idioma,id,titol);
                             else
-                                sItem = tipoItem('DESPLEGA_SI_PADRE',idioma,id,titol);
+                                sItem = tipoItem(false,'DESPLEGA_SI_PADRE',idioma,id,titol);
 
                             $("#ulMenu").append(sItem).listview('refresh');
                         }
                     }
                     else
                     {
-                        sItem = tipoItem(tieneLink,idioma,id,titol);
+                        sItem = tipoItem(false,tieneLink,idioma,id,titol);
                         $("#ulMenu").append(sItem).listview('refresh');
                     }
                 }
@@ -191,36 +191,52 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
     }
 }
 
-function tipoItem(sTipo,idioma,id,titol){
+function tipoItem(bAcordeon,sTipo,idioma,id,titol){
     var sItem = "";
     var img = "";
 
     switch(sTipo)
     {
         case 'DESPLEGA_SI_PADRE' :
-            img = "<img src='images/desplega.png' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
             sItem += "<li>";
-            sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-            sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
-            sItem += img;
-            sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
-            sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
-            sItem += "<font style='white-space:normal;'>";
-            sItem += titol;
-            sItem += "</font></a></td></tr></table></div></li>";
+            sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' >";  /*class='mi-fondoPaginaTXT'*/
+            sItem += "<table width='100%' height='100%' ><tr>";   /*class='mi-fondoPaginaTXT'*/
+            if(!bAcordeon)
+            {
+                img = "<img src='images/desplega.png' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\" >";
+                sItem += "<td style='width: 5%; vertical-align: middle; text-align: left;'>" + img + "</td>";
+                sItem += "<td style='width: 95%; vertical-align: middle;'>";
+                sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
+                sItem += "<font style='white-space:normal; text-decoration:none;';>" + titol + "</font>";
+            }
+            else
+            {
+                sItem += "<td style='width: 100%; vertical-align: middle;'>";
+                sItem += "<font style='white-space:normal; text-decoration:none; color: #ffffff;';>" + titol + "</font>";
+            }
+            if(!bAcordeon)sItem += "</a>";
+            sItem += "</td></tr></table></div></li>";
             break;
 
         case 'DESPLEGA_NO_PADRE' :
-            img = "<img src='images/seccion.png' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-            sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
-            sItem += img;
-            sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
-            sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
-            sItem += "<font style='white-space:normal;'>";
-            sItem += titol;
-            sItem += "</font></a></td></tr></table></div></li>";
+            sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr>";
+            if(!bAcordeon) {
+                img = "<img src='images/seccion.png' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\" >";
+                sItem += "<td style='width: 5%; vertical-align: middle; text-align: left;'>" + img + "</td>";
+                sItem += "<td style='width: 95%; vertical-align: middle;'>";
+                sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
+                sItem += "<font style='white-space:normal; text-decoration:none; color: #000000';'>" + titol + "</font>";
+            }
+            else
+            {
+                sItem += "<td style='width: 100%; vertical-align: middle;'>";
+                sItem += "<font style='white-space:normal; text-decoration:none; color: #ffffff';'>" + titol + "</font>";
+            }
+
+            if(!bAcordeon)sItem += "</a>";
+            sItem += "</td></tr></table></div></li>";
             break;
 
         case 'TXT':  //link a un Texto de Textes.xml ***********************************************
@@ -285,7 +301,8 @@ function CargaArcodeon(idInicial, idioma)
 
     //El idInicial es el primero (cabecera acordeón)
     //a partir de éste crear arcordeon con todos los que tengan nivel='ACORDEON'
-    var contenidoAcordeon  = "<div data-role='collapsibleset' id='menuAcordeon' data-iconpos='left' data-theme='b' data-content-theme='b' data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'>";
+    // data-iconpos='left' data-theme='b' data-content-theme='b'
+    var contenidoAcordeon  = "<div data-role='collapsibleset' id='menuAcordeon' data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'>";
     var id = "";
     var bEmpezar = false;
     var bIniciado = false;
@@ -321,7 +338,11 @@ function CargaArcodeon(idInicial, idioma)
                 if(cierreDIV > 0)  contenidoAcordeon += "</div>";
 
                 contenidoAcordeon += "<div data-role='collapsible'>";
-                contenidoAcordeon += "<h3>" + titol + "</h3>";
+                if (idPadre == 0)
+                    sItem = tipoItem(true,'DESPLEGA_NO_PADRE',idioma,id,titol);
+                else
+                    sItem = tipoItem(true,'DESPLEGA_SI_PADRE',idioma,id,titol);
+                contenidoAcordeon += "<h3>" + sItem + "</h3>";
                 contenidoAcordeon += "<ul data-role='listview' data-inset='false'>";
 
                 bIniciado = true;
@@ -345,20 +366,24 @@ function CargaArcodeon(idInicial, idioma)
                             }
                             contenidoAcordeon += "<li>";                                        cierreLI += 1;
                             contenidoAcordeon += "<div data-role='collapsible'>";               cierreDIV += 1;
-                            contenidoAcordeon += "<h3>" + titol + "</h3>";
+                            if (idPadre == 0)
+                                sItem = tipoItem(true,'DESPLEGA_NO_PADRE',idioma,id,titol);
+                            else
+                                sItem = tipoItem(true,'DESPLEGA_SI_PADRE',idioma,id,titol);
+                            contenidoAcordeon += "<h3>" + sItem + "</h3>";
                             contenidoAcordeon += "<ul data-role='listview' data-inset='false'>"; cierreUL += 1;
 
                         }
                         else
                         {
-                            sItem = tipoItem(tieneLink,idioma,id,titol);
+                            sItem = tipoItem(true,tieneLink,idioma,id,titol);
                             contenidoAcordeon += sItem ;
                         }
                     }
                     else
                     {
                         if(nivel == 'FIN-ACORDEON') {
-                            sItem = tipoItem(tieneLink,idioma,id,titol);
+                            sItem = tipoItem(true,tieneLink,idioma,id,titol);
                             contenidoAcordeon += sItem ;
 
                             contenidoAcordeon += "</ul>";
