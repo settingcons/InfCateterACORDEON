@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <IUtextes>
-    <label id="-1">
-        <txt></txt>
+    <label id="100">
+        <txt>-</txt>
     </label>
     <label id="0">
         <txt>InfCateter</txt>

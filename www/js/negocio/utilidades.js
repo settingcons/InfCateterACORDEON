@@ -410,7 +410,7 @@ function cargaLabels(idioma)
     }
     catch(ex)
     {
-        aviso(40,-1,ex.message);
+        aviso(40,100,ex.message);
     }
 }
 
@@ -441,7 +441,7 @@ function leeXML(idioma, fichero) {
     }
     catch(ex)
     {
-        aviso(40,-1,ex.message);
+        aviso(40,100,ex.message);
     }
 }
 

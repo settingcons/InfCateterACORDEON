@@ -96,3 +96,20 @@
     background-color: #8B2E75 !important;
     color:#000000;
 }
+
+#menuAcordeon ul{
+       list-style:none;
+       margin-left:0px;
+       margin:0px;
+       padding:0px;
+       }
+#contenidoAcordeon ul{
+       list-style:none;
+       margin:0px;
+       padding:0px;
+       }
+#contenidoAcordeonInicial ul{
+       list-style:none;
+       margin:0px;
+       padding:0px;
+       }

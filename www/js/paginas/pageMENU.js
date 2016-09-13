@@ -23,7 +23,7 @@ function paginaInfoPDF(idioma,fichero){
     }
     catch(ex)
     {
-        aviso(40,-1,ex.message);
+        aviso(40,100,ex.message);
     }
 }
 
@@ -52,7 +52,7 @@ function paginaInfoTXT(idioma,id, titulo){
     }
     catch(ex)
     {
-        aviso(40,-1,ex.message);
+        aviso(40,100,ex.message);
     }
 }
 
@@ -102,7 +102,7 @@ function filtroFichas(idioma){
     }
     catch(ex)
     {
-        aviso(40,-1,ex.message);
+        aviso(40,100,ex.message);
     }
 }
 
@@ -125,7 +125,7 @@ function volverInicio(sPag, id, titulo){
 function cargaPaginaInfoCateter(idioma, idPadreSel) {
     var menu = leeXML(idioma,'menu.xml');
     var img = "";
-    var id, idPadre,idPadreAnt,titol, tieneLink, nivel, nivelAnt, esPadre;
+    var id, idPadre,idPadreAnt,titol, tieneLink, nivel, nivelAnt, esPadre, icono;
     var bPrimero = true;
     var nCierres = 0;
     var contenido = "";
@@ -153,6 +153,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                     tieneLink = $(this).find('ficAsociado').text();
                     nivel = $(this).find('nivel').text();
                     esPadre = $(this).find('esPadre').text();
+                    icono = $(this).find('icono').text();
                     img = "";
 
                     if(esPadre==1)
@@ -165,16 +166,16 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                         else
                         {
                             if (idPadre == 0)
-                                sItem = tipoItem(false,'DESPLEGA_NO_PADRE',idioma,id,titol);
+                                sItem = tipoItem(false,'DESPLEGA_NO_PADRE',idioma,id,titol,icono);
                             else
-                                sItem = tipoItem(false,'DESPLEGA_SI_PADRE',idioma,id,titol);
+                                sItem = tipoItem(false, 'DESPLEGA_SI_PADRE', idioma, id, titol, icono);
 
                             $("#ulMenu").append(sItem).listview('refresh');
                         }
                     }
                     else
                     {
-                        sItem = tipoItem(false,tieneLink,idioma,id,titol);
+                        sItem = tipoItem(false, tieneLink, idioma, id, titol, icono);
                         $("#ulMenu").append(sItem).listview('refresh');
                     }
                 }
@@ -187,32 +188,32 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
     }
     catch(ex)
     {
-        aviso(40,-1, ex.message);
+        aviso(40,100, ex.message);
     }
 }
 
-function tipoItem(bAcordeon,sTipo,idioma,id,titol){
+function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
     var sItem = "";
     var img = "";
 
     switch(sTipo)
     {
-        case 'DESPLEGA_SI_PADRE' :
+        case 'DESPLEGA_SI_PADRE':
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' >";  /*class='mi-fondoPaginaTXT'*/
-            sItem += "<table width='100%' height='100%' ><tr>";   /*class='mi-fondoPaginaTXT'*/
+            sItem += "<table width='100%' height='100%'><tr>";   /*class='mi-fondoPaginaTXT'*/
             if(!bAcordeon)
-            {
-                img = "<img src='images/desplega.png' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\" >";
+            {   
+                img = "<img src='images/"+icono+"' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\" >";
                 sItem += "<td style='width: 5%; vertical-align: middle; text-align: left;'>" + img + "</td>";
                 sItem += "<td style='width: 95%; vertical-align: middle;'>";
                 sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
-                sItem += "<font style='white-space:normal; text-decoration:none;';>" + titol + "</font>";
+                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none;';>" + titol + "</font>";
             }
             else
             {
                 sItem += "<td style='width: 100%; vertical-align: middle;'>";
-                sItem += "<font style='white-space:normal; text-decoration:none; color: #ffffff;';>" + titol + "</font>";
+                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #ffffff;';>" + titol + "</font>";
             }
             if(!bAcordeon)sItem += "</a>";
             sItem += "</td></tr></table></div></li>";
@@ -223,16 +224,16 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol){
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr>";
             if(!bAcordeon) {
-                img = "<img src='images/seccion.png' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\" >";
+                img = "<img src='images/" + icono + "' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\" >";
                 sItem += "<td style='width: 5%; vertical-align: middle; text-align: left;'>" + img + "</td>";
                 sItem += "<td style='width: 95%; vertical-align: middle;'>";
                 sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
-                sItem += "<font style='white-space:normal; text-decoration:none; color: #000000';'>" + titol + "</font>";
+                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #000000';'>" + titol + "</font>";
             }
             else
             {
                 sItem += "<td style='width: 100%; vertical-align: middle;'>";
-                sItem += "<font style='white-space:normal; text-decoration:none; color: #ffffff';'>" + titol + "</font>";
+                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none; color: #ffffff';'>" + titol + "</font>";
             }
 
             if(!bAcordeon)sItem += "</a>";
@@ -240,52 +241,52 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol){
             break;
 
         case 'TXT':  //link a un Texto de Textes.xml ***********************************************
-            img = "<img src='images/text.png' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + titol + "')\">";
+            img = "<img src='images/" + icono + "' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + titol + "')\">";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             sItem += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + titol + "')\"> ";
-            sItem += "<font style='white-space:normal;'>";
+            sItem += "<font style='white-space:normal;text-transform: none;'>";
             sItem += titol;
             sItem += "</font></a></td></tr></table></div></li>";
             break;
 
         case '':  //no hay link, es sólo para leer *************************************************
-            img = "<img src='images/itemFinal.png'>";
+            img = "<img src='images/" + icono + "'>";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
-            sItem += "<font style='white-space:normal;'>";
+            sItem += "<font style='white-space:normal;text-transform: none;'>";
             sItem += titol;
             sItem += "</font></td></tr></table></div></li>";
             break;
 
         case 'FILTRO':  //Buscador de fichas *******************************************************
-            img = "<img src='images/lupa.png' onclick=\"paginaFiltroFichas('" + idioma + "','" + id + "','" + titol + "')\">";
+            img = "<img src='images/" + icono + "' onclick=\"paginaFiltroFichas('" + idioma + "','" + id + "','" + titol + "')\">";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             sItem += "<a href='#' style='text-decoration:none;' onclick=\"paginaFiltroFichas('" + idioma + "','" + id + "','" + titol + "')\"> ";
-            sItem += "<font style='white-space:normal;'>";
+            sItem += "<font style='white-space:normal;text-transform: none;'>";
             sItem += titol;
             sItem += "</font></a></td></tr></table></div></li>";
             break;
 
         default:  //link al fichero PDF especificado ***********************************************
-            img = "<img src='images/pdf.png' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
+            img = "<img src='images/" + icono + "' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             sItem += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
-            sItem += "<font style='white-space:normal;'>";
+            sItem += "<font style='white-space:normal;text-transform: none;'>";
             sItem += titol;
             sItem += "</font></a></td></tr></table></div></li>";
             break;
@@ -328,6 +329,7 @@ function CargaArcodeon(idInicial, idioma)
             esPadre = $(this).find('esPadre').text();
             idPadre = $(this).find('idPadre').text();
             tieneLink = $(this).find('ficAsociado').text();
+            icono = $(this).find('icono').text();
 
             if (id == idInicial) nPadreInicial = idPadre;
 
@@ -337,11 +339,11 @@ function CargaArcodeon(idInicial, idioma)
                 if(cierreUL > 0)  contenidoAcordeon += "</ul>";
                 if(cierreDIV > 0)  contenidoAcordeon += "</div>";
 
-                contenidoAcordeon += "<div data-role='collapsible'>";
+                contenidoAcordeon += "<div data-role='collapsible' id='contenidoAcordeonInicial'>";
                 if (idPadre == 0)
-                    sItem = tipoItem(true,'DESPLEGA_NO_PADRE',idioma,id,titol);
+                    sItem = tipoItem(true,'DESPLEGA_NO_PADRE',idioma,id,titol,icono);
                 else
-                    sItem = tipoItem(true,'DESPLEGA_SI_PADRE',idioma,id,titol);
+                    sItem = tipoItem(true, 'DESPLEGA_SI_PADRE', idioma, id, titol, icono);
                 contenidoAcordeon += "<h3>" + sItem + "</h3>";
                 contenidoAcordeon += "<ul data-role='listview' data-inset='false'>";
 
@@ -364,26 +366,26 @@ function CargaArcodeon(idInicial, idioma)
                                 if(cierreDIV > 0) { contenidoAcordeon += "</div>"; cierreDIV -= 1; }
                                 if(cierreUL > 0) { contenidoAcordeon += "</ul>"; cierreUL -= 1; }
                             }
-                            contenidoAcordeon += "<li>";                                        cierreLI += 1;
-                            contenidoAcordeon += "<div data-role='collapsible'>";               cierreDIV += 1;
+                            contenidoAcordeon += "<li>"; cierreLI += 1;
+                            contenidoAcordeon += "<div data-role='collapsible' id='contenidoAcordeon'>"; cierreDIV += 1;
                             if (idPadre == 0)
-                                sItem = tipoItem(true,'DESPLEGA_NO_PADRE',idioma,id,titol);
+                                sItem = tipoItem(true, 'DESPLEGA_NO_PADRE', idioma, id, titol, icono);
                             else
-                                sItem = tipoItem(true,'DESPLEGA_SI_PADRE',idioma,id,titol);
+                                sItem = tipoItem(true, 'DESPLEGA_SI_PADRE', idioma, id, titol, icono);
                             contenidoAcordeon += "<h3>" + sItem + "</h3>";
                             contenidoAcordeon += "<ul data-role='listview' data-inset='false'>"; cierreUL += 1;
 
                         }
                         else
                         {
-                            sItem = tipoItem(true,tieneLink,idioma,id,titol);
+                            sItem = tipoItem(true, tieneLink, idioma, id, titol, icono);
                             contenidoAcordeon += sItem ;
                         }
                     }
                     else
                     {
                         if(nivel == 'FIN-ACORDEON') {
-                            sItem = tipoItem(true,tieneLink,idioma,id,titol);
+                            sItem = tipoItem(true, tieneLink, idioma, id, titol, icono);
                             contenidoAcordeon += sItem ;
 
                             contenidoAcordeon += "</ul>";
