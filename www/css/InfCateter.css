@@ -59,19 +59,21 @@
     list-style:none;
     text-decoration:none;
     font-weight: normal !important;
+    padding-left : 1px;
 }
 
 
 .mi-selected {
-    color:#cf7dc9;
+    color:#79B6B7;
 }
 .mi-ul li {
     border-bottom:1px solid #fafafa;
 }
 .mi-ul li:hover {
-    background-color: rgb(207, 125, 201) !important;
-    font-weight: normal !important;
+    background-color: rgb(121, 182, 183) !important;
+    font-weight: bold !important;
 }
+
 .mi-ul a {
     text-decoration: none;
     zoom: 1; /* IE7 */
@@ -113,3 +115,11 @@
        margin:0px;
        padding:0px;
        }
+
+.mi-titulo-menu {
+    display:block;
+    background-color: #ffffff;
+    color:#018986 !important; /*333333*/
+    font-weight:normal;
+}
+

@@ -100,7 +100,6 @@
             <table width="100%" cellspacing="0" cellpadding="0" border="0" class="tablacab">
                 <tr>
                     <td width="5%" style="text-align: left;">
-                        <!--<img  id="imgHeaderAtras" src="images/back.png" width='14' height='14' onclick="Atras()" >-->
                         <img id="imgHeaderAtras" alt="" src="images/back.png" width='30' height='30' onclick="Atras()"/>
                     </td>
                     <td width="90%" style="text-align: center;">
@@ -116,14 +115,10 @@
         </div>
 
         <div data-role="main" class="mi-fondoPagina">
-            <H3 id="tituloMenu"></H3>
+            <H3 id="tituloMenu" class="mi-titulo-menu"></H3>
             <div data-role="content" data-theme="c" class="mi-fondoPagina" style="width: 95%">
                 <ul data-role="listview" data-inset="true" id="ulMenu" ></ul>
 
-<!--            Prueba acordeon
-                <br/><br/>
-                <div data-role='collapsibleset' id='menuAcordeon' data-iconpos='left' data-theme='b' data-content-theme='b' data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'><div>
--->
             </div>
         </div>
     </div>
@@ -153,7 +148,7 @@
             <table width="98%" cellspacing="3" cellpadding="3" border="0">
                 <tr>
                     <td style="text-align: left; width: 20%" class="mi-fondoPagina">
-                        <label id="labelFiltro" for="inputFiltro" style="font-weight: bold;">Fármaco</label>
+                        <label id="labelFiltro" for="inputFiltro" style="color:#79B6B7;text-align:center;font-weight:bold;">&nbsp;&nbsp;Fármaco</label>
                     </td>
                     <td style="text-align: center; width: 80%" class="mi-fondoPagina">
                         <input type="text" name="inputFiltro" id="inputFiltro" value=""  />
@@ -209,17 +204,23 @@
     </div>
 
 
-    <!--Página que muestra el menu lateral ************************************************************************* -->
-    <div data-role="panel" id="pageMenuLateral" data-display="overlay" data-position="right" style="top:0px;bottom:1px;background-color:#f3f3f3;">
+    <!--Página que muestra el menu lateral *************************************************************************--> 
+    <div data-role="panel" id="pageMenuLateral" data-theme="none" data-display="overlay" data-position="right" style="top:0px;bottom:1px;background-color:#f3f3f3;">
         <div class="mi-cab-menu">
-            <!-- <img alt="" src="images/logo_menu.jpg" />-->
+             <img alt="" src="images/Logo.jpg" />
             <div id="menuversion" style="float: right; color: #A83587; font-weight: bold;" class="fondo">InfCateterACORDEON v1.0<br/></div>
         </div>
         <div data-role="content">
             <div data-role="main"><br/>
                 <ul id="ulMenuLateral" class="mi-ul">
-                    <li id="liMenuInicio"><a href="#" onclick="volverInicio('pageMENU',0,'');"><div><img alt="" src="images/Secciones.png" width='20' height='20'><div id="menuInicio">&nbsp;&nbsp;&nbsp;Inicio<br/></div></div></a></li>
+                    <li id="liMenuInicio"><a href="#" onclick="volverInicio('pageMENU',0,'');"><div><div id="menuInicio">Inicio<br/></div></div></a></li>
                     <br/>
+                    <li id="liMenuGeneralidades"><a href="#" onclick="volverInicio('pageMENU',100,'Generalidades');"><div><img alt="" src="images/GeneralidadesMenu.png" width='20' height='20'><div id="menuGeneralidades">&nbsp;&nbsp;&nbsp;Generalidades<br /></div></div></a></li>
+                    <br />
+                    <li id="liMenuManejo"><a href="#" onclick="volverInicio('pageMENU',200,'Manejo');"><div><img alt="" src="images/ManejoMenu.png" width='20' height='20'><div id="menuManejo">&nbsp;&nbsp;&nbsp;Manejo de infecciones<br /></div></div></a></li>
+                    <br />
+                    <li id="liMenuFichas"><a href="#" onclick="volverInicio('pageMENU',300,'Fichas');"><div><img alt="" src="images/FichaMenu.png" width='20' height='20'><div id="menuFichas">&nbsp;&nbsp;&nbsp;Fichas de preparación<br /></div></div></a></li>
+                    <br />
                     <li id="liMenuAcerca"><a href="#" onclick="abrirPagina('pageAYUDA',0,'Acerca de')"><div><img alt="" src="images/Acerca.png" width='20' height='20'><div id="menuAcerca">&nbsp;&nbsp;&nbsp;Acerca de<br/></div></div></a></li>
                     <br/>
                     <li id="liMenuInfo"><a href="#" onclick="abrirPagina('pageINFO',0,'Información')"><div ><img alt="" src="images/Info.png" width='20' height='20'><div id="menuInfo">&nbsp;&nbsp;&nbsp;Info<br/></div></div></a></li>

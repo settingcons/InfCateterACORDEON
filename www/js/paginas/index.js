@@ -48,7 +48,7 @@ function deviceReady() {
 
     }
     catch(ex){
-        aviso(40,-1,ex.message);
+        aviso(40,100,ex.message);
     }
 }
 
