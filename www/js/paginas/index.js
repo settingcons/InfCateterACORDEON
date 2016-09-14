@@ -62,11 +62,18 @@ function inicio(){
     //Menú lateral
     $("#menuversion").html(Etiqueta(0) + " v1.0");
     $("#menuInicio").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(11) + "<br/>");
-    $("#menuAcerca").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(12) + "<br/>");
-    $("#menuInfo").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(13) + "<br/>");
-    $("#menuSalir").html(Etiqueta(14) + "<br/>");
+    $("#menuGeneralidades").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(12) + "<br/>");
+    $("#menuManejo").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(13) + "<br/>");
+    $("#menuFichas").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(14) + "<br/>");
+    $("#menuAcerca").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(15) + "<br/>");
+    $("#menuInfo").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(16) + "<br/>");
+    $("#menuSalir").html(Etiqueta(17) + "<br/>");
+    //$("#menuAcerca").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(12) + "<br/>");
+    //$("#menuInfo").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(13) + "<br/>");
+    //$("#menuSalir").html(Etiqueta(14) + "<br/>");
 
     navLIFO.push("pageMENU|0|");
+
     cargaPaginaInfoCateter('es-es', 0);
     if(esIOS()) $("#liMenuSalir").attr('class', 'ui-screen-hidden');
 }
@@ -75,23 +82,21 @@ function Menu() {
     $("#pageMenuLateral" ).panel().panel("open");
 }
 
+
 function Atras() {
-    var item="";
-    try
-    {
-        if(navLIFO.length > 1)
-        {
+    var item = "";
+    try {
+        if (navLIFO.length >= 1) {
             navLIFO.pop();
             item = navLIFO.pop();
             abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
-        }
+          }
         else {
             salir();
         }
     }
-    catch(ex)
-    {
-        aviso(40,-1,ex.message);
+    catch (ex) {
+        aviso(40, -1, ex.message);
     }
 }
 

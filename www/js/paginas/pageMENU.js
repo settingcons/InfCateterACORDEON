@@ -200,7 +200,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
     {
         case 'DESPLEGA_SI_PADRE':
             sItem += "<li>";
-            sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' >";  /*class='mi-fondoPaginaTXT'*/
+            sItem += "<div style='width: 100%; height:100%;  vertical-align: middle; '>";  /*class='mi-fondoPaginaTXT'*/
             sItem += "<table width='100%' height='100%'><tr>";   /*class='mi-fondoPaginaTXT'*/
             if(!bAcordeon)
             {
@@ -209,12 +209,12 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
                 sItem += "<td style='width: 5%; vertical-align: middle; text-align: left;'>" + img + "</td>";
                 sItem += "<td style='width: 95%; vertical-align: middle;'>";
                 sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
-                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none;color: #79B6B7'';>&nbsp;&nbsp;" + titol + "</font>";
+                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none;color: #79B6B7'';>&nbsp;" + titol + "</font>";
             }
             else
             {
                 /*bifurcacions esquemes*/
-                sItem += "<td style='width: 100%; vertical-align: middle;'>";
+                sItem += "<td style='width: 100%; vertical-align: middle; '>";
                 sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #ffffff;';>" + titol + "</font>";
             }
             if(!bAcordeon)sItem += "</a>";
@@ -226,17 +226,19 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr>";
             if (!bAcordeon) {
+                //sItem += "<div style='width: 60%; height:60%;  vertical-align: center;' class='mi-fondoPaginaInicio'>";
+                //sItem += "<table width='60%' height='60%' class='mi-fondoPaginaInicio'><tr>";
                 /*inicio*/
                 img = "<img src='images/" + icono + "' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\" >";
                 sItem += "<td style='width: 5%; vertical-align: middle; text-align: left;'>" + img + "</td>";
                 sItem += "<td style='width: 95%; vertical-align: middle;'>";
                 sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
-                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #79B6B7';'> &nbsp;&nbsp;" + titol + "</font>";
+                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #79B6B7';'> &nbsp;" + titol + "</font>";
             }
             else
             {
                 sItem += "<td style='width: 100%; vertical-align: middle;'>";
-                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none; color: #ffffff';'>4" + titol + "</font>";
+                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none; color: #ffffff';'>" + titol + "</font>";
             }
 
             if(!bAcordeon)sItem += "</a>";
@@ -251,7 +253,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             sItem += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + titol + "')\"> ";
-            sItem += "<font style='white-space:normal;text-transform: none;color: #79B6B7'>&nbsp;&nbsp;";
+            sItem += "<font style='white-space:normal;text-transform: none;color: #79B6B7'>&nbsp;";
             sItem += titol;
             sItem += "</font></a></td></tr></table></div></li>";
             break;
@@ -264,7 +266,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
-            sItem += "<font style='white-space:normal;text-transform: none;'>";
+            sItem += "<font style='white-space:normal;text-transform: none;color: #79B6B7'>";
             sItem += titol;
             sItem += "</font></td></tr></table></div></li>";
             break;
@@ -277,7 +279,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             sItem += "<a href='#' style='text-decoration:none;' onclick=\"paginaFiltroFichas('" + idioma + "','" + id + "','" + titol + "')\"> ";
-            sItem += "<font style='white-space:normal;text-transform: none;'>";
+            sItem += "<font style='white-space:normal;text-transform: none;color: #79B6B7'>";
             sItem += titol;
             sItem += "</font></a></td></tr></table></div></li>";
             break;
@@ -306,7 +308,7 @@ function CargaArcodeon(idInicial, idioma)
 
     //El idInicial es el primero (cabecera acordeón)
     //a partir de éste crear arcordeon con todos los que tengan nivel='ACORDEON'
-    // data-iconpos='left' data-theme='b' data-content-theme='b'
+    //data-iconpos='left' data-theme='b' data-content-theme='b'
     var contenidoAcordeon  = "<div data-role='collapsibleset' id='menuAcordeon' data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'>";
     var id = "";
     var bEmpezar = false;

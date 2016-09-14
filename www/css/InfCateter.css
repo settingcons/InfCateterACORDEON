@@ -20,6 +20,17 @@
     height: 100%;
     top: 0px;
 }
+
+.mi-fondoPaginaInicio{
+    background-repeat: round;
+    background-color: #FCFCFC;
+/*    text-align: justify;*/
+    width: 50%;
+    height: 50%;
+    top: 0px;
+    text-align:center;
+    vertical-align:middle;
+}
 .mi-util{
     background-color:transparent;
     padding:2px;
@@ -123,3 +134,6 @@
     font-weight:normal;
 }
 
+#miHr {
+    border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;
+}
