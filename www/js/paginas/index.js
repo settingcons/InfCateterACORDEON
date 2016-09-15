@@ -72,6 +72,9 @@ function inicio(){
     navLIFO.push("pageMENU|0|");
 
     cargaPaginaInfoCateter('es-es', 0);
+    //hgs afegit abrirPagina
+    //abrirPagina('pageMENU', '0', '');
+
     if(esIOS()) $("#liMenuSalir").attr('class', 'ui-screen-hidden');
 }
 
@@ -83,11 +86,14 @@ function Menu() {
 function Atras() {
 
     var item = "";
+
     try {
-        if (navLIFO.length > 1) {
+        if (navLIFO.length >= 1) {
+
             navLIFO.pop();
             item = navLIFO.pop();
             abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
+
         }
         else {
             salir();

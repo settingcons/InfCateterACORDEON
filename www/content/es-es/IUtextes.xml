@@ -24,7 +24,7 @@
     <label id="14">
         <txt>Fichas de preparación</txt>
     </label>
-      <label id="15">
+    <label id="15">
         <txt>Acerca de</txt>
     </label>
     <label id="16">
@@ -52,7 +52,7 @@
         <txt>Error</txt>
     </label>
     <label id="41">
-        <txt>processant arxiu XML</txt>
+        <txt>Procesando archivo XML</txt>
     </label>
     <label id="42">
         <txt>PhoneGap no está funcionando</txt>

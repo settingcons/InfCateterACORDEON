@@ -1,6 +1,7 @@
 /*HEADER*/
 .mi-cabecera{
     background-color: #A83587 !important;
+    /* background-color: #9F66A5 !important;*/
     text-shadow: none !important;
     color: #fff !important;
 }
@@ -109,7 +110,13 @@
     background-color: #8B2E75 !important;
     color:#000000;
 }
-
+.mi-titulo-menu {
+    display:block;
+    background-color: #ffffff;
+    color: #9F66A5 !important;
+    /*color:#018986 !important; /*333333*/
+    font-weight:normal;
+}
 #menuAcordeon ul{
        list-style:none;
        margin-left:0px;
@@ -127,13 +134,16 @@
        padding:0px;
        }
 
-.mi-titulo-menu {
-    display:block;
-    background-color: #ffffff;
-    color:#018986 !important; /*333333*/
-    font-weight:normal;
-}
-
 #miHr {
     border: 2px solid #666; border-radius: 200px/5px; height: 0px; text-align: center;
+}
+#divContenido {
+    /*para Firefox*/
+-moz-border-radius: 15px 15px 15px 15px;
+/*para Safari y Chrome*/
+-webkit-border-radius: 15px 15px 15px 15px;
+/* para Opera */
+border-radius: 15px 15px 15px 15px;
+/* para IE */
+behavior:url(border.htc);
 }

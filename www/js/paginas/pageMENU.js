@@ -214,7 +214,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
             else
             {
                 /*bifurcacions esquemes*/
-                sItem += "<td style='width: 100%; vertical-align: middle; '>";
+                sItem += "<td style='width: 100%; vertical-align: middle; background-color:#9F66A5 '>";
                 sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #ffffff;';>" + titol + "</font>";
             }
             if(!bAcordeon)sItem += "</a>";
