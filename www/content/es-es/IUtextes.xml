@@ -16,12 +16,21 @@
         <txt>Inicio</txt>
     </label>
     <label id="12">
-        <txt>Acerca de</txt>
+        <txt>Generalidades</txt>
     </label>
     <label id="13">
-        <txt>Info</txt>
+        <txt>Manejo de infecciones</txt>
     </label>
     <label id="14">
+        <txt>Fichas de preparación</txt>
+    </label>
+      <label id="15">
+        <txt>Acerca de</txt>
+    </label>
+    <label id="16">
+        <txt>Info</txt>
+    </label>
+    <label id="17">
         <txt>Salir</txt>
     </label>
     <label id="20">

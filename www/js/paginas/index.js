@@ -68,9 +68,6 @@ function inicio(){
     $("#menuAcerca").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(15) + "<br/>");
     $("#menuInfo").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(16) + "<br/>");
     $("#menuSalir").html(Etiqueta(17) + "<br/>");
-    //$("#menuAcerca").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(12) + "<br/>");
-    //$("#menuInfo").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(13) + "<br/>");
-    //$("#menuSalir").html(Etiqueta(14) + "<br/>");
 
     navLIFO.push("pageMENU|0|");
 
@@ -84,33 +81,32 @@ function Menu() {
 
 
 function Atras() {
+
     var item = "";
     try {
-        if (navLIFO.length >= 1) {
+        if (navLIFO.length > 1) {
             navLIFO.pop();
             item = navLIFO.pop();
             abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
-          }
+        }
         else {
             salir();
         }
     }
     catch (ex) {
-        aviso(40, -1, ex.message);
+        aviso(40, 100, ex.message);
     }
 }
 
 function abrirPagina(sPag, id, titulo) {
 
-    try
-    {
-
+    try {
         navLIFO.push(sPag + "|" + id + "|" + titulo);
 
-        $.mobile.changePage('#' + sPag, {transition: "slide"});
+        $.mobile.changePage('#' + sPag, { transition: "slide" });
 
         //Texto de body --> Titulo
-        if(typeof titulo !== "undefined") $("#tituloMenu").html(titulo);
+        if (typeof titulo !== "undefined") $("#tituloMenu").html(titulo);
 
         switch (sPag) {
             case 'pageMENU':
@@ -132,13 +128,10 @@ function abrirPagina(sPag, id, titulo) {
             case 'pageINFO':
                 $.doTimeout(1500, inicioPaginaInfo(titulo));
                 break;
-
         }
-
     }
-    catch(ex)
-    {
-        aviso(40,-1,ex.message);
+    catch (ex) {
+        aviso(40, -1, ex.message);
     }
 }
 
