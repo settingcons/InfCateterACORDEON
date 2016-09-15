@@ -95,7 +95,7 @@
     <ficAsociado>CepasSensibles.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>pdfNegativo.png</icono>
   </itemMenu>
   <itemMenu id="2212">
     <titol>Cepas BLEE (betalactamaasas de espectro extendido) o con algún tipo de carbapenemasas asociada.</titol>
@@ -143,7 +143,7 @@
     <ficAsociado>Stenotrophomonas.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>pdfNegativo.png</icono>
   </itemMenu>
   <itemMenu id="2124">
     <titol>Pseudomonas: agentes que favorezcan la destrucción del biofilm son necesarios dada la gran faciliad de este microorganismo en producirlo.</titol>

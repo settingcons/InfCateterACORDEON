@@ -147,18 +147,32 @@
         <div data-role="main" class="ui-content,mi-fondoPagina">
             <table width="98%" cellspacing="3" cellpadding="3" border="0">
                 <tr>
+                    <td style="text-align: left; width: 20%" class="mi-fondoPagina" colspan="2">
+                        <label id="labelFiltro" for="inputFiltro" style="color:#79B6B7;text-align:left;font-weight:bold;">Fármaco</label>
+                    </td>
+                </tr>
+                <!--<tr>
                     <td style="text-align: left; width: 20%" class="mi-fondoPagina">
                         <label id="labelFiltro" for="inputFiltro" style="color:#79B6B7;text-align:center;font-weight:bold;">&nbsp;&nbsp;Fármaco</label>
                     </td>
                     <td style="text-align: center; width: 80%" class="mi-fondoPagina">
-                        <input type="text" name="inputFiltro" id="inputFiltro" value=""  />
+                        <input type="text" name="inputFiltro" id="inputFiltro" value="" />
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 20%;">&nbsp;</td>
-                    <td  style="width: 80%; text-align: center; vertical-align: top;" class="mi-fondoPagina">
-                        <!--<input type="button" value="buscar"onclick="filtroFichas('es-es')" style="width: 90%" />-->
+                    <td style="width: 80%; text-align: center; vertical-align: top;" class="mi-fondoPagina">
                         <a href="#" id="botonBuscar" onclick="filtroFichas('es-es')" data-role="button" data-inline="false" data-icon="search">buscar</a>
+                    </td>
+                </tr>-->
+                <tr>
+                    <td style="text-align: center;" class="mi-fondoPagina">
+                        <input type="search" name="inputFiltro" id="inputFiltro" placeholder="Nombre fármaco...">
+                    </td>
+                    <td style="width: 20%; text-align: center;" class="mi-fondoPagina">
+                        <a href="#" id="botonBuscar" onclick="filtroFichas('es-es')" data-icon="search">
+                            <img src="images/lupa.png" width="26" height="26"/>
+                        </a>
                     </td>
                 </tr>
                 <tr>
@@ -214,13 +228,15 @@
             <div data-role="main"><br/>
                 <ul id="ulMenuLateral" class="mi-ul">
                     <li id="liMenuInicio"><a href="#" onclick="volverInicio('pageMENU',0,'');"><div><div id="menuInicio">Inicio<br/></div></div></a></li>
-                    <hr id="miHr" />
-                    <li id="liMenuGeneralidades"><a href="#" onclick="volverInicio('pageMENU',100,'Generalidades');"><div><img alt="" src="images/GeneralidadesMenu.png" width='20' height='20'><div id="menuGeneralidades">&nbsp;&nbsp;&nbsp;Generalidades<br /></div></div></a></li>
+                    <!--<hr id="miHr" />-->
                     <br />
-                    <li id="liMenuManejo"><a href="#" onclick="volverInicio('pageMENU',200,'Manejo');"><div><img alt="" src="images/ManejoMenu.png" width='20' height='20'><div id="menuManejo">&nbsp;&nbsp;&nbsp;Manejo de infecciones<br /></div></div></a></li>
+                    <li id="liMenuGeneralidades"><a href="#" onclick="inicioSellado('pageMENU', 100, 'Generalidades');"><div><img alt="" src="images/GeneralidadesMenu.png" width='20' height='20'><div id="menuGeneralidades">&nbsp;&nbsp;&nbsp;Generalidades<br /></div></div></a></li>
                     <br />
-                    <li id="liMenuFichas"><a href="#" onclick="volverInicio('pageMENU',300,'Fichas');"><div><img alt="" src="images/FichaMenu.png" width='20' height='20'><div id="menuFichas">&nbsp;&nbsp;&nbsp;Fichas de preparación<br /></div></div></a></li>
-                    <hr id="miHr" />
+                    <li id="liMenuManejo"><a href="#" onclick="inicioSellado('pageMENU', 200, 'Manejo');"><div><img alt="" src="images/ManejoMenu.png" width='20' height='20'><div id="menuManejo">&nbsp;&nbsp;&nbsp;Manejo de infecciones<br /></div></div></a></li>
+                    <br />
+                    <li id="liMenuFichas"><a href="#" onclick="inicioSellado('pageMENU', 300, 'Fichas');"><div><img alt="" src="images/FichaMenu.png" width='20' height='20'><div id="menuFichas">&nbsp;&nbsp;&nbsp;Fichas de preparación<br /></div></div></a></li>
+                    <!--<hr id="miHr" /-->>
+                    <br />
                     <li id="liMenuAcerca"><a href="#" onclick="abrirPagina('pageAYUDA',0,'Acerca de')"><div><img alt="" src="images/Acerca.png" width='20' height='20'><div id="menuAcerca">&nbsp;&nbsp;&nbsp;Acerca de<br/></div></div></a></li>
                     <br/>
                     <li id="liMenuInfo"><a href="#" onclick="abrirPagina('pageINFO',0,'Información')"><div ><img alt="" src="images/Info.png" width='20' height='20'><div id="menuInfo">&nbsp;&nbsp;&nbsp;Info<br/></div></div></a></li>

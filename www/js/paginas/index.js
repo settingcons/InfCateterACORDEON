@@ -93,7 +93,6 @@ function Atras() {
             navLIFO.pop();
             item = navLIFO.pop();
             abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
-
         }
         else {
             salir();

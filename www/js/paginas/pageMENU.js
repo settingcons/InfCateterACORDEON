@@ -122,6 +122,15 @@ function volverInicio(sPag, id, titulo){
     $("#pageMenuLateral").panel("close");
 }
 
+function inicioSellado(sPag, id, titulo) {
+    navLIFO=[];
+    navLIFO.push("pageMENU|0|");
+    abrirPagina(sPag, id, titulo);
+
+    $("#pageMenuLateral").panel("close");
+}
+
+
 function cargaPaginaInfoCateter(idioma, idPadreSel) {
     var menu = leeXML(idioma,'menu.xml');
     var img = "";
@@ -285,14 +294,14 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
             break;
 
         default:  //link al fichero PDF especificado ***********************************************
-            img = "<img src='images/" + icono + "' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
+            img = "<img src='images/" + icono + "' align='center' width='40' height='40' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             sItem += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
-            sItem += "<font style='white-space:normal;text-transform: none;color: #79B6B7'>";
+            sItem += "<font style='white-space:normal;text-transform: none;color: #79B6B7;font-weight:normal;'>&nbsp;";
             sItem += titol;
             sItem += "</font></a></td></tr></table></div></li>";
             break;
