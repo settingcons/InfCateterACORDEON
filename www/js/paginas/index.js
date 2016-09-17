@@ -88,7 +88,7 @@ function Atras() {
     var item = "";
 
     try {
-        if (navLIFO.length >= 1) {
+        if (navLIFO.length > 1) {
 
             navLIFO.pop();
             item = navLIFO.pop();
