@@ -88,8 +88,8 @@ function Atras() {
     var item = "";
 
     try {
-        if (navLIFO.length > 1) {
-
+       
+          if (navLIFO.length > 1) {
             navLIFO.pop();
             item = navLIFO.pop();
             abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);

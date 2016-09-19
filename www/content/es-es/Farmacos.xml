@@ -1,12 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <farmacos>
-    <farmaco nom="CIPROFLOXACINO 2 MG/ML">
-        <fic>Ciprofloxacino.pdf</fic>
+  <farmaco nom="Paracetamol 1gr">
+    <fic>Paracetamol.pdf</fic>
+  </farmaco>
+  <farmaco nom="GentamicinaPDF 1gr">
+    <fic>Gentamicina.pdf</fic>
+  </farmaco>
+  <farmaco nom="CiprofloxacinoPDF 1gr">
+    <fic>Ciprofloxacino.pdf</fic>
+  </farmaco>
+    <farmaco nom="Ciprofloxacino 2mg/ml">
+        <fic></fic>
     </farmaco>
-	<farmaco nom="GENTAMICINA 5 MG/ML">
-        <fic>Gentamicina.pdf</fic>
+	<farmaco nom="Gentamicina 5mg/ml">
+        <fic></fic>
     </farmaco>
-	<farmaco nom="PARACETAMOL 1 GR">
-        <fic>Paracetamol.pdf</fic>
+  <farmaco nom="Amikacina 2,5mg/ml">
+    <fic></fic>
+  </farmaco>
+	<farmaco nom="Cefazolina 5mg/ml + heparina 2500 UI/ml">
+        <fic></fic>
     </farmaco>
+  <farmaco nom="Ceftazidima 5mg/ml">
+    <fic></fic>
+  </farmaco>
+  <farmaco nom="Vancomicina 5mg/ml">
+    <fic></fic>
+  </farmaco>
+  <farmaco nom="Vancomicina 5mg/ml y heparina 4500 UI/mL">
+    <fic></fic>
+  </farmaco>
+  <farmaco nom="Daptomicina 3,5 mg/ml + heparina 100 ui/ml en Ringer Lactato">
+    <fic></fic>
+  </farmaco>
+  <farmaco nom="Colistina 2mg/ml y heparina 100ui/ml">
+    <fic></fic>
+  </farmaco>
+  <farmaco nom="Etanol 70º">
+    <fic></fic>
+  </farmaco>
 </farmacos>

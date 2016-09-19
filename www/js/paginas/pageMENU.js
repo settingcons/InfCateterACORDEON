@@ -56,6 +56,8 @@ function paginaInfoTXT(idioma,id, titulo){
     }
 }
 
+
+
 function paginaFiltroFichas(idioma,id, titulo) {
     abrirPagina("pageFiltro",false,titulo);
 }
@@ -63,7 +65,7 @@ function paginaFiltroFichas(idioma,id, titulo) {
 function inicioPaginaFiltro(titulo) {
     $('#divTituloFiltro').html(titulo);
     $('#labelFiltro').html(Etiqueta(20));
-    $('#botonBuscar').text(Etiqueta(21));
+   /* $('#botonBuscar').text(Etiqueta(21));*/
     $("#ulFichas").empty();
 }
 
@@ -73,6 +75,8 @@ function filtroFichas(idioma){
     var fic = "";
     var sFiltro = $("#inputFiltro").val().toUpperCase();
     var img = "";
+    var farmacoEncontrado = "";
+    var descripcionFicha = "";
 
     $("#ulFichas").empty();
 
@@ -82,19 +86,37 @@ function filtroFichas(idioma){
         $(xmlFic).find('farmacos').each(function () {
             $(this).find('farmaco').each(function () {
                 nomFarmaco = $(this).attr('nom').toUpperCase();
-                if(nomFarmaco.indexOf(sFiltro) != -1) {
+                farmacoEncontrado = $(this).attr('nom');
+                if (nomFarmaco.indexOf(sFiltro) != -1) {
+                    
                     fic = $(this).find('fic').text();
-                    img = "<img src='images/pdf.png' onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >";
-                    items += "<li>";
-                    items += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-                    items += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
-                    items += img;
-                    items += "</td><td style='width: 95%; vertical-align: middle;'>";
-                    items += "<a href='#' style='color:#6A9EA0;text-decoration:none;text-transform: none;' onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >";
-                    items += "<font style='white-space:normal;'>";
-                    items += nomFarmaco;
-                    items += "</font></a></td></tr></table></div></li>";
-                    /*antes : items += "<li><a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >" + nomFarmaco + "</a></li>";*/
+
+                    if (fic.length > 1) {
+                        img = "<img src='images/pdf.png'  align='center' width='30' height='30'  onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >";
+                        items += "<li>";
+                        items += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
+                        items += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
+                        items += img;
+                        items += "</td><td style='width: 95%; vertical-align: middle;'>";
+                        items += "<a href='#' style='color:#6A9EA0;text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >";
+                        items += "<font style='white-space:normal;text-transform: none !important;color: #79B6B7;font-weight:normal;'>&nbsp;";
+                        items += farmacoEncontrado;
+                        items += "</font></a></td></tr></table></div></li>";
+                        /*antes : items += "<li><a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >" + nomFarmaco + "</a></li>";*/
+                    }
+                    else {
+                        img = "<img src='images/dossier.png' width='30' height='30' onclick=\"paginaInfoTXT('" + idioma + "','" + farmacoEncontrado + "','" + farmacoEncontrado + "')\">";
+                        items += "<li>";
+                        items += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
+                        items += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
+                        items += img;
+                        items += "</td><td style='width: 95%; vertical-align: middle;'>";
+                        items += "<a href='#' style='color:#6A9EA0;text-decoration:none;'  onclick=\"paginaInfoTXT('" + idioma + "','" + farmacoEncontrado + "','" + farmacoEncontrado + "')\" >";
+                        items += "<font style='white-space:normal;text-transform: none !important;color: #79B6B7;font-weight:normal;'>&nbsp;";
+                        items += farmacoEncontrado;
+                        items += "</font></a></td></tr></table></div></li>";
+
+                    }
                 }
             });
         });
@@ -129,7 +151,6 @@ function inicioSellado(sPag, id, titulo) {
 
     $("#pageMenuLateral").panel("close");
 }
-
 
 function cargaPaginaInfoCateter(idioma, idPadreSel) {
     var menu = leeXML(idioma,'menu.xml');
@@ -218,7 +239,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
                 sItem += "<td style='width: 5%; vertical-align: middle; text-align: left;'>" + img + "</td>";
                 sItem += "<td style='width: 95%; vertical-align: middle;'>";
                 sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
-                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none;color: #79B6B7'';>&nbsp;" + titol + "</font>";
+                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none;color: #79B6B7;'>&nbsp;" + titol + "</font>";
             }
             else
             {
@@ -255,7 +276,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
             break;
 
         case 'TXT':  //link a un Texto de Textes.xml ***********************************************
-            img = "<img src='images/" + icono + "' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + titol + "')\">";
+            img = "<img src='images/" + icono + "'  width='30' height='30' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + titol + "')\">";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
@@ -269,7 +290,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
 
         case '':  //no hay link, es sólo para leer *************************************************
             /*ultim nivell esquema*/
-            img = "<img src='images/" + icono + "'>";
+            img = "<img src='images/" + icono + "'  width='30' height='30'>";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
@@ -431,7 +452,3 @@ function CargaArcodeon(idInicial, idioma)
         });
     });
 }
-
-
-
-

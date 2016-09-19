@@ -90,7 +90,7 @@
     <icono></icono>
   </itemMenu>
   <itemMenu id="2211">
-    <titol>Cepas sensibles: amiklacina 2mg/ml, gentamicina 5mg/mo o ciprofloxacino 2mg/ml</titol>
+    <titol>Cepas sensibles: amikacina 2mg/ml, gentamicina 5mg/mo o ciprofloxacino 2mg/ml</titol>
     <idPadre>2110</idPadre>
     <ficAsociado>CepasSensibles.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
@@ -191,7 +191,7 @@
     <ficAsociado>vancomicina.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2212">
     <titol>Alternativa: teicoplanina, daptomicina</titol>
@@ -384,7 +384,6 @@
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
   </itemMenu>
-
   <itemMenu  id="300">
     <titol>Fichas de preparación</titol>
     <idPadre>0</idPadre>
