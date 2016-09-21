@@ -105,13 +105,23 @@ function Atras() {
 
 function abrirPagina(sPag, id, titulo) {
 
+    var nomApp = "Información Sellado Catéter";
     try {
         navLIFO.push(sPag + "|" + id + "|" + titulo);
 
         $.mobile.changePage('#' + sPag, { transition: "slide" });
 
         //Texto de body --> Titulo
-        if (typeof titulo !== "undefined") $("#tituloMenu").html(titulo);
+        //  if (typeof titulo !== "undefined") $("#tituloMenu").html(titulo);
+        if (typeof titulo !== "undefined")
+        {
+            if (titulo!=="")
+                $("#txtHeaderTitulo").html(titulo);
+            else
+                $("#txtHeaderTitulo").html(nomApp);
+        }
+     
+
 
         switch (sPag) {
             case 'pageMENU':

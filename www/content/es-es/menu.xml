@@ -87,7 +87,7 @@
     <ficAsociado></ficAsociado>
     <nivel>INI-ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2211">
     <titol>Cepas sensibles: amikacina 2mg/ml, gentamicina 5mg/mo o ciprofloxacino 2mg/ml</titol>
@@ -95,7 +95,7 @@
     <ficAsociado>CepasSensibles.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdfNegativo.png</icono>
+    <icono>pdf.png</icono>
   </itemMenu>
   <itemMenu id="2212">
     <titol>Cepas BLEE (betalactamaasas de espectro extendido) o con algún tipo de carbapenemasas asociada.</titol>
@@ -119,7 +119,7 @@
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2121">
     <titol>De forma general se deberá retirar el catéter.</titol>
@@ -143,7 +143,7 @@
     <ficAsociado>Stenotrophomonas.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdfNegativo.png</icono>
+    <icono>pdf.png</icono>
   </itemMenu>
   <itemMenu id="2124">
     <titol>Pseudomonas: agentes que favorezcan la destrucción del biofilm son necesarios dada la gran faciliad de este microorganismo en producirlo.</titol>
@@ -183,7 +183,7 @@
     <ficAsociado></ficAsociado>
     <nivel>INI-ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2211">
     <titol>Vancomicina: salvar catéter en 84% de los casos</titol>
@@ -215,7 +215,7 @@
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2221">
     <titol>Solo debe sellarse el catéter en circunstancias especiales enumeradas anteriormente</titol>
@@ -231,7 +231,7 @@
     <ficAsociado>cefazolina.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2223">
     <titol>SARM - vancomicina o teicoplanina</titol>
@@ -239,7 +239,7 @@
     <ficAsociado>teicoplanina.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2224">
     <titol>AB con actividad antibofilms pueden emplearse en el tratamiento de SA como Daptomicina y la tigeciclina</titol>
@@ -247,7 +247,7 @@
     <ficAsociado>Daptomicina.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2230">
     <titol>E.faecalis</titol>
@@ -255,7 +255,7 @@
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2231">
     <titol>Ampicilina</titol>
@@ -263,7 +263,7 @@
     <ficAsociado>Ampicilina</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2240">
     <titol>E.faecium</titol>
@@ -271,7 +271,7 @@
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2241">
     <titol>vancomicina</titol>
@@ -279,7 +279,7 @@
     <ficAsociado>vancomicina.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2242">
     <titol>alternativas (en caso de resistencia vanco):daptomicina,linezolid, teicoplanina</titol>
@@ -287,7 +287,7 @@
     <ficAsociado>linezolid.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2243">
     <titol>vancomicina 2mg/ml + gentamicina 2mg/ml</titol>
@@ -295,7 +295,7 @@
     <ficAsociado>gentamicina.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2250">
     <titol>Bacillus sp, Micrococcus sp o Propionibacterium</titol>
@@ -303,7 +303,7 @@
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2251">
     <titol>especies menos virulentas pero dificiles de eliminar - retirada del catéter</titol>
@@ -342,7 +342,7 @@
     <ficAsociado></ficAsociado>
     <nivel>INI-ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2311">
     <titol>AnfB-deoxicolato 2mg/mL o 2.5mg/ml 12h dos veces al dia</titol>
@@ -374,7 +374,7 @@
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2321">
     <titol>Caspofungina 3.33 mg/mL 12h</titol>

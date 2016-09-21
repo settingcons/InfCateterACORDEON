@@ -57,7 +57,6 @@ function paginaInfoTXT(idioma,id, titulo){
 }
 
 
-
 function paginaFiltroFichas(idioma,id, titulo) {
     abrirPagina("pageFiltro",false,titulo);
 }
@@ -105,7 +104,7 @@ function filtroFichas(idioma){
                         /*antes : items += "<li><a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >" + nomFarmaco + "</a></li>";*/
                     }
                     else {
-                        img = "<img src='images/dossier.png' width='30' height='30' onclick=\"paginaInfoTXT('" + idioma + "','" + farmacoEncontrado + "','" + farmacoEncontrado + "')\">";
+                        img = "<img src='images/dossier.png' width='20' height='20' onclick=\"paginaInfoTXT('" + idioma + "','" + farmacoEncontrado + "','" + farmacoEncontrado + "')\">";
                         items += "<li>";
                         items += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
                         items += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
@@ -115,7 +114,6 @@ function filtroFichas(idioma){
                         items += "<font style='white-space:normal;text-transform: none !important;color: #79B6B7;font-weight:normal;'>&nbsp;";
                         items += farmacoEncontrado;
                         items += "</font></a></td></tr></table></div></li>";
-
                     }
                 }
             });
@@ -290,7 +288,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
 
         case '':  //no hay link, es sólo para leer *************************************************
             /*ultim nivell esquema*/
-            img = "<img src='images/" + icono + "'  width='30' height='30'>";
+            img = "<img src='images/" + icono + "' width='20' height='20'>";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
@@ -315,7 +313,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono){
             break;
 
         default:  //link al fichero PDF especificado ***********************************************
-            img = "<img src='images/" + icono + "' align='center' width='40' height='40' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
+            img = "<img src='images/" + icono + "' align='center' width='30' height='30' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
