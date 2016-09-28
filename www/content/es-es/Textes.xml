@@ -11,7 +11,8 @@
         ]]></p></txt>
     </itemMenu>
     <itemMenu id="120">
-        <txt><![CDATA[
+        <txt>
+          <![CDATA[
             <p>Basándose en informes anteriores y la opinión de expertos, la Infectious Diseases Society of America (IDSA) ha publicado recomendaciones (19) principalmente de clase B/C II o III resumidas en la tabla 1. La evidencia disponible sugiere que el SAC puede estar justificado tanto en pacientes con indicación de permanencia de catéter como en aquellos de difícil reemplazo, con hemocultivos negativos en 48-72 horas, sin signos de complicaciones metastásicas, microorganismos tratables, y pacientes hemodinámicamente estables. </p>
             <p><font size="2">Tabla 1. Acreditación del resumen de recomendaciones para el diagnóstico y manejo de infecciones relacionadas con catéteres intravasculares</font></p>
             <p>
@@ -21,7 +22,13 @@
                     <tr><td colspan=4><b>Sellado antibiótico de catéter (SAC)</b></td></tr>
                     <tr style='vertical-align:top;'><td>68</td><td>SAC está indicado en infecciones de catéter sin signos de salida o infección catéter tunelizado con intención de mantenerlo</td><td>B-II</td><td>(20, 21)</td></tr>
                     <tr style='vertical-align:top;'><td>69</td><td>SAC no debe utilizarse solo, debe conbinarse con terapia antimicrobiana concomitantemente durante 7-14 días</td><td>B-II</td><td>(20, 21)</td></tr>
-                </table>
+                    <tr style='vertical-align:top;'><td rowspan="2">70</td><td>El recambio de SAC no debe exceder las 48h, preferentemente debe cambiarse cada 24h para pacientes ambulatorios con catéter femoral (B-II)</td><td>B-II</td><td>(22)</td></tr>
+                    <tr style='vertical-align:top;'><td>En pacientes sometidos a hemodiálsisi, el SAC puede renovarse cada sesión de diálisis</td><td>B-II</td><td>(22)</td></tr>
+                    <tr style='vertical-align:top;'><td>71</td><td>Se recomienda la retirada de catéter en infecciones por S.aureus y Candida, en lugar de SAC y mantenimiento del mismo, a menos que haya circunstancias especiales (por ejemplo, no hay alternativa al sitio de inserción de catéter)</td><td>A-II</td><td>(23,20)</td></tr>
+                    <tr style='vertical-align:top;'><td>72</td><td>Pacientes con múltiples hemocultivos positivos de SCN y bacilos gram-negativos, con periféricos negativos, el SAC puede administrarse sin terapia antibiótica sistémica durante 10-14 días</td><td>B-III</td><td>(20, 21)</td></tr>
+                    <tr style='vertical-align:top;'><td>73</td><td>SAC de vancomicina debe tener una concentración de almenos 1000 veces la MIC del microorganismo implicado</td><td>B-II</td><td>(24)</td></tr>
+                    <tr style='vertical-align:top;'><td>74</td><td>Actualmente no hay datos suficientes que apoyen un SAC con etanol en pacientes con bacteriemias relacionadas con catéter.</td><td>C-III</td><td>(25)</td></tr>
+                 </table>
             </p>
         ]]></txt>
     </itemMenu>
@@ -100,7 +107,7 @@
       </ul></p>
     ]]></txt>
   </itemMenu>
- <itemMenu  id="Ciprofloxacino 2mg/ml">
+ <itemMenu  id="4">
         <txt><p>
           <![CDATA[
         <p>ESPECTRO DE ACCIÓN: Bacilos Gram negativos</p>
@@ -117,7 +124,7 @@
         <p>La dilución de ciprofloxacino 2mg/ml, tiene estabilida<d 9 dias en nevera. Proteger los viales de la luz.</p>
       ]]></p></txt>
     </itemMenu>
- <itemMenu  id="Gentamicina 5mg/ml">
+ <itemMenu  id="5">
         <txt><p>
           <![CDATA[
         <p>ESPECTRO DE ACCIÓN: Bacilos Gram negativos</p>
@@ -134,7 +141,7 @@
         <p>La dilución de gentamicina 5mg/ml, tiene estabilida<d 9 dias en nevera. Proteger los viales de la luz.</p>
       ]]></p></txt>
     </itemMenu>
- <itemMenu  id="Amikacina 2,5mg/ml">
+ <itemMenu  id="6">
         <txt><p>
           <![CDATA[
         <p>ESPECTRO DE ACCIÓN: Bacilos Gram negativos</p>
@@ -151,7 +158,7 @@
         <p>La dilución de amikacina 2,5mg/mL, tiene estabilida<d 9 dias en nevera. Proteger los viales de la luz.</p>
       ]]></p></txt>
     </itemMenu>
- <itemMenu  id="Cefazolina 5mg/ml + heparina 2500 UI/ml">
+ <itemMenu  id="7">
         <txt><p>
           <![CDATA[
         <p>ESPECTRO DE ACCIÓN: <i>S aureus</i> sensible a meticilina</p>
@@ -169,7 +176,7 @@
         <p>La dilución de cefazolina 5mg/mL y heparina 2500UI/mL, tiene estabilida<d 72h temperatura ambiente.</p>
       ]]></p></txt>
     </itemMenu>
- <itemMenu  id="Ceftazidima 5mg/ml">
+ <itemMenu  id="8">
         <txt><p>
           <![CDATA[
         <p>ESPECTRO DE ACCIÓN: Bacilos Gram negativos</p>
@@ -186,7 +193,7 @@
         <p>La dilución de ceftazidima 5mg/mL tiene estabilida<d 9 días en nevera. Proteger los viales de la luz.</p>
       ]]></p></txt>
     </itemMenu>
-<itemMenu  id="Vancomicina 5mg/ml">
+<itemMenu  id="9">
         <txt><p>
           <![CDATA[
         <p>ESPECTRO DE ACCIÓN: S aureus meticilin resistente y Staphylococcus coagulasa negativos</p>
@@ -203,7 +210,7 @@
         <p>La dilución de vancomicina 5mg/mL tiene estabilida<d 9 días en nevera. Proteger los viales de la luz.</p>
       ]]></p></txt>
     </itemMenu>
-<itemMenu  id="Vancomicina 5mg/ml y heparina 4500 UI/mL">
+<itemMenu  id="10">
         <txt><p>
           <![CDATA[
         <p>ESPECTRO DE ACCIÓN: S aureus meticilin resistente y Staphylococcus coagulasa negativos</p>
@@ -221,7 +228,7 @@
         <p><u>Nota:</u> aunque <i>Justo et al</i>referencian compatibilidad física de la mezcla durante 72h a 37ºC y otros autores referencian desaparición del precipitado bajo agitación, no parece recomendable su preparación con antelación</p>
       ]]></p></txt>
     </itemMenu>
-<itemMenu  id="Daptomicina 3,5 mg/ml + heparina 100 ui/ml en Ringer Lactato">
+<itemMenu  id="11">
         <txt><p>
           <![CDATA[
         <p>ESPECTRO DE ACCIÓN: S aureus meticilin resistente y Staphylococcus coagulasa negativos</p>
@@ -238,7 +245,7 @@
         <p>La mezcla de daptomicina + heparina acondicionada en jeringas de 5 ml es estable 24 horas a Tª ambiente y conservación en frigorífico hasta su uso. En concentraciones de 5 mg/ml de daptomicina es estable entre 2-8ºC durante al menos 14 días</p>
       ]]></p></txt>
     </itemMenu>
-<itemMenu  id="Colistina 2mg/ml y heparina 100ui/ml">
+<itemMenu  id="12">
         <txt><p>
           <![CDATA[
         <p><b>PREPARACION:</b></p>
@@ -254,7 +261,7 @@
         <p>La mezcla de colistimetato y heparina se administrará el mismo día de su preparación. Conservar entre 2-8ºC</p>
       ]]></p></txt>
     </itemMenu>
-<itemMenu  id="Etanol 70º">
+<itemMenu  id="13">
         <txt><p>
           <![CDATA[
         <p><b>PREPARACION:</b></p>

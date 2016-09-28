@@ -1,42 +1,55 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <farmacos>
-  <farmaco nom="Paracetamol 1gr">
+  <farmaco id="1">
+    <nom>Paracetamol 1gr</nom>
     <fic>Paracetamol.pdf</fic>
   </farmaco>
-  <farmaco nom="GentamicinaPDF 1gr">
+  <farmaco id="2">
+    <nom>GentamicinaPDF 1gr</nom>
     <fic>Gentamicina.pdf</fic>
   </farmaco>
-  <farmaco nom="CiprofloxacinoPDF 1gr">
+  <farmaco id="3">
+    <nom>CiprofloxacinoPDF 1gr</nom>
     <fic>Ciprofloxacino.pdf</fic>
   </farmaco>
-    <farmaco nom="Ciprofloxacino 2mg/ml">
+    <farmaco id="4">
+      <nom>Ciprofloxacino 2mg/ml</nom>
         <fic></fic>
     </farmaco>
-	<farmaco nom="Gentamicina 5mg/ml">
+	<farmaco id="5">
+    <nom>Gentamicina 5mg/ml</nom>
         <fic></fic>
     </farmaco>
-  <farmaco nom="Amikacina 2,5mg/ml">
+  <farmaco id="6">
+    <nom>Amikacina 2,5mg/ml</nom>
     <fic></fic>
   </farmaco>
-	<farmaco nom="Cefazolina 5mg/ml + heparina 2500 UI/ml">
+	<farmaco id="7">
+    <nom>Cefazolina 5mg/ml + heparina 2500 UI/ml</nom>
         <fic></fic>
     </farmaco>
-  <farmaco nom="Ceftazidima 5mg/ml">
+  <farmaco id="8">
+    <nom>Ceftazidima 5mg/ml</nom>
     <fic></fic>
   </farmaco>
-  <farmaco nom="Vancomicina 5mg/ml">
+  <farmaco id="9">
+    <nom>Vancomicina 5mg/ml</nom>
     <fic></fic>
   </farmaco>
-  <farmaco nom="Vancomicina 5mg/ml y heparina 4500 UI/mL">
+  <farmaco id="10">
+    <nom>Vancomicina 5mg/ml y heparina 4500 UI/mL</nom>
     <fic></fic>
   </farmaco>
-  <farmaco nom="Daptomicina 3,5 mg/ml + heparina 100 ui/ml en Ringer Lactato">
+  <farmaco id="11">
+    <nom>Daptomicina 3,5 mg/ml + heparina 100 ui/ml en Ringer Lactato</nom>
     <fic></fic>
   </farmaco>
-  <farmaco nom="Colistina 2mg/ml y heparina 100ui/ml">
+  <farmaco id="12">
+    <nom>Colistina 2mg/ml y heparina 100ui/ml</nom>
     <fic></fic>
   </farmaco>
-  <farmaco nom="Etanol 70º">
+  <farmaco id="13">
+    <nom>Etanol 70º</nom>
     <fic></fic>
   </farmaco>
 </farmacos>

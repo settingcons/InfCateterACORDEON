@@ -16,19 +16,6 @@
         <link href="css/jquery.mobile.datebox-1.0.1.min.css" rel="stylesheet" type="text/css" />
         <link href="css/jquery.mobile.datepicker.css" rel="stylesheet" type="text/css" />
 
-<!-- IC
-        <link href="css/rutas.css" rel="stylesheet" />
-        <link href="css/utiles.css" rel="stylesheet" />
-        <link href="css/pageini.css" rel="stylesheet" />
-        <link href="css/utiles_320.css" rel="stylesheet" media="only screen and  (max-width : 320px) , only screen and  (max-device-width : 320px) " />
-        <link href="css/utiles_320.css" rel="stylesheet" media="only screen and  (min-width : 320px) and (orientation: portrait), only screen and  (min-width : 480px) and (orientation: landscape)" />
-        <link href="css/utiles_360.css" rel="stylesheet" media="only screen and  (min-width : 360px) and (orientation: portrait), only screen and  (min-width : 640px) and (orientation: landscape)"/>
-        <link href="css/utiles_480.css" rel="stylesheet" media="only screen and  (min-width : 480px) and (orientation: portrait), only screen and  (min-width : 800px) and (orientation: landscape)"/>
-        <link href="css/utiles_600.css" rel="stylesheet" media="only screen and  (min-width : 540px) and (orientation: portrait),only screen and  (min-width : 960px) and (orientation: landscape)"/>
-        <link href="css/utiles_768.css" rel="stylesheet" media="only screen and  (min-width : 600px) and (orientation: portrait),only screen and  (min-width : 1024px) and (orientation: landscape)"/>
-        &lt;!&ndash;<link href="css/utiles_768.css" rel="stylesheet" media="screen and  (min-width : 768px) and (orientation: portrait), screen and  (min-width : 1024px) and (orientation: landscape)"/>&ndash;&gt;
-        <link href="css/utiles_800.css" rel="stylesheet" media="only screen and  (min-width : 800px) and (orientation: portrait), only screen and  (min-width : 1280px) and (orientation: landscape)"/>
--->
 
         <link rel="stylesheet" href="css/InfCateter.css" type="text/css">
 
@@ -39,60 +26,17 @@
         <script src="js/jquery/jquery.mobile.datebox-1.0.1.min.js" type="text/javascript"></script>
         <script src="js/jquery/jquery.ba-dotimeout.min.js" type="text/javascript"></script>
         <script src="js/jquery/slidervertical.js" type="text/javascript"></script>
-<!--  IC      <script src="js/jquery/jquery.ui.datepicker.js" type="text/javascript"></script>-->
-<!--  IC      <script src="js/jquery/diagnostic.js" type="text/javascript"></script>-->
-<!--  IC      <script src="js/jquery/Cache.js" type="text/javascript"></script>-->
 
         <!-- Base de dades (localStorage) -->
         <script src="js/jquery/jstorage.js" type="text/javascript"></script>
 
-        <!-- clases -->
-<!-- IC
-        <script src="js/clases/clEntradaKm.js" type="text/javascript"></script>
-        <script src="js/clases/clNotificacion.js" type="text/javascript"></script>
-        <script src="js/clases/clRuta.js" type="text/javascript"></script>
-        <script src="js/clases/clRutaPunto.js" type="text/javascript"></script>
-        <script src="js/clases/clTexto.js" type="text/javascript"></script>
-        <script src="js/clases/clUsuario.js" type="text/javascript"></script>
-        <script src="js/clases/clVehiculoFlota.js" type="text/javascript"></script>
-        <script src="js/clases/clVehiculoPropio.js" type="text/javascript"></script>
--->
-
-        <!-- Negocio  -->
-<!-- IC
-        <script src="js/negocio/BDSQLite.js" type="text/javascript"></script>
-        <script src="js/negocio/baseDatos.js" type="text/javascript"></script>
-        <script src="js/negocio/variables.js" type="text/javascript"></script>
-        <script src="js/negocio/mapa.js" type="text/javascript"></script>
-        <script src="js/negocio/AtencionCliente.js" type="text/javascript"></script>
-        <script src="js/negocio/nentradakm.js" type="text/javascript"></script>
-        <script src="js/negocio/ntextos.js" type="text/javascript"></script>
-        <script src="js/negocio/nusuarios.js" type="text/javascript"></script>
-        <script src="js/negocio/selvehiculos.js" type="text/javascript"></script>
--->
-
-        <!-- Paginas  -->
-<!-- IC
-        <script src="js/paginas/pageInicio.js" type="text/javascript"></script>
-        <script src="js/paginas/pageCapturaRuta.js" type="text/javascript"></script>
-        <script src="js/paginas/pageListaRutas.js" type="text/javascript"></script>
-        <script src="js/paginas/pageConsultaRutas.js" type="text/javascript"></script>
-        <script src="js/paginas/pageDatosConductor.js" type="text/javascript"></script>
-        <script src="js/paginas/pageEntradaKm.js" type="text/javascript"></script>
-        <script src="js/paginas/pageRevisionKm.js" type="text/javascript"></script>
-        <script src="js/paginas/pageNotificacion.js" type="text/javascript"></script>
-        <script src="js/paginas/pageFichaRuta.js" type="text/javascript"></script>
-        <script src="js/paginas/pageEditarRuta.js" type="text/javascript"></script>
-        <script src="js/paginas/pageDatosVehiculo.js" type="text/javascript"></script>
-        <script src="js/paginas/pageResultados.js" type="text/javascript"></script>
--->
 
         <script src="js/negocio/utilidades.js" type="text/javascript"></script>
         <script src="js/paginas/pageMENU.js" type="text/javascript"></script>
 
     </head>
-
-    <body style="margin: auto; width: 100%;">
+<!--style="margin: auto; width: 100%;"-->
+    <body>
 
     <!-- Página PRINCIPAL : CONTENIDO ÁRBOL nivel 0 **************************************************************** -->
     <div data-role="page" id="pageMENU" class="mi-fondoPagina" >
@@ -119,6 +63,16 @@
             <div data-role="content" data-theme="c" class="mi-fondoPagina" style="width: 95%" >
                 <ul data-role="listview" data-inset="true" id="ulMenu" ></ul>
             </div>
+        </div>
+
+
+    </div>
+
+    <!--Popup mostrar fichas del esquema *************************************************************************** -->
+    <!-- data-role="dialog" -->
+    <div id="popupBasic" data-role="popup">
+        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
+        <div id="changehere">
         </div>
     </div>
 
@@ -150,20 +104,7 @@
                         <label id="labelFiltro" for="inputFiltro" style="color:#79B6B7;text-align:left;font-weight:bold;">Fármaco</label>
                     </td>
                 </tr>
-                <!--<tr>
-                    <td style="text-align: left; width: 20%" class="mi-fondoPagina">
-                        <label id="labelFiltro" for="inputFiltro" style="color:#79B6B7;text-align:center;font-weight:bold;">&nbsp;&nbsp;Fármaco</label>
-                    </td>
-                    <td style="text-align: center; width: 80%" class="mi-fondoPagina">
-                        <input type="text" name="inputFiltro" id="inputFiltro" value="" />
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 20%;">&nbsp;</td>
-                    <td style="width: 80%; text-align: center; vertical-align: top;" class="mi-fondoPagina">
-                        <a href="#" id="botonBuscar" onclick="filtroFichas('es-es')" data-role="button" data-inline="false" data-icon="search">buscar</a>
-                    </td>
-                </tr>-->
+
                 <tr>
                     <td style="text-align: center;" class="mi-fondoPagina">
                         <input type="search" name="inputFiltro" id="inputFiltro" placeholder="Nombre fármaco...">
@@ -215,7 +156,6 @@
         </div>
 
     </div>
-
 
     <!--Página que muestra el menu lateral *************************************************************************--> 
     <div data-role="panel" id="pageMenuLateral" data-theme="none" data-display="overlay" data-position="right" style="top:0px;bottom:1px;background-color:#f3f3f3;">
@@ -304,13 +244,11 @@
 
     </div>
 
-        
-        
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/paginas/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/paginas/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
 
     </body>
 </html>

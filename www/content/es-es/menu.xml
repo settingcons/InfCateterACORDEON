@@ -3,6 +3,7 @@
 <itemMenu id="100">
     <titol>Generalidades del sellado del catéter</titol>
     <idPadre>0</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>0</nivel>
     <esPadre>1</esPadre>
@@ -11,6 +12,7 @@
   <itemMenu  id="110">
     <titol>Generalidades</titol>
     <idPadre>100</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
@@ -19,6 +21,7 @@
   <itemMenu id="120">
     <titol>Guidelines</titol>
     <idPadre>100</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
@@ -27,6 +30,7 @@
   <itemMenu  id="130">
     <titol>Técnica</titol>
     <idPadre>100</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
@@ -35,6 +39,7 @@
   <itemMenu  id="140">
     <titol>Duración</titol>
     <idPadre>100</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
@@ -43,6 +48,7 @@
   <itemMenu  id="150">
     <titol>Reacciones adversas relacionadas</titol>
     <idPadre>100</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
@@ -51,6 +57,7 @@
   <itemMenu  id="160">
     <titol>Conclusiones</titol>
     <idPadre>100</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
@@ -60,6 +67,7 @@
   <itemMenu  id="200">
     <titol>Manejo de infecciones asociadas a catéteres</titol>
     <idPadre>0</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>0</nivel>
     <esPadre>1</esPadre>
@@ -68,6 +76,7 @@
   <itemMenu  id="205">
     <titol>Bacterias gram negativas</titol>
     <idPadre>200</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>1</nivel>
     <esPadre>1</esPadre>
@@ -76,6 +85,7 @@
   <itemMenu  id="210">
     <titol>Sellado de catéter gram negativos</titol>
     <idPadre>205</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>2</nivel>
     <esPadre>0</esPadre>
@@ -84,30 +94,34 @@
   <itemMenu id="2110">
     <titol>BGN fermentadores: con más frecuencia aislamientos de E.coli, Klebsiella pneumanor, Enterobacter.</titol>
     <idPadre>205</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>INI-ACORDEON</nivel>
     <esPadre>1</esPadre>
     <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2211">
-    <titol>Cepas sensibles: amikacina 2mg/ml, gentamicina 5mg/mo o ciprofloxacino 2mg/ml</titol>
+    <titol>Cepas sensibles: amikacina 2mg/ml |TXT,6| gentamicina 5mg/ml |PDF,Gentamicina.pdf| ciprofloxacino 2mg/ml |PDF,Ciprofloxacino.pdf|.</titol>
     <idPadre>2110</idPadre>
-    <ficAsociado>CepasSensibles.pdf</ficAsociado>
+    <idFarmaco></idFarmaco>
+    <ficAsociado>POPUP</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2212">
     <titol>Cepas BLEE (betalactamaasas de espectro extendido) o con algún tipo de carbapenemasas asociada.</titol>
     <idPadre>2110</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
-    <icono></icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2213">
     <titol>La indicación de retirada de mismo parece claro.</titol>
     <idPadre>2212</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -116,6 +130,7 @@
   <itemMenu id="2120">
     <titol>BGN no fermentadores: es frecuente encontrarnos cepas de Acinetobactersp. y Stenotrophomonas maltophilia y Pseudomonas.</titol>
     <idPadre>205</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
@@ -124,6 +139,7 @@
   <itemMenu id="2121">
     <titol>De forma general se deberá retirar el catéter.</titol>
     <idPadre>2120</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -132,31 +148,34 @@
   <itemMenu id="2122">
     <titol>Si no está recomendada la retirada se deberá seleccionar antibiótico según antibiograma y un agente que favorezcan la destrucción del biofilm como pueden ser la heparina, N-acetilcisteina, EDTA, etc.</titol>
     <idPadre>2120</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
     <icono></icono>
   </itemMenu>
   <itemMenu id="2123">
-    <titol>Stenotrophomonas maltophilia:ceztazidima o ciprofloxacino</titol>
+    <titol>Stenotrophomonas maltophilia:ceftazidima |TXT,8| ciprofloxacino |PDF,Ciprofloxacino.pdf|.</titol>
     <idPadre>2122</idPadre>
-    <ficAsociado>Stenotrophomonas.pdf</ficAsociado>
+    <idFarmaco></idFarmaco>
+    <ficAsociado>POPUP</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>pdf.png</icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2124">
     <titol>Pseudomonas: agentes que favorezcan la destrucción del biofilm son necesarios dada la gran faciliad de este microorganismo en producirlo.</titol>
     <idPadre>2122</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>Pseudomonas.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
   </itemMenu>
-
   <itemMenu id="215">
     <titol>Bacterias gram positivas</titol>
     <idPadre>200</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>1</nivel>
     <esPadre>1</esPadre>
@@ -165,21 +184,16 @@
   <itemMenu id="220">
     <titol>Sellado de catéter gram positivos</titol>
     <idPadre>215</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
     <icono>text.png</icono>
   </itemMenu>
-<!--  <itemMenu id="2200">
-    <titol>Gram positivos</titol>
-    <idPadre>215</idPadre>
-    <ficAsociado></ficAsociado>
-    <nivel>2</nivel>
-    <esPadre>1</esPadre>
-  </itemMenu>-->
   <itemMenu id="2210">
     <titol>SCN</titol>
     <idPadre>215</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>INI-ACORDEON</nivel>
     <esPadre>1</esPadre>
@@ -188,7 +202,8 @@
   <itemMenu id="2211">
     <titol>Vancomicina: salvar catéter en 84% de los casos</titol>
     <idPadre>2210</idPadre>
-    <ficAsociado>vancomicina.pdf</ficAsociado>
+    <idFarmaco>9</idFarmaco>
+    <ficAsociado>TXT</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>dossier.png</icono>
@@ -196,6 +211,7 @@
   <itemMenu id="2212">
     <titol>Alternativa: teicoplanina, daptomicina</titol>
     <idPadre>2210</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -204,6 +220,7 @@
   <itemMenu id="2213">
     <titol>Estafilococos sensibles a la meticilina - cefazolina</titol>
     <idPadre>2210</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -212,6 +229,7 @@
   <itemMenu id="2220">
     <titol>S.aureus</titol>
     <idPadre>215</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
@@ -220,6 +238,7 @@
   <itemMenu id="2221">
     <titol>Solo debe sellarse el catéter en circunstancias especiales enumeradas anteriormente</titol>
     <idPadre>2220</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -228,30 +247,34 @@
   <itemMenu id="2222">
     <titol>SAMS - cefazolina</titol>
     <idPadre>2220</idPadre>
-    <ficAsociado>cefazolina.pdf</ficAsociado>
+    <idFarmaco>7</idFarmaco>
+    <ficAsociado>TXT</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2223">
-    <titol>SARM - vancomicina o teicoplanina</titol>
+    <titol>SARM: vancomicina |TXT,9| teicoplanina |PDF,Ciprofloxacino.pdf|.</titol>
     <idPadre>2220</idPadre>
-    <ficAsociado>teicoplanina.pdf</ficAsociado>
+    <idFarmaco></idFarmaco>
+    <ficAsociado>POPUP</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>dossier.png</icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2224">
     <titol>AB con actividad antibofilms pueden emplearse en el tratamiento de SA como Daptomicina y la tigeciclina</titol>
     <idPadre>2220</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>Daptomicina.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>dossier.png</icono>
+    <icono>pdf.png</icono>
   </itemMenu>
   <itemMenu id="2230">
     <titol>E.faecalis</titol>
     <idPadre>215</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
@@ -260,14 +283,16 @@
   <itemMenu id="2231">
     <titol>Ampicilina</titol>
     <idPadre>2230</idPadre>
-    <ficAsociado>Ampicilina</ficAsociado>
+    <idFarmaco></idFarmaco>
+    <ficAsociado>Ampicilina.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>dossier.png</icono>
+    <icono>pdf.png</icono>
   </itemMenu>
   <itemMenu id="2240">
     <titol>E.faecium</titol>
     <idPadre>215</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
@@ -276,30 +301,34 @@
   <itemMenu id="2241">
     <titol>vancomicina</titol>
     <idPadre>2240</idPadre>
-    <ficAsociado>vancomicina.pdf</ficAsociado>
+    <idFarmaco>9</idFarmaco>
+    <ficAsociado>TXT</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>dossier.png</icono>
   </itemMenu>
   <itemMenu id="2242">
-    <titol>alternativas (en caso de resistencia vanco):daptomicina,linezolid, teicoplanina</titol>
+    <titol>alternativas (en caso de resistencia vanco):daptomicina |TXT,11| linezolid |PDF,Ciprofloxacino.pdf| teicoplanina |PDF,Ciprofloxacino.pdf|.</titol>
     <idPadre>2240</idPadre>
-    <ficAsociado>linezolid.pdf</ficAsociado>
+    <idFarmaco></idFarmaco>
+    <ficAsociado>POPUP</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>dossier.png</icono>
+    <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2243">
     <titol>vancomicina 2mg/ml + gentamicina 2mg/ml</titol>
     <idPadre>2240</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>gentamicina.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>dossier.png</icono>
+    <icono>pdf.png</icono>
   </itemMenu>
   <itemMenu id="2250">
     <titol>Bacillus sp, Micrococcus sp o Propionibacterium</titol>
     <idPadre>215</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
@@ -308,6 +337,7 @@
   <itemMenu id="2251">
     <titol>especies menos virulentas pero dificiles de eliminar - retirada del catéter</titol>
     <idPadre>2250</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -316,6 +346,7 @@
   <itemMenu  id="225">
     <titol>Infección por hongos</titol>
     <idPadre>200</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>1</nivel>
     <esPadre>1</esPadre>
@@ -324,21 +355,16 @@
   <itemMenu  id="230">
     <titol>Tratamiento de la infección por hongos</titol>
     <idPadre>225</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
     <icono>text.png</icono>
   </itemMenu>
-<!--  <itemMenu id="2300">
-    <titol>Hongos</titol>
-    <idPadre>225</idPadre>
-    <ficAsociado></ficAsociado>
-    <nivel>2</nivel>
-    <esPadre>1</esPadre>
-  </itemMenu>-->
   <itemMenu id="2310">
     <titol>Candida albicans/glabrata</titol>
     <idPadre>225</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>INI-ACORDEON</nivel>
     <esPadre>1</esPadre>
@@ -347,6 +373,7 @@
   <itemMenu id="2311">
     <titol>AnfB-deoxicolato 2mg/mL o 2.5mg/ml 12h dos veces al dia</titol>
     <idPadre>2310</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>unPDF.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -355,6 +382,7 @@
   <itemMenu id="2312">
     <titol>AnfB-Liposomal 2.67mg/mL 8h 2.67mg/ml 8h</titol>
     <idPadre>2310</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>anfotericinaBLiposomal.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -363,6 +391,7 @@
   <itemMenu id="2313">
     <titol>Etanol 70%</titol>
     <idPadre>2310</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>anfotericinaBLiposomal.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -371,6 +400,7 @@
   <itemMenu id="2320">
     <titol>Candida lipolytica</titol>
     <idPadre>225</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>1</esPadre>
@@ -379,6 +409,7 @@
   <itemMenu id="2321">
     <titol>Caspofungina 3.33 mg/mL 12h</titol>
     <idPadre>2320</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>caspofungina.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
@@ -387,6 +418,7 @@
   <itemMenu  id="300">
     <titol>Fichas de preparación</titol>
     <idPadre>0</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado></ficAsociado>
     <nivel>0</nivel>
     <esPadre>1</esPadre>
@@ -395,6 +427,7 @@
   <itemMenu id="310">
     <titol>Protocolo elaboración del sellado de catéter</titol>
     <idPadre>300</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>TXT</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
@@ -403,6 +436,7 @@
   <itemMenu id="320">
     <titol>Fichas según fármaco</titol>
     <idPadre>300</idPadre>
+    <idFarmaco></idFarmaco>
     <ficAsociado>FILTRO</ficAsociado>
     <nivel>1</nivel>
     <esPadre>0</esPadre>
