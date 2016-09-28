@@ -105,7 +105,7 @@ function Atras() {
 
 function abrirPagina(sPag, id, titulo) {
 
-    var nomApp = "Información Sellado Catéter";
+    var nomApp = "Información sellado catéter";
     try {
         navLIFO.push(sPag + "|" + id + "|" + titulo);
 
@@ -116,9 +116,13 @@ function abrirPagina(sPag, id, titulo) {
         if (typeof titulo !== "undefined")
         {
             if (titulo!=="")
+            {
                 $("#txtHeaderTitulo").html(titulo);
+            }
             else
+            {
                 $("#txtHeaderTitulo").html(nomApp);
+            }
         }
      
 

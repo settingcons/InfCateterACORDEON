@@ -1,13 +1,28 @@
 /*HEADER*/
+
+div.centerTable{
+    text-align: center;
+    background-color: #995BA5 !important;
+   /* background-color: #A83587 !important;*/
+
+    text-shadow: none !important;
+    color: #fff !important;
+}
+
+div.centerTable table {
+    margin: 0 auto;
+    text-align: left;
+}
+
 .mi-cabecera {
     background-color: #A83587 !important;
     /*background-color: #CF7AA7 !important;*/
     text-shadow: none !important;
     color: #fff !important;
     height: 50px;
-    text-align: center;
-    vertical-align: middle;
+    vertical-align:inherit;
 }
+
 .mi-fondoPagina{
     background-repeat: round;
     text-align: center;
@@ -70,10 +85,13 @@
 }
 
 .tablacab {
-    position: relative;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align:left;
+    /*position: relative;
     top:1px;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: middle;*/
 }
 
 .mi-cab-menu {
