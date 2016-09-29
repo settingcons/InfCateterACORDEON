@@ -72,8 +72,6 @@ function inicio(){
     navLIFO.push("pageMENU|0|");
 
     cargaPaginaInfoCateter('es-es', 0);
-    //hgs afegit abrirPagina
-    //abrirPagina('pageMENU', '0', '');
 
     if(esIOS()) $("#liMenuSalir").attr('class', 'ui-screen-hidden');
 }

@@ -2,7 +2,8 @@ var textoXML = "";
 var tituloXML = "";
 var miIdPadre="";
 
-/* Muestra un PDF del directorio del sistema (sdcard/infCateter) */
+
+    /* Muestra un PDF del directorio del sistema (sdcard/infCateter) */
 function paginaInfoPDF(idioma,fichero){
     var ruta = "";
     var fic = "";
@@ -270,17 +271,22 @@ function crearPopPup(txt, idioma)
     sLinks += "</li></td></tr></table>";
 
     $("#popupBasic #changehere").html(sLinks);
+    /*$("#popupBasic #changehere").html(sLinks).dialog(
+    {
+        modal: false,
+        show: "blind",
+        resizable: true,
+        height: 'auto',
+        width: 'auto',
+        position: 'center',
+        close: function (event, ui) {
+            jQuery(this).remove();
+        }
+
+    });*/
 
      $.mobile.changePage('#popupBasic', 'pop');
 
-    /*$('div[data-role="popup"]').live('pageMENU', function (e, ui) {
-        ui.prevPage.addClass("ui-dialog-background");
-    });
-
-    $('div[data-role="popup"]').live('popupBasic', function (e, ui) {
-        $(".ui-dialog-background ").removeClass("ui-dialog-background");
-    });*/
-  
 }
 
 function soloTexto(txt, sParte)
@@ -325,7 +331,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
         case 'DESPLEGA_SI_PADRE':
             //alert('soy Si_Padre + id: ' + id);
             sItem += "<li>";
-            sItem += "<div style='width: 100%; height:100%;  vertical-align: middle; '>";  /*class='mi-fondoPaginaTXT'*/
+            sItem += "<div id='ejemplo1' style='width: 100%; height:100%;  vertical-align: middle; '>";  /*class='mi-fondoPaginaTXT'*/
             sItem += "<table width='100%' height='100%'><tr>";   /*class='mi-fondoPaginaTXT'*/
             if(!bAcordeon)
             {
@@ -400,7 +406,8 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
-            if(sTipo=="POPUP") sItem += "<a href='#popupBasic' data-rel='popup' style='text-decoration:none;' onclick=\"crearPopPup('" + titol + "','" + idioma + "')\"> ";
+            //if(sTipo=="POPUP") sItem += "<a href='ventana.html' rel='pop-up' style='text-decoration:none;' onclick=\"crearPopPup('" + titol + "','" + idioma + "')\"> ";
+            if(sTipo=="POPUP") sItem += "<a href='#' rel='pop-up' style='text-decoration:none;' onclick=\"crearPopPup('" + titol + "','" + idioma + "')\"> ";
             sItem += "<font style='white-space:normal;text-transform: none;color: #79B6B7'>";
             sItem += soloTexto(titol,"TEXT");
             sItem += "</font></td></tr></table></div></li>";
