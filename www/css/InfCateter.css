@@ -205,5 +205,12 @@ border-radius: 15px 15px 15px 15px;
 }
 .mi-tablaPopup {
     background-color: #FCFCFC !important;
+    text-align: left;
+    vertical-align: middle;
 }
+
+#popupBasic {
+  width:375px;
+  height:203px;
+ }
 

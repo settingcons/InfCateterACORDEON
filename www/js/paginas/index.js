@@ -123,8 +123,6 @@ function abrirPagina(sPag, id, titulo) {
             }
         }
      
-
-
         switch (sPag) {
             case 'pageMENU':
                 $.doTimeout(1500, cargaPaginaInfoCateter('es-es', id));

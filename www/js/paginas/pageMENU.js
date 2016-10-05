@@ -270,22 +270,22 @@ function crearPopPup(txt, idioma)
     }
     sLinks += "</li></td></tr></table>";
 
-    $("#popupBasic #changehere").html(sLinks);
-    /*$("#popupBasic #changehere").html(sLinks).dialog(
-    {
-        modal: false,
-        show: "blind",
-        resizable: true,
-        height: 'auto',
-        width: 'auto',
-        position: 'center',
-        close: function (event, ui) {
-            jQuery(this).remove();
-        }
+    $(" #popupBasic #changehere").html(sLinks);
+    //$("#popupBasic #changehere").html(sLinks).dialog(
+    //{
+    //    modal: true,
+    //    show: "blind",
+    //    resizable: true,
+    //    height: 'auto',
+    //    width: 'auto',
+    //    position: 'center',
+    //    close: function (event, ui) {
+    //        jQuery(this).remove();
+    //    }
 
-    });*/
+    //});
+    $.mobile.changePage('#popupBasic', 'pop');
 
-     $.mobile.changePage('#popupBasic', 'pop');
 
 }
 
@@ -406,11 +406,11 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
             sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
-            //if(sTipo=="POPUP") sItem += "<a href='ventana.html' rel='pop-up' style='text-decoration:none;' onclick=\"crearPopPup('" + titol + "','" + idioma + "')\"> ";
-            if(sTipo=="POPUP") sItem += "<a href='#' rel='pop-up' style='text-decoration:none;' onclick=\"crearPopPup('" + titol + "','" + idioma + "')\"> ";
+            if (sTipo == "POPUP") sItem += "<a href='#popupBasic' data-rel='popup' style='text-decoration:none;' onclick=\"crearPopPup('" + titol + "','" + idioma + "')\"> ";
             sItem += "<font style='white-space:normal;text-transform: none;color: #79B6B7'>";
-            sItem += soloTexto(titol,"TEXT");
-            sItem += "</font></td></tr></table></div></li>";
+            sItem += soloTexto(titol,"TEXT")+"</font>";
+            if (sTipo == "POPUP")  sItem += "</a>";
+             sItem += "</td></tr></table></div></li>";
             break;
 
         case 'FILTRO':  //Buscador de fichas *******************************************************
