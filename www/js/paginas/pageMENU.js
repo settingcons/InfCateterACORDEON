@@ -98,10 +98,10 @@ function filtroFichas(idioma){
                     fic = $(this).find('fic').text();
 
                     if (fic.length > 1) {
-                        img = "<img src='images/pdf.png'  align='center' width='30' height='30'  onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >";
+                        img = "<img src='images/pdf.png'  align='center'   onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >";
                         items += "<li>";
                         items += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-                        items += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
+                        items += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
                         items += img;
                         items += "</td><td style='width: 95%; vertical-align: middle;'>";
                         items += "<a href='#' style='color:#6A9EA0;text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >";
@@ -111,10 +111,10 @@ function filtroFichas(idioma){
                         /*antes : items += "<li><a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >" + nomFarmaco + "</a></li>";*/
                     }
                     else {
-                        img = "<img src='images/dossier.png' width='20' height='20' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\">";
+                        img = "<img src='images/dossier.png' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\">";
                         items += "<li>";
                         items += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-                        items += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
+                        items += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
                         items += img;
                         items += "</td><td style='width: 95%; vertical-align: middle;'>";
                         items += "<a href='#' style='color:#6A9EA0;text-decoration:none;'  onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\" >";
@@ -243,7 +243,7 @@ function crearPopPup(txt, idioma)
     var aItems = new Array();
     aItems = sLinks.split("|");
 
-    sLinks="<table width='100%' cellspacing='1' cellpadding='1' border='0' style='margin:auto;'>";
+    sLinks = "<table width='100%' cellspacing='1' cellpadding='1' class='mi-fondoTablaTXT' style='margin:auto;'>";
     sLinks+="<tr  class='mi-cabeceraPopup'><td><h3>Fichas asociadas</h3></td></tr>"
     sLinks += "<tr class='mi-tablaPopup'><td><li style='list-style-type:none'>";
     for (var i = 0, len = aItems.length; i < len; i++) {
@@ -255,13 +255,13 @@ function crearPopPup(txt, idioma)
         }
         else{
             if(sTipo == "TXT"){
-                img = "<img src='images/dossier.png'  width='30' height='30' onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">";
+                img = "<img src='images/dossier.png'  onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">";
                 sLinks += "<ul  style='list-style-type:none'>" + img ;
                 sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">" + sNombres.split(",")[i];
                 sLinks += "</ul>";
             }
             else if(sTipo == "PDF"){
-                img = "<img src='images/pdf.png' align='center' width='30' height='30' onclick=\"paginaInfoPDF('" + idioma + "','" + sVal + "')\" >";
+                img = "<img src='images/pdf.png' align='center' onclick=\"paginaInfoPDF('" + idioma + "','" + sVal + "')\" >";
                 sLinks += "<ul  style='list-style-type:none'>" + img;
                 sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + sVal + "')\" >" + sNombres.split(",")[i];
                 sLinks += "</ul>";
@@ -271,21 +271,7 @@ function crearPopPup(txt, idioma)
     sLinks += "</li></td></tr></table>";
 
     $(" #popupBasic #changehere").html(sLinks);
-    //$("#popupBasic #changehere").html(sLinks).dialog(
-    //{
-    //    modal: true,
-    //    show: "blind",
-    //    resizable: true,
-    //    height: 'auto',
-    //    width: 'auto',
-    //    position: 'center',
-    //    close: function (event, ui) {
-    //        jQuery(this).remove();
-    //    }
-
-    //});
     $.mobile.changePage('#popupBasic', 'pop');
-
 
 }
 
@@ -331,11 +317,13 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
         case 'DESPLEGA_SI_PADRE':
             //alert('soy Si_Padre + id: ' + id);
             sItem += "<li>";
-            sItem += "<div id='ejemplo1' style='width: 100%; height:100%;  vertical-align: middle; '>";  /*class='mi-fondoPaginaTXT'*/
-            sItem += "<table width='100%' height='100%'><tr>";   /*class='mi-fondoPaginaTXT'*/
+           
+          
             if(!bAcordeon)
             {
                 /*Botons nivell 1 esquemes*/
+                sItem += "<div  style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
+                sItem += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr>";
                 img = "<img src='images/"+icono+"' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\" >";
                 sItem += "<td style='width: 5%; vertical-align: middle; text-align: left;'>" + img + "</td>";
                 sItem += "<td style='width: 95%; vertical-align: middle;'>";
@@ -344,9 +332,11 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
             }
             else
             {
+                sItem += "<div  style='width: 100%; height:100%;  vertical-align: middle;'>";
                 /*bifurcacions esquemes*/
+                sItem += "<table width='100%' height='100%' ><tr>";
                 sItem += "<td style='width: 100%; vertical-align: middle; background-color:#9F66A5' class='mi-fondoPaginaTXTRedondeada'>";
-                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #ffffff;';>" + titol + "</font>";
+                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #ffffff;'>2" + titol + "</font>";
             }
             if (!bAcordeon) sItem += "</a>";
             sItem += "</td></tr></table></div></li>";
@@ -357,7 +347,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
 
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-            sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXTRedondeada'><tr>";
+            sItem += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr>";
             if (!bAcordeon) {
                 //sItem += "<div style='width: 60%; height:60%;  vertical-align: center;' class='mi-fondoPaginaInicio'>";
                 //sItem += "<table width='60%' height='60%' class='mi-fondoPaginaInicio'><tr>";
@@ -379,15 +369,14 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
             break;
 
         case 'TXT':  //link a un Texto de Textes.xml ***********************************************
-            //alert('soy txt + idAntes: ' + id + ' titol:' + titol + ' idioma:' + idioma);
             if (idFarmaco == null) id = id;
             else id=idFarmaco;
             //alert('soy txt + idDespues: ' + id + ' titol:' + titol + ' idioma:' + idioma);
 
-            img = "<img src='images/" + icono + "'  width='30' height='30' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + titol + "')\">";
+            img = "<img src='images/" + icono + "'  onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + titol + "')\">";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-            sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
+            sItem += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             sItem += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + titol + "')\"> ";
@@ -396,14 +385,16 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
             sItem += "</font></a></td></tr></table></div></li>";
             break;
 
+         
+
         case 'POPUP':
         case '' :  //no hay link, es sólo para leer *************************************************
             //alert('soy popup + id: ' + id +' Titol:' + titol);
             /*ultim nivell esquema*/
-            img = "<img src='images/" + icono + "' width='20' height='20'>";
+            img = "<img src='images/" + icono + "' >";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-            sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
+            sItem += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             if (sTipo == "POPUP") sItem += "<a href='#popupBasic' data-rel='popup' style='text-decoration:none;' onclick=\"crearPopPup('" + titol + "','" + idioma + "')\"> ";
@@ -417,7 +408,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
             img = "<img src='images/" + icono + "' onclick=\"paginaFiltroFichas('" + idioma + "','" + id + "','" + titol + "')\">";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-            sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
+            sItem += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             sItem += "<a href='#' style='text-decoration:none;' onclick=\"paginaFiltroFichas('" + idioma + "','" + id + "','" + titol + "')\"> ";
@@ -428,11 +419,11 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
 
         default:  //link al fichero PDF especificado ***********************************************
             //alert('soy default + id: ' + id +' sTipo:' + sTipo);
-            img = "<img src='images/" + icono + "' align='center' width='30' height='30' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
+            img = "<img src='images/" + icono + "' align='center' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
             sItem += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + sTipo + "')\" >";
             sItem += "<li>";
             sItem += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
-            sItem += "<table width='100%' height='100%' class='mi-fondoPaginaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
+            sItem += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
             sItem += img;
             sItem += "</td><td style='width: 95%; vertical-align: middle;'>";
             sItem += href;           

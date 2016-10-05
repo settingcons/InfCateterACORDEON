@@ -2,8 +2,8 @@
 
 div.centerTable{
     text-align: center;
-    background-color: #995BA5 !important;
-   /* background-color: #A83587 !important;*/
+    /*background-color: #995BA5 !important;*/
+    background-color: #A83587 !important;
 
     text-shadow: none !important;
     color: #fff !important;
@@ -15,8 +15,8 @@ div.centerTable table {
 }
 
 .mi-cabecera {
-    background-color: #A83587 !important;
-    /*background-color: #CF7AA7 !important;*/
+    /*background-color: #A83587 !important;*/
+    background-color: #CF7AA7 !important;
     text-shadow: none !important;
     color: #fff !important;
     height: 50px;
@@ -35,11 +35,22 @@ div.centerTable table {
 .mi-fondoPaginaTXT{
     border-style: none!important;
     background-repeat: round;
-    background-color: #FCFCFC;
+    background-color: #EAEAEA;
     width: 100%;
     height: 100%;
     top: 0px;
 }
+
+.mi-fondoTabla{
+    
+    border-color:black;
+    background-repeat: round;
+    background-color: #EAEAEA;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
 
 .mi-fondoPaginaLINK{
     border-style: none!important;
@@ -169,6 +180,8 @@ div.centerTable table {
        margin:0px;
        padding:0px;
        }
+
+
 .mi-farmacoUl {
     padding: 20px;
     font-size: 12px;
@@ -195,8 +208,8 @@ border-radius: 15px 15px 15px 15px;
 /*popupBasic*/
 
 .mi-cabeceraPopup {
-    background-color: #9F66A5 !important;
-    /*background-color: #CF7AA7 !important;*/
+    /*background-color: #9F66A5 !important;*/
+    background-color: #A83587 !important;
     text-shadow: none !important;
     color: #fff !important;
     height: 50px;
@@ -210,7 +223,12 @@ border-radius: 15px 15px 15px 15px;
 }
 
 #popupBasic {
-  width:375px;
-  height:203px;
+  width:300px;
+  height:200px;
  }
 
+.mi-fondoTablaTXT {
+  border: 1px solid;
+  border-radius: 10px;
+  border-color:#C0C0C0;
+}

@@ -1,0 +1,72 @@
+<li>
+despliega-si-padre no tiene class, el resto son todos asi:
+<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>
+**comun
+
+DESPLEGA-SI-PADRE NIVEL 1 ESQUEMA
+<table width='100%' height='100%'>
+	<tr>
+	<td style='width: 5%; vertical-align: middle; text-align: left;'>img </td>
+	<td style='width: 95%; vertical-align: middle;'>
+		<a href='#' style='text-decoration:none;' onclick=\"abrirPagina....>";
+                <font style='white-space:normal;text-transform: none; text-decoration:none;color: #79B6B7;'>titol</font></a>
+
+DESPLEGA-SI-PADRE BIFURCACIO ESQUEMA
+<table width='100%' height='100%'>
+	<tr>
+	<td style='width: 100%; vertical-align: middle; background-color:#9F66A5' class='mi-fondoPaginaTXTRedondeada'>
+	<font style='white-space:normal; text-decoration:none;text-transform: none; color: #ffffff;'>titol</font>";
+
+DESPLEGA-NO-PADRE BOTONES INICIO
+<table width='100%' height='100%' class='mi-fondoTabla'>
+	<tr>
+	<td style='width: 5%; vertical-align: middle; text-align: left;'>img</td>
+	<td style='width: 95%; vertical-align: middle;'>
+	<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">
+	<font style='white-space:normal; text-decoration:none;text-transform: none; color: #79B6B7';'>titol</font></a>
+
+DESPLEGA-NO-PADRE
+<table width='100%' height='100%' class='mi-fondoTabla'>
+	<tr>
+	<td style='width: 100%; vertical-align: middle;'>
+	<font style='white-space:normal;text-transform: none; text-decoration:none; color: #ffffff';'>titol</font>
+
+TXT
+<table width='100%' height='100%' class='mi-fondoTabla'>
+	<tr>
+	<td style='width: 5%; vertical-align: middle; text-align: left;'>img</td>
+	<td style='width: 95%; vertical-align: middle;'>
+	<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('...')\">
+	<font style='white-space:normal;text-transform: none;color: #79B6B7'>titol</font></a>
+	
+
+POPUP o ''
+<table width='100%' height='100%' class='mi-fondoTabla'>
+	<tr>
+	<td style='width: 5%; vertical-align: middle; text-align: left;'>img</td>
+	<td style='width: 95%; vertical-align: middle;'>";
+	<a href='#popupBasic' data-rel='popup' style='text-decoration:none;' onclick=\"crearPopPup('...')\">
+	<font style='white-space:normal;text-transform: none;color: #79B6B7'>soloTexto(titol,"TEXT")</font>	</a>
+	
+PDF
+<table width='100%' height='100%' class='mi-fondoTabla'>
+	<tr>
+	<td style='width: 5%; vertical-align: middle; text-align: left;'>img</td>
+	<td style='width: 95%; vertical-align: middle;'>
+	<a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('...')\" 
+	<font style='white-space:normal;text-transform: none;color: #79B6B7;font-weight:normal;'>titol</font></a>
+
+
+
+**comun
+	</td>
+	</tr>
+</table>
+</div>
+</li>
+
+
+
+
+
+
