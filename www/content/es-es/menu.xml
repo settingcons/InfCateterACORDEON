@@ -80,7 +80,7 @@
     <ficAsociado></ficAsociado>
     <nivel>1</nivel>
     <esPadre>1</esPadre>
-    <icono>esquema.png</icono>
+    <icono>bgn.png</icono>
   </itemMenu>
   <itemMenu  id="210">
     <titol>Sellado de catéter gram negativos</titol>
@@ -179,7 +179,7 @@
     <ficAsociado></ficAsociado>
     <nivel>1</nivel>
     <esPadre>1</esPadre>
-    <icono>esquema.png</icono>
+    <icono>bgp.png</icono>
   </itemMenu>
   <itemMenu id="220">
     <titol>Sellado de catéter gram positivos</titol>
@@ -350,7 +350,7 @@
     <ficAsociado></ficAsociado>
     <nivel>1</nivel>
     <esPadre>1</esPadre>
-    <icono>esquema.png</icono>
+    <icono>hongos.png</icono>
   </itemMenu>
   <itemMenu  id="230">
     <titol>Tratamiento de la infección por hongos</titol>

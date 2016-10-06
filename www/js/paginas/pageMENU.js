@@ -336,7 +336,7 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
                 /*bifurcacions esquemes*/
                 sItem += "<table width='100%' height='100%' ><tr>";
                 sItem += "<td style='width: 100%; vertical-align: middle; background-color:#9F66A5' class='mi-fondoPaginaTXTRedondeada'>";
-                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #ffffff;'>2" + titol + "</font>";
+                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #ffffff;'>" + titol + "</font>";
             }
             if (!bAcordeon) sItem += "</a>";
             sItem += "</td></tr></table></div></li>";
@@ -356,12 +356,12 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
                 sItem += "<td style='width: 5%; vertical-align: middle; text-align: left;'>" + img + "</td>";
                 sItem += "<td style='width: 95%; vertical-align: middle;'>";
                 sItem += "<a href='#' style='text-decoration:none;' onclick=\"abrirPagina('pageMENU','" + id + "','" + titol + "')\">";
-                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #79B6B7';'> &nbsp;" + titol + "</font>";
+                sItem += "<font style='white-space:normal; text-decoration:none;text-transform: none; color: #79B6B7'>&nbsp;" + titol + "</font>";
             }
             else
             {
                 sItem += "<td style='width: 100%; vertical-align: middle;'>";
-                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none; color: #ffffff';'>" + titol + "</font>";
+                sItem += "<font style='white-space:normal;text-transform: none; text-decoration:none; color: #ffffff'>" + titol + "</font>";
             }
 
             if(!bAcordeon)sItem += "</a>";
