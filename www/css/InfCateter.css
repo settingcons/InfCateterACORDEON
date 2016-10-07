@@ -217,7 +217,8 @@ border-radius: 15px 15px 15px 15px;
     vertical-align: middle;
 }
 .mi-tablaPopup {
-    background-color: #FCFCFC !important;
+    /*background-color: #FCFCFC !important;*/
+    background-color: #EAEAEA !important;
     text-align: left;
     vertical-align: middle;
 }
