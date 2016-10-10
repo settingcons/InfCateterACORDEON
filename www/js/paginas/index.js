@@ -40,7 +40,8 @@ function deviceReady() {
         }
 
         //Evento q se dispara cuando se pulsa el botón atrás
-/*        document.addEventListener("backbutton", handleBackButton, false);*/
+        //descomentado hgs 07/10/2016
+        document.addEventListener("backbutton", handleBackButton, false);
 
         //INICIO InfCateter
         copiaPDFs('es-es');
@@ -86,8 +87,7 @@ function Atras() {
     var item = "";
 
     try {
-       
-          if (navLIFO.length > 1) {
+           if (navLIFO.length > 1) {
             navLIFO.pop();
             item = navLIFO.pop();
             abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
@@ -153,9 +153,68 @@ function abrirPagina(sPag, id, titulo) {
 
 //------------------------------------------------------------------------
 // Evento 'patras'
+
+
+document.addEventListener("backbutton", function (e) {
+    alert('Estoy en backbutton');
+    if ($.mobile.activePage.is('#pageMENU')) {
+
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+
 //------------------------------------------------------------------------
-function handleBackButton() {
-}
+//function handleBackButton() {
+
+//    try {
+//        var v_pagActiva = $.mobile.activePage.attr('id');
+//        alert(v_pagActiva);
+//        var p_pagActiva = $.mobile.activePage[0].id;
+        
+//        switch (v_pagActiva) {
+
+//            //volverInicio('pageMENU',0,'');
+//            case 'pageMENU':
+
+//                if (id!='0')
+//                    volverInicio('pageMENU', 0, '');
+//                else
+//                    salir();
+//                break;
+
+//            ////inicioSellado('pageMENU', 100, 'Generalidades')
+//            //case 'pageMENU':
+//            //    volverInicio('pageMENU', 0, '');
+//            //    break;
+
+//            ////inicioSellado('pageMENU', 200, 'Manejo');
+//            //case 'pageMENU':
+//            //    volverInicio('pageMENU', 0, '');
+//            //    break;
+
+//            ////inicioSellado('pageMENU', 300, 'Fichas');
+//            //case 'pageMENU':
+//            //    volverInicio('pageMENU', 0, '');
+//            //    break;
+
+//           //abrirPagina('pageAYUDA',0,'Acerca de')
+//            case 'pageAYUDA':
+//                salir();
+//                break;
+
+//          //abrirPagina('pageINFO',0,'Información')
+//            case 'pageINFO':
+//                Salir();
+//                break;
+//        }
+//    }
+//    catch (ex) { }
+
+//}
 
 function irAtras(){
     if (esIOS()) {
