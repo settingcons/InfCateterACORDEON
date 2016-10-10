@@ -199,10 +199,10 @@ function handleBackButton() {
         } 
     }
     else if ($.mobile.activePage.is('#pageAYUDA')) {
-        Salir();
+        salir();
     }
     else if ($.mobile.activePage.is('#pageINFO')) {
-        Salir();
+        salir();
     }
     else {
         //navigator.app.backHistory();
