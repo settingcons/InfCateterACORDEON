@@ -199,10 +199,17 @@ function handleBackButton() {
         } 
     }
     else if ($.mobile.activePage.is('#pageAYUDA')) {
-        Salir();
+        if (navLIFO.length > 1) {
+            navLIFO.pop();
+            item = navLIFO.pop();
+            abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
+        }
+        else {
+            salir();
+        }
     }
     else if ($.mobile.activePage.is('#pageINFO')) {
-        Salir();
+        salir();
     }
     else {
         //navigator.app.backHistory();
