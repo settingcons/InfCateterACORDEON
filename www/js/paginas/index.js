@@ -84,11 +84,11 @@ function Atras() {
 
     var item = "";
 
-    var v_pagActiva = $.mobile.activePage.attr('id');
-    alert('Atras-Pagina:'+ v_pagActiva);
+    //var v_pagActiva = $.mobile.activePage.attr('id');
+    //alert('Atras-Pagina:'+ v_pagActiva);
 
-    var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
-    alert('Atras: '+tituloPag);
+    //var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
+    //alert('Atras: '+tituloPag);
 
     try {
            if (navLIFO.length > 1) {
@@ -114,7 +114,6 @@ function abrirPagina(sPag, id, titulo) {
         $.mobile.changePage('#' + sPag, { transition: "slide" });
 
         //Texto de body --> Titulo
-        //  if (typeof titulo !== "undefined") $("#tituloMenu").html(titulo);
         if (typeof titulo !== "undefined")
         {
             if (titulo!=="")
@@ -162,29 +161,58 @@ function abrirPagina(sPag, id, titulo) {
 // Evento 'patras'
 
 
-document.addEventListener("backbutton", function (e) {
+//document.addEventListener("backbutton", function (e) {
     
-    //alert('Estoy en backbutton');
+//    //alert('Estoy en backbutton');
+//    var nomApp = "Información sellado catéter";
+
+//    if ($.mobile.activePage.is('#pageMENU')) {
+
+//        var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
+//        if (tituloPag == nomApp)
+//            navigator.app.exitApp();
+//        else
+//            navigator.app.backHistory();
+//    }
+//    else {
+//        navigator.app.backHistory()
+//    }
+//}, false);
+
+function handleBackButton() {
+
     var nomApp = "Información sellado catéter";
 
     if ($.mobile.activePage.is('#pageMENU')) {
 
         var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
-        //alert(tituloPag);
-        if (tituloPag = nomApp)
-        {
+        if (tituloPag == nomApp)
             navigator.app.exitApp();
-        }
         else
         {
-            navigator.app.backHistory()
-        }
-        //navigator.app.exitApp();
+            //navigator.app.backHistory();
+            if (navLIFO.length > 1) {
+                navLIFO.pop();
+                item = navLIFO.pop();
+                abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
+            }
+        } 
+    }
+    else if ($.mobile.activePage.is('#pageAYUDA')) {
+        Salir();
+    }
+    else if ($.mobile.activePage.is('#pageINFO')) {
+        Salir();
     }
     else {
-        navigator.app.backHistory()
+        //navigator.app.backHistory();
+        if (navLIFO.length > 1) {
+            navLIFO.pop();
+            item = navLIFO.pop();
+            abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
+        }
     }
-}, false);
+}
 
 
 //------------------------------------------------------------------------
@@ -201,29 +229,22 @@ document.addEventListener("backbutton", function (e) {
 //            case 'pageMENU':
 //                var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
 //                alert(tituloPag);
-//                if (tituloPag = nomApp) {
+//                if (tituloPag == nomApp) {
 //                    salir();
 //                }
 //                else {
 //                    volverInicio('pageMENU', 0, '');
 //                }
-//               break;
-
-//            //inicioSellado('pageMENU', 100, 'Generalidades')
-//            case 'pageMENU':
-//                volverInicio('pageMENU', 0, '');
 //                break;
 
-//            //inicioSellado('pageMENU', 200, 'Manejo');
-//            case 'pageMENU':
-//                volverInicio('pageMENU', 0, '');
+//            case 'pageInfoXML':
+//                if (navLIFO.length > 1) {
+//                    navLIFO.pop();
+//                    item = navLIFO.pop();
+//                    abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
+//                }
 //                break;
-
-//            //inicioSellado('pageMENU', 300, 'Fichas');
-//            case 'pageMENU':
-//                volverInicio('pageMENU', 0, '');
-//                break;
-
+                
 //           //abrirPagina('pageAYUDA',0,'Acerca de')
 //            case 'pageAYUDA':
 //                salir();
@@ -236,7 +257,6 @@ document.addEventListener("backbutton", function (e) {
 //        }
 //    }
 //    catch (ex) { }
-
 //}
 
 function irAtras(){
