@@ -86,6 +86,10 @@ function Atras() {
 
     var item = "";
 
+    //var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
+    //var titulo = document.getElementById('txtHeaderTitulo').innerText;
+    //alert('nom tituloPag: ' + tituloPag + 'titulo:' + titulo);
+
     try {
            if (navLIFO.length > 1) {
             navLIFO.pop();
@@ -156,9 +160,22 @@ function abrirPagina(sPag, id, titulo) {
 
 
 document.addEventListener("backbutton", function (e) {
-    alert('Estoy en backbutton');
+    
+    //alert('Estoy en backbutton');
+    var nomApp = "Información sellado catéter";
+
     if ($.mobile.activePage.is('#pageMENU')) {
 
+        var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
+        //alert(tituloPag);
+        if (tituloPag = nomApp)
+        {
+            navigator.app.exitApp();
+        }
+        else
+        {
+            navigator.app.backHistory()
+        }
         navigator.app.exitApp();
     }
     else {
