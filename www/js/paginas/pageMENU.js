@@ -31,7 +31,7 @@ function paginaInfoPDF(idioma,fichero){
 /* Muestra el texto XML a partir de Textes.xml */
 function inicioPaginaInfoXML() {
     $('#divTituloXML').html(tituloXML);
-    alert(tituloXML);
+    alert('inicioPaginaInfoXML:' + tituloXML);
     $('#divInfoXML').html(textoXML);
 }
 

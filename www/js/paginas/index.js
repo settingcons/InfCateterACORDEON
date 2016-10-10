@@ -33,15 +33,13 @@ function deviceReady() {
             //alert('Cache Error: ' + status);
         }
 
+        //Evento q se dispara cuando se pulsa el botón atrás --descomentado hgs 07/10/2016
+        document.addEventListener("backbutton", handleBackButton, false);
 
         if(!phoneGapRun()) {
             aviso(40,42,'');
             salir();
         }
-
-        //Evento q se dispara cuando se pulsa el botón atrás
-        //descomentado hgs 07/10/2016
-        document.addEventListener("backbutton", handleBackButton, false);
 
         //INICIO InfCateter
         copiaPDFs('es-es');
@@ -86,8 +84,11 @@ function Atras() {
 
     var item = "";
 
+    var v_pagActiva = $.mobile.activePage.attr('id');
+    alert('Atras-Pagina:'+ v_pagActiva);
+
     var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
-    alert(tituloPag);
+    alert('Atras: '+tituloPag);
 
     try {
            if (navLIFO.length > 1) {
@@ -122,7 +123,10 @@ function abrirPagina(sPag, id, titulo) {
             }
             else
             {
-                $("#txtHeaderTitulo").html(nomApp);
+                if ($.mobile.activePage.is('#pageMENU'))
+                    $("#txtHeaderTitulo").html(nomApp);
+                else 
+                    $("#txtHeaderTitulo").html('-');
             }
         }
      
