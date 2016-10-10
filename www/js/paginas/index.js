@@ -86,9 +86,8 @@ function Atras() {
 
     var item = "";
 
-    //var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
-    //var titulo = document.getElementById('txtHeaderTitulo').innerText;
-    //alert('nom tituloPag: ' + tituloPag + 'titulo:' + titulo);
+    var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
+    alert(tituloPag);
 
     try {
            if (navLIFO.length > 1) {
@@ -176,7 +175,7 @@ document.addEventListener("backbutton", function (e) {
         {
             navigator.app.backHistory()
         }
-        navigator.app.exitApp();
+        //navigator.app.exitApp();
     }
     else {
         navigator.app.backHistory()
@@ -186,37 +185,40 @@ document.addEventListener("backbutton", function (e) {
 
 //------------------------------------------------------------------------
 //function handleBackButton() {
+//    //falta provar aquesta versio////
 
 //    try {
 //        var v_pagActiva = $.mobile.activePage.attr('id');
-//        alert(v_pagActiva);
-//        var p_pagActiva = $.mobile.activePage[0].id;
-        
+//        var nomApp = "Información sellado catéter";
+
 //        switch (v_pagActiva) {
 
 //            //volverInicio('pageMENU',0,'');
 //            case 'pageMENU':
-
-//                if (id!='0')
-//                    volverInicio('pageMENU', 0, '');
-//                else
+//                var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
+//                alert(tituloPag);
+//                if (tituloPag = nomApp) {
 //                    salir();
+//                }
+//                else {
+//                    volverInicio('pageMENU', 0, '');
+//                }
+//               break;
+
+//            //inicioSellado('pageMENU', 100, 'Generalidades')
+//            case 'pageMENU':
+//                volverInicio('pageMENU', 0, '');
 //                break;
 
-//            ////inicioSellado('pageMENU', 100, 'Generalidades')
-//            //case 'pageMENU':
-//            //    volverInicio('pageMENU', 0, '');
-//            //    break;
+//            //inicioSellado('pageMENU', 200, 'Manejo');
+//            case 'pageMENU':
+//                volverInicio('pageMENU', 0, '');
+//                break;
 
-//            ////inicioSellado('pageMENU', 200, 'Manejo');
-//            //case 'pageMENU':
-//            //    volverInicio('pageMENU', 0, '');
-//            //    break;
-
-//            ////inicioSellado('pageMENU', 300, 'Fichas');
-//            //case 'pageMENU':
-//            //    volverInicio('pageMENU', 0, '');
-//            //    break;
+//            //inicioSellado('pageMENU', 300, 'Fichas');
+//            case 'pageMENU':
+//                volverInicio('pageMENU', 0, '');
+//                break;
 
 //           //abrirPagina('pageAYUDA',0,'Acerca de')
 //            case 'pageAYUDA':

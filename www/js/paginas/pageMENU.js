@@ -31,6 +31,7 @@ function paginaInfoPDF(idioma,fichero){
 /* Muestra el texto XML a partir de Textes.xml */
 function inicioPaginaInfoXML() {
     $('#divTituloXML').html(tituloXML);
+    alert(tituloXML);
     $('#divInfoXML').html(textoXML);
 }
 
@@ -108,7 +109,6 @@ function filtroFichas(idioma){
                         items += "<font style='white-space:normal;text-transform: none !important;color: #79B6B7;font-weight:normal;'>&nbsp;";
                         items += farmacoEncontrado;
                         items += "</font></a></td></tr></table></div></li>";
-                        /*antes : items += "<li><a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + fic + "')\" >" + nomFarmaco + "</a></li>";*/
                     }
                     else {
                         img = "<img src='images/dossier.png' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\">";
@@ -145,7 +145,7 @@ function inicioPaginaInfo(titulo) {
 
 function volverInicio(sPag, id, titulo){
     navLIFO=[];
-    abrirPagina(sPag, id, titulo );
+    abrirPagina(sPag, id, titulo);
     $("#pageMenuLateral").panel("close");
 }
 
