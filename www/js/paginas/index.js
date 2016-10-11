@@ -33,7 +33,7 @@ function deviceReady() {
             //alert('Cache Error: ' + status);
         }
 
-        //Evento q se dispara cuando se pulsa el botón atrás --descomentado hgs 07/10/2016
+        //Evento q se dispara cuando se pulsa el botón atrás 
         document.addEventListener("backbutton", handleBackButton, false);
 
         if(!phoneGapRun()) {
@@ -83,12 +83,6 @@ function Menu() {
 function Atras() {
 
     var item = "";
-
-    //var v_pagActiva = $.mobile.activePage.attr('id');
-    //alert('Atras-Pagina:'+ v_pagActiva);
-
-    //var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
-    //alert('Atras: '+tituloPag);
 
     try {
            if (navLIFO.length > 1) {
@@ -160,25 +154,6 @@ function abrirPagina(sPag, id, titulo) {
 //------------------------------------------------------------------------
 // Evento 'patras'
 
-
-//document.addEventListener("backbutton", function (e) {
-    
-//    //alert('Estoy en backbutton');
-//    var nomApp = "Información sellado catéter";
-
-//    if ($.mobile.activePage.is('#pageMENU')) {
-
-//        var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
-//        if (tituloPag == nomApp)
-//            navigator.app.exitApp();
-//        else
-//            navigator.app.backHistory();
-//    }
-//    else {
-//        navigator.app.backHistory()
-//    }
-//}, false);
-
 function handleBackButton() {
 
     var nomApp = "Información sellado catéter";
@@ -186,8 +161,10 @@ function handleBackButton() {
     if ($.mobile.activePage.is('#pageMENU')) {
 
         var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
-        if (tituloPag == nomApp)
-            navigator.app.exitApp();
+        if (tituloPag == nomApp) {
+            //  navigator.app.exitApp();
+            salir();
+        }    
         else
         {
             //navigator.app.backHistory();
@@ -209,7 +186,14 @@ function handleBackButton() {
         }
     }
     else if ($.mobile.activePage.is('#pageINFO')) {
-        salir();
+        if (navLIFO.length > 1) {
+            navLIFO.pop();
+            item = navLIFO.pop();
+            abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
+        }
+        else {
+            salir();
+        }
     }
     else {
         //navigator.app.backHistory();
@@ -221,50 +205,6 @@ function handleBackButton() {
     }
 }
 
-
-//------------------------------------------------------------------------
-//function handleBackButton() {
-//    //falta provar aquesta versio////
-
-//    try {
-//        var v_pagActiva = $.mobile.activePage.attr('id');
-//        var nomApp = "Información sellado catéter";
-
-//        switch (v_pagActiva) {
-
-//            //volverInicio('pageMENU',0,'');
-//            case 'pageMENU':
-//                var tituloPag = document.getElementById('txtHeaderTitulo').innerHTML;
-//                alert(tituloPag);
-//                if (tituloPag == nomApp) {
-//                    salir();
-//                }
-//                else {
-//                    volverInicio('pageMENU', 0, '');
-//                }
-//                break;
-
-//            case 'pageInfoXML':
-//                if (navLIFO.length > 1) {
-//                    navLIFO.pop();
-//                    item = navLIFO.pop();
-//                    abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
-//                }
-//                break;
-                
-//           //abrirPagina('pageAYUDA',0,'Acerca de')
-//            case 'pageAYUDA':
-//                salir();
-//                break;
-
-//          //abrirPagina('pageINFO',0,'Información')
-//            case 'pageINFO':
-//                Salir();
-//                break;
-//        }
-//    }
-//    catch (ex) { }
-//}
 
 function irAtras(){
     if (esIOS()) {

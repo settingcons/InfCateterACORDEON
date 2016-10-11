@@ -167,7 +167,7 @@
     <titol>Pseudomonas: agentes que favorezcan la destrucción del biofilm son necesarios dada la gran faciliad de este microorganismo en producirlo.</titol>
     <idPadre>2122</idPadre>
     <idFarmaco></idFarmaco>
-    <ficAsociado>Pseudomonas.pdf</ficAsociado>
+    <ficAsociado>Paracetamol.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
@@ -266,7 +266,7 @@
     <titol>AB con actividad antibofilms pueden emplearse en el tratamiento de SA como Daptomicina y la tigeciclina</titol>
     <idPadre>2220</idPadre>
     <idFarmaco></idFarmaco>
-    <ficAsociado>Daptomicina.pdf</ficAsociado>
+    <ficAsociado>Gentamicina.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
@@ -284,7 +284,7 @@
     <titol>Ampicilina</titol>
     <idPadre>2230</idPadre>
     <idFarmaco></idFarmaco>
-    <ficAsociado>Ampicilina.pdf</ficAsociado>
+    <ficAsociado>Gentamicina.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
@@ -320,7 +320,7 @@
     <titol>vancomicina 2mg/ml + gentamicina 2mg/ml</titol>
     <idPadre>2240</idPadre>
     <idFarmaco></idFarmaco>
-    <ficAsociado>gentamicina.pdf</ficAsociado>
+    <ficAsociado>Gentamicina.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
@@ -374,7 +374,7 @@
     <titol>AnfB-deoxicolato 2mg/mL o 2.5mg/ml 12h dos veces al dia</titol>
     <idPadre>2310</idPadre>
     <idFarmaco></idFarmaco>
-    <ficAsociado>unPDF.pdf</ficAsociado>
+    <ficAsociado>Paracetamol.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
@@ -383,7 +383,7 @@
     <titol>AnfB-Liposomal 2.67mg/mL 8h 2.67mg/ml 8h</titol>
     <idPadre>2310</idPadre>
     <idFarmaco></idFarmaco>
-    <ficAsociado>anfotericinaBLiposomal.pdf</ficAsociado>
+    <ficAsociado>Paracetamol.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
@@ -392,7 +392,7 @@
     <titol>Etanol 70%</titol>
     <idPadre>2310</idPadre>
     <idFarmaco></idFarmaco>
-    <ficAsociado>anfotericinaBLiposomal.pdf</ficAsociado>
+    <ficAsociado>Paracetamol.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
@@ -410,7 +410,7 @@
     <titol>Caspofungina 3.33 mg/mL 12h</titol>
     <idPadre>2320</idPadre>
     <idFarmaco></idFarmaco>
-    <ficAsociado>caspofungina.pdf</ficAsociado>
+    <ficAsociado>Paracetamol.pdf</ficAsociado>
     <nivel>FIN-ACORDEON</nivel>
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
