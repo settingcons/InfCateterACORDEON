@@ -41,10 +41,9 @@ function paginaObrirTXT(idioma, fichero) {
             window.open(fic, '_blank', 'location=no');
         }
         else {
-            load(fichero);
-            //ruta = "file:///sdcard/infCateter/" + idioma + "/";
-            //fic = ruta + fichero;
-            //window.plugins.fileOpener.open(fic);
+            ruta = "file:///sdcard/infCateter/" + idioma + "/";
+            fic = ruta + fichero;
+            window.plugins.fileOpener.open(fic);
         }
     }
     catch (ex) {
