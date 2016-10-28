@@ -28,6 +28,32 @@ function paginaInfoPDF(idioma,fichero){
     }
 }
 
+
+/* Muestra un PDF del directorio del sistema (sdcard/infCateter) */
+function paginaObrirTXT(idioma, fichero) {
+    var ruta = "";
+    var fic = "";
+    try {
+        if (esIOS()) {
+            ruta = window.location.href;
+            ruta = ruta.substr(0, ruta.lastIndexOf('/'));
+            fic = ruta + "/content/" + idioma + "/TXT/" + fichero;
+            window.open(fic, '_blank', 'location=no');
+        }
+        else {
+            load(fichero);
+            //ruta = "file:///sdcard/infCateter/" + idioma + "/";
+            //fic = ruta + fichero;
+            //window.plugins.fileOpener.open(fic);
+        }
+    }
+    catch (ex) {
+        aviso(40, 100, ex.message);
+    }
+}
+
+
+
 /* Muestra el texto XML a partir de Textes.xml */
 function inicioPaginaInfoXML() {
     $('#divTituloXML').html(tituloXML);
@@ -36,7 +62,6 @@ function inicioPaginaInfoXML() {
 
 /* Lee el texto XML de Textes.xml según idioma */
 function paginaInfoTXT(idioma,id, titulo){
-
 
     leeXML(idioma , "Textes.xml");
 
@@ -51,7 +76,6 @@ function paginaInfoTXT(idioma,id, titulo){
                 }
             });
         });
-
     }
     catch(ex)
     {
@@ -249,14 +273,15 @@ function crearPopPup(txt, idioma)
         sVal = aItems[i].split(",")[1];
         sTipo = aItems[i].split(",")[0];
 
-        if (sTipo=="" || (typeof(sVal)=="undefined" )){
-            //alert('No tengo que pintar');
-        }
+        if (sTipo=="" || (typeof(sVal)=="undefined" )){} //alert('No tengo que pintar');
+  
         else{
             if(sTipo == "TXT"){
-                img = "<img src='images/dossier.png'  onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">";
+               // img = "<img src='images/dossier.png'  onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">";
+                img = "<img src='images/dossier.png'  onclick=\"paginaObrirTXT('" + idioma + "','MiTabla.txt')\">";
                 sLinks += "<ul  style='list-style-type:none'>" + img ;
-                sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">" + sNombres.split(",")[i];
+                //sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">" + sNombres.split(",")[i];
+                sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaObrirTXT('" + idioma + "','MiTabla.txt')\">" + sNombres.split(",")[i];
                 sLinks += "</ul>";
             }
             else if(sTipo == "PDF"){

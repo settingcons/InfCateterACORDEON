@@ -41,9 +41,7 @@
     <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
 
     <feature name="http://api.phonegap.com/1.0/device" />
-<!-- IC   <feature name="http://api.phonegap.com/1.0/camera"/>-->
     <feature name="http://api.phonegap.com/1.0/file"/>
-<!-- IC   <feature name="http://api.phonegap.com/1.0/geolocation"/>-->
     <feature name="http://api.phonegap.com/1.0/media"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
@@ -52,6 +50,7 @@
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
     </feature>
+
     <feature name="Media">
 <!-- IC   <param name="ios-package" value="CDVSound" />-->
 <!-- IC   <param name="android-package" value="org.apache.cordova.media.AudioHandler" />-->
@@ -81,50 +80,20 @@
     <!--<preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />-->
     <!--geolocalización para android-->
     <preference name="android-build-tool" value="gradle" />
-<!-- IC   <plugin name="com.settingconsultoria.gpstracking" spec="1.0.22" source="pgb" />-->
 
-    <!--geolocalización para ios-->
-<!-- IC   <plugin name="settingconsultoria.geolocation.ios" spec="0.1" source="pgb" />-->
-
-    <!--<plugin name="settingconsultoria.cordova.plugins.geolocation" spec="0.1" source="pgb" />-->
-    <!--<feature name="Geolocation">-->
-        <!--<param name="ios-package" value="CDVLocation" />-->
-        <!--<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />-->
-    <!--</feature>-->
 
     <!-- IC Plugin para visualizar PDF's-->
     <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" />
 
-    <!--Plugin para llamar por teléfono-->
-<!--    <gap:plugin name="com.teamnemitoff.phonedialer" version="0.3.0" />-->
-
-    <!--Plugin para enviar email-->
-<!-- IC   <gap:plugin name="de.appplant.cordova.plugin.email-composer" version="0.8.0" />-->
-
     <!-- ocultar statusbar en ios -->
     <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0"/>
 
-    <!-- para activar la geolocalización en background para ios-->
-<!-- IC   <plugin name="com.wizital.plugins.backgroundlocationenabler" spec="1.0.2" source="pgb" />-->
-
     <!-- para que la app funcione en background -->
     <!--<plugin name="de.appplant.cordova.plugin.background-mode" spec="0.6.4" source="pgb" />-->
-
     <!--<gap:plugin name="cordova.plugins.diagnostic" source="npm" />-->
-
-    <!--plugin para detectar si el GPS está activo-->
-<!-- IC   <gap:plugin name="settingconsultoria.cordova.plugins.diagnostic" version="0.0.1" />-->
 
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
     <plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />
-
-    <!--para utilizar el plugin de diagnóstico-->
-<!-- IC
-    <feature name="Diagnostic" >
-        <param name="ios-package" value="Diagnostic" />
-        <param name="android-package" value="cordova.plugins.diagnostic"/>
-    </feature>
--->
 
     <!--<plugin name="SplashScreen" value="”org.apache.cordova.SplashScreen"  source="npm"/>-->
 
