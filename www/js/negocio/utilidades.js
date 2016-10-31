@@ -23,14 +23,9 @@ function salir() {
 
 function salir1(p_opcion) {
     if(p_opcion==1) {
-/*        if (_wathID != null) {
-            navigator.geolocation.clearWatch(_wathID);
-            _wathID = null;
-        }*/
+    /*  if (_wathID != null) { navigator.geolocation.clearWatch(_wathID);  _wathID = null; }*/
 
-        if (esIOS()) {
-
-        }
+        if (esIOS()) { }
         else {
             if (navigator.app) {
                 navigator.app.exitApp();
@@ -62,8 +57,7 @@ function mensaje(p_idmsg,p_idtitulo,p_exc) {
         navigator.notification.alert(v_texto, null, v_titulo);
     else
         alert(v_texto);
-}
-*/
+}*/
 
 function aviso(nIdTitulo,nIdMensaje, sMsg) {
     var sTitulo = Etiqueta(nIdTitulo);
@@ -116,7 +110,6 @@ function leeXML(idioma, fichero) {
     //DEBUG: alert("content/" + idioma + "/" + fichero);
     try
     {
-
         $.ajax({
             type: "GET",
             url: "content/" + idioma + "/" + fichero,
@@ -128,7 +121,6 @@ function leeXML(idioma, fichero) {
                 aviso(40,41,'');
             }, async: false
         });
-
     }
     catch(ex)
     {

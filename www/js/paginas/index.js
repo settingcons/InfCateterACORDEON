@@ -83,7 +83,6 @@ function Menu() {
 function Atras() {
 
     var item = "";
-
     try {
            if (navLIFO.length > 1) {
             navLIFO.pop();
@@ -98,6 +97,7 @@ function Atras() {
         aviso(40, 100, ex.message);
     }
 }
+
 
 function abrirPagina(sPag, id, titulo) {
 
@@ -202,6 +202,13 @@ function handleBackButton() {
             item = navLIFO.pop();
             abrirPagina(item.split("|")[0], item.split("|")[1], item.split("|")[2]);
         }
+        //afegit 11/10/16
+        //else {
+        //    if (navigator.app) {
+        //        navigator.app.backHistory(); }
+        //    else if (navigator.device) { navigator.device.backHistory(); }
+        //    else { window.history.back(); }
+        //}
     }
 }
 
