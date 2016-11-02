@@ -41,7 +41,7 @@ function paginaObrirTXT(idioma, fichero) {
             window.open(fic, '_blank', 'location=no');
         }
         else {
-            ruta = "file:///sdcard/infCateter/" + idioma + "/TXT/";
+            ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
             window.plugins.fileOpener.open(fic);
         }
