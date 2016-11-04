@@ -276,11 +276,11 @@ function crearPopPup(txt, idioma)
   
         else{
             if(sTipo == "TXT"){
-               // img = "<img src='images/dossier.png'  onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">";
-                img = "<img src='images/dossier.png'  onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">";
+                img = "<img src='images/dossier.png'  onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">";
+               // img = "<img src='images/dossier.png'  onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">";
                 sLinks += "<ul  style='list-style-type:none'>" + img ;
-                //sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">" + sNombres.split(",")[i];
-                sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">" + sNombres.split(",")[i];
+                sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">" + sNombres.split(",")[i];
+                //sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">" + sNombres.split(",")[i];
                 sLinks += "</ul>";
             }
             else if(sTipo == "PDF"){
