@@ -59,8 +59,7 @@
     <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> -->
 	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
-    <!--<plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />-->
-	<gap:plugin name="com-gkcgautam-asset2sd" source="pgb"/>
+    <gap:plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />
 	
    
     <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
