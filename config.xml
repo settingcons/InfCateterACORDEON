@@ -55,8 +55,8 @@
 <!-- IC   <param name="ios-package" value="CDVSound" />-->
 <!-- IC   <param name="android-package" value="org.apache.cordova.media.AudioHandler" />-->
     </feature>
-    <gap:plugin name="org.apache.cordova.battery-status"/>
-    <!--<gap:plugin name="org.apache.cordova.camera"/>-->
+   <!-- <gap:plugin name="org.apache.cordova.battery-status"/>
+    <gap:plugin name="org.apache.cordova.camera"/>-->
     <gap:plugin name="org.apache.cordova.media-capture" />
     <!--<gap:plugin name="org.apache.cordova.console" />-->
     <!--<gap:plugin name="org.apache.cordova.contacts"/>-->
