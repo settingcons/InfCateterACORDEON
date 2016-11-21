@@ -55,8 +55,9 @@
     <gap:plugin name="cordova-plugin-file" source="npm"/>
 	<!--<plugin name="SplashScreen" value="”org.apache.cordova.SplashScreen"  source="npm"/>-->
 	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
-    <!-- IC Plugin para visualizar PDF's-->
-    <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> 
+    <!-- IC Plugin para visualizar PDF's
+    <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> -->
+	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
     <plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />
 
