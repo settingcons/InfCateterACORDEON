@@ -101,7 +101,7 @@
     <icono>desplega.png</icono>
   </itemMenu>
   <itemMenu id="2211">
-    <titol>Cepas sensibles: amikacina 2mg/ml |TXT,6| gentamicina 5mg/ml |PDF,Gentamicina.pdf| ciprofloxacino 2mg/ml |PDF,Ciprofloxacino.pdf|.</titol>
+    <titol>Cepas sensibles: amikacina 2mg/ml |TXT,6.txt| gentamicina 5mg/ml |PDF,Gentamicina.pdf| ciprofloxacino 2mg/ml |PDF,Ciprofloxacino.pdf|.</titol>
     <idPadre>2110</idPadre>
     <idFarmaco></idFarmaco>
     <ficAsociado>POPUP</ficAsociado>

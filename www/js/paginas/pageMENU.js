@@ -37,7 +37,7 @@ function paginaObrirTXT(idioma, fichero) {
         if (esIOS()) {
             ruta = window.location.href;
             ruta = ruta.substr(0, ruta.lastIndexOf('/'));
-            fic = ruta + "/content/" + idioma + "/TXT/" + fichero;
+            fic = ruta + "/content/" + idioma + "/PDF/" + fichero;
             window.open(fic, '_blank', 'location=no');
         }
         else {
