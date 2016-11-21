@@ -21,7 +21,7 @@
     <preference name="stay-in-webview" value="false" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
-    <preference name="exit-on-suspend" value="false" />
+    <preference name="exit-on-suspend" value="true" /> <!--abans false-->
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="false" />
     <preference name="disable-cursor" value="false" />
@@ -58,10 +58,9 @@
     <!-- IC Plugin para visualizar PDF's
     <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> -->
 	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
-    <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
-    <gap:plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />
+    <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema 
+    <gap:plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />-->
 	
-   
     <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
    
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
