@@ -9,6 +9,7 @@ function paginaInfoPDF(idioma,fichero){
     var fic = "";
     try
     {
+        alert('llego aqui' + fichero);
         if(esIOS())
         {
             ruta = window.location.href;
@@ -20,7 +21,8 @@ function paginaInfoPDF(idioma,fichero){
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
             //window.plugins.fileOpener.open(fic);
-            window.plugins.fileOpener2.open(fic,'application/pdf');
+            alert('llego aqui');
+            cordova.plugins.fileOpener2.open(fic, 'application/pdf');
         }
     }
     catch(ex)
@@ -34,7 +36,9 @@ function paginaInfoPDF(idioma,fichero){
 function paginaObrirTXT(idioma, fichero) {
     var ruta = "";
     var fic = "";
+    
     try {
+        alert('llego aqui' + fichero);
         if (esIOS()) {
             ruta = window.location.href;
             ruta = ruta.substr(0, ruta.lastIndexOf('/'));
@@ -45,7 +49,7 @@ function paginaObrirTXT(idioma, fichero) {
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
             //window.plugins.fileOpener.open(fic);
-            window.plugins.fileOpener2.open(fic, 'application/txt');
+            cordova.plugins.fileOpener2.open(fic, 'application/txt');
         }
     }
     catch (ex) {
@@ -135,13 +139,15 @@ function filtroFichas(idioma){
                         items += "</font></a></td></tr></table></div></li>";
                     }
                     else {
-                        img = "<img src='images/dossier.png' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\">";
+                        //img = "<img src='images/dossier.png' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\">";
+                        img = "<img src='images/dossier.png' onclick=\"paginaInfoTXT('" + idioma + "','" + fic + "')\">";
                         items += "<li>";
                         items += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
                         items += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
                         items += img;
                         items += "</td><td style='width: 95%; vertical-align: middle;'>";
-                        items += "<a href='#' style='color:#6A9EA0;text-decoration:none;'  onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\" >";
+                        //items += "<a href='#' style='color:#6A9EA0;text-decoration:none;'  onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\" >";
+                        items += "<a href='#' style='color:#6A9EA0;text-decoration:none;'  onclick=\"paginaInfoTXT('" + idioma + "','" + fic + "')\" >";
                         items += "<font style='white-space:normal;text-transform: none !important;color: #79B6B7;font-weight:normal;'>&nbsp;";
                         items += farmacoEncontrado;
                         items += "</font></a></td></tr></table></div></li>";
