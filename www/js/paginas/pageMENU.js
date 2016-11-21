@@ -19,7 +19,8 @@ function paginaInfoPDF(idioma,fichero){
         else {
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
-            window.plugins.fileOpener.open(fic);
+            //window.plugins.fileOpener.open(fic);
+            window.plugins.fileOpener2.open(fic,'application/pdf');
         }
     }
     catch(ex)
@@ -43,7 +44,8 @@ function paginaObrirTXT(idioma, fichero) {
         else {
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
-            window.plugins.fileOpener.open(fic);
+            //window.plugins.fileOpener.open(fic);
+            window.plugins.fileOpener2.open(fic, 'application/txt');
         }
     }
     catch (ex) {
