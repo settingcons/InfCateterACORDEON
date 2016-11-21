@@ -28,7 +28,7 @@
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
-	<preference name="android-build-tool" value="gradle" /> <!--"ant"-->
+	<preference name="android-build-tool" value="ant|gradle" /> <!--"ant"-->
     
 	
 	<!--<feature name="http://api.phonegap.com/1.0/device" />
@@ -45,28 +45,25 @@
 	<gap:plugin name="cordova-plugin-media" source="npm" version="2.4.0"/>
 	<gap:plugin name="cordova-plugin-network-information" source="npm" version="1.3.0" />
 	<plugin name="cordova-plugin-media-capture" source="npm" version="1.4.0"/>
+	<plugin name="cordova-plugin-device-motion" source="npm" version="1.2.2"/>
 	-->
 	
 	<!-- el plugin device se instala con el plugin de notificaciones -->
     <!--<gap:plugin name="org.apache.cordova.device" version="0.2.12" />-->
-	<plugin name="cordova-plugin-device-motion" source="npm" version="1.2.2"/>
 	<gap:plugin name="cordova-plugin-device-orientation" source="npm" version="1.0.4"/>
 	<gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0"/>
 	<gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0"/>
-	
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
-	
-    <gap:plugin name="cordova-plugin-file" source="npm"/>
-	<!--<plugin name="SplashScreen" value="”org.apache.cordova.SplashScreen"  source="npm"/>-->
+	<gap:plugin name="cordova-plugin-file" source="npm"/>
 	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
+	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
     <!-- IC Plugin para visualizar PDF's
     <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> -->
 	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema 
     <gap:plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />-->
 	
-    <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-   
+ 
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" /> <!--fa falta?-->
 
@@ -75,14 +72,13 @@
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
     </feature>
 	
-   <feature name="Media">
+   <!--feature name="Media">
         <param name="ios-package" value="CDVSound" />
         <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-    </feature>
+    </feature-->
   
    <!--plugin para notificaciones-->
     <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />
-    <!--<plugin name="de.appplant.cordova.plugin.local-notification-ios9-fix" spec="0.8.2" source="pgb" />-->
 	
    <!-- ocultar statusbar en ios -->
    <gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
