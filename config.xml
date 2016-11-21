@@ -79,7 +79,8 @@
     </feature>
   
    <!--plugin para notificaciones-->
-    <plugin name="de.appplant.cordova.plugin.local-notification-ios9-fix" spec="0.8.2" source="pgb" />
+    <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />
+    <!--<plugin name="de.appplant.cordova.plugin.local-notification-ios9-fix" spec="0.8.2" source="pgb" />-->
 	
    <!-- ocultar statusbar en ios -->
    <gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
