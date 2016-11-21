@@ -31,27 +31,31 @@
 	<preference name="android-build-tool" value="gradle" /> <!--"ant"-->
     
 	
-	<feature name="http://api.phonegap.com/1.0/device" />
+	<!--<feature name="http://api.phonegap.com/1.0/device" />
+	<feature name="http://api.phonegap.com/1.0/media"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	-->
     <feature name="http://api.phonegap.com/1.0/file"/>
-    <feature name="http://api.phonegap.com/1.0/media"/>
-    <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
-	
 		
 	
-
+	<!-- No son requerits
 	<plugin name="cordova-plugin-battery-status" source="npm" version="1.2.0"/>
-    <plugin name="cordova-plugin-media-capture" source="npm" version="1.4.0"/>
+	<gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
+	<gap:plugin name="cordova-plugin-media" source="npm" version="2.4.0"/>
+	<gap:plugin name="cordova-plugin-network-information" source="npm" version="1.3.0" />
+	<plugin name="cordova-plugin-media-capture" source="npm" version="1.4.0"/>
+	-->
+	
 	<!-- el plugin device se instala con el plugin de notificaciones -->
     <!--<gap:plugin name="org.apache.cordova.device" version="0.2.12" />-->
 	<plugin name="cordova-plugin-device-motion" source="npm" version="1.2.2"/>
 	<gap:plugin name="cordova-plugin-device-orientation" source="npm" version="1.0.4"/>
 	<gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0"/>
 	<gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0"/>
-	<gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
+	
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
-	<gap:plugin name="cordova-plugin-media" source="npm" version="2.4.0"/>
-	<gap:plugin name="cordova-plugin-network-information" source="npm" version="1.3.0" />
+	
     <gap:plugin name="cordova-plugin-file" source="npm"/>
 	<!--<plugin name="SplashScreen" value="”org.apache.cordova.SplashScreen"  source="npm"/>-->
 	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
