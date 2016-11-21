@@ -139,15 +139,13 @@ function filtroFichas(idioma){
                         items += "</font></a></td></tr></table></div></li>";
                     }
                     else {
-                        //img = "<img src='images/dossier.png' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\">";
-                        img = "<img src='images/dossier.png' onclick=\"paginaInfoTXT('" + idioma + "','" + fic + "')\">";
+                        img = "<img src='images/dossier.png' onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\">";
                         items += "<li>";
                         items += "<div style='width: 100%; height:100%;  vertical-align: middle;' class='mi-fondoPaginaTXT'>";
                         items += "<table width='100%' height='100%' class='mi-fondoTablaTXT'><tr><td style='width: 5%; vertical-align: middle; text-align: left;'>";
                         items += img;
                         items += "</td><td style='width: 95%; vertical-align: middle;'>";
-                        //items += "<a href='#' style='color:#6A9EA0;text-decoration:none;'  onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\" >";
-                        items += "<a href='#' style='color:#6A9EA0;text-decoration:none;'  onclick=\"paginaInfoTXT('" + idioma + "','" + fic + "')\" >";
+                        items += "<a href='#' style='color:#6A9EA0;text-decoration:none;'  onclick=\"paginaInfoTXT('" + idioma + "','" + id + "','" + farmacoEncontrado + "')\" >";
                         items += "<font style='white-space:normal;text-transform: none !important;color: #79B6B7;font-weight:normal;'>&nbsp;";
                         items += farmacoEncontrado;
                         items += "</font></a></td></tr></table></div></li>";
@@ -284,11 +282,11 @@ function crearPopPup(txt, idioma)
   
         else{
             if(sTipo == "TXT"){
-                img = "<img src='images/dossier.png'  onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">";
-               // img = "<img src='images/dossier.png'  onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">";
+               //canviar amb la seguent liniea si no va img = "<img src='images/dossier.png'  onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">";
+                img = "<img src='images/dossier.png'  onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">";
                 sLinks += "<ul  style='list-style-type:none'>" + img ;
-                sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">" + sNombres.split(",")[i];
-                //sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">" + sNombres.split(",")[i];
+                //canviar amb la seguent liniea si no va sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">" + sNombres.split(",")[i];
+               sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">" + sNombres.split(",")[i];
                 sLinks += "</ul>";
             }
             else if(sTipo == "PDF"){
