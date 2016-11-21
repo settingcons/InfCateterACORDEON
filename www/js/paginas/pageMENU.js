@@ -3,13 +3,12 @@ var tituloXML = "";
 var miIdPadre="";
 
 
-    /* Muestra un PDF del directorio del sistema (sdcard/infCateter) */
+    /* Muestra un PDF del directorio del sistema (sdcard/infCateter)  FUNCIONA!!!*/
 function paginaInfoPDF(idioma,fichero){
     var ruta = "";
     var fic = "";
     try
     {
-        alert('llego aqui' + fichero);
         if(esIOS())
         {
             ruta = window.location.href;
@@ -21,7 +20,6 @@ function paginaInfoPDF(idioma,fichero){
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
             //window.plugins.fileOpener.open(fic);
-            alert('llego aqui');
             cordova.plugins.fileOpener2.open(fic, 'application/pdf');
         }
     }
@@ -48,9 +46,11 @@ function paginaObrirTXT(idioma, fichero) {
         else {
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
-            //window.plugins.fileOpener.open(fic);
-            cordova.plugins.fileOpener2.open(fic, 'application/txt');
+            //    window.plugins.fileOpener.open(fic);
+            var reader = new FileReader();
+            reader.readAsText(fic);
         }
+        
     }
     catch (ex) {
         aviso(40, 100, ex.message);
