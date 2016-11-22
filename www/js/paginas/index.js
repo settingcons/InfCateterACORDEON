@@ -40,9 +40,12 @@ function deviceReady() {
             aviso(40,42,'');
             salir();
         }
+        
 
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, null);
+        
         //INICIO InfCateter
-        copiaPDFs('es-es');
+       // copiaPDFs('es-es');
         $.doTimeout(1500, inicio());
 
     }
@@ -50,6 +53,28 @@ function deviceReady() {
         aviso(40,100,ex.message);
     }
 }
+
+//inici per copiar
+function onRequestFileSystemSuccess(fileSystem) {
+    alert('onRequestFileSystemSuccess');
+    var entry = fileSystem.root;
+    alert('entry');
+    entry.getDirectory("example", { create: true, exclusive: false }, onGetDirectorySuccess, onGetDirectoryFail);
+}
+
+function onGetDirectorySuccess(dir) {
+    alert("Created dir " + dir.name);
+}
+
+function onGetDirectoryFail(error) {
+    alert("Error creating directory " + error.code);
+}
+
+//fi per copiar
+
+
+
+
 
 /*inicia InfCateter*/
 function inicio(){

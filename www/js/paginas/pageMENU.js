@@ -36,7 +36,7 @@ function paginaObrirTXT(idioma, fichero) {
     var fic = "";
     
     try {
-        alert('llego aqui' + fichero);
+        alert('llego aqui ' + fichero);
         if (esIOS()) {
             ruta = window.location.href;
             ruta = ruta.substr(0, ruta.lastIndexOf('/'));
@@ -44,11 +44,11 @@ function paginaObrirTXT(idioma, fichero) {
             window.open(fic, '_blank', 'location=no');
         }
         else {
+            var reader = new FileReader(); //nou
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
             //    window.plugins.fileOpener.open(fic);
-            var reader = new FileReader();
-            reader.readAsText(fic);
+            reader.readAsText(fic); //nou
         }
         
     }
