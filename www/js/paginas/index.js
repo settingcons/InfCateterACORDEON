@@ -41,8 +41,8 @@ function deviceReady() {
             salir();
         }
         
-
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, null);
+     
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, null);
         
         //INICIO InfCateter
        // copiaPDFs('es-es');
@@ -55,19 +55,16 @@ function deviceReady() {
 }
 
 //inici per copiar
-function onRequestFileSystemSuccess(fileSystem) {
-    alert('onRequestFileSystemSuccess!!');
-    var entry = fileSystem.root;
-    alert('entry: ' + entry);
-    entry.getDirectory("www/content/" + idioma + "/PDF", { create: true, exclusive: false }, onGetDirectorySuccess, onGetDirectoryFail);
+function gotFS(fileSystem) {
+    fileSystem.root.getDirectory("InfCateter/es-es", { create: true }, gotDir);
 }
 
-function onGetDirectorySuccess(dir) {
-    alert("Created dir: " + dir.name);
+function gotDir(dirEntry) {
+    dirEntry.getFile("lockfile.txt", { create: true, exclusive: true }, gotFile);
 }
 
-function onGetDirectoryFail(error) {
-    alert("Error creating directory " + error.code);
+function gotFile(fileEntry) {
+    // Do something with fileEntry here
 }
 
 //fi per copiar
