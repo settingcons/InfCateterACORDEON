@@ -135,7 +135,7 @@ function getPath() {
     return 'file://' + path;
 }
 
-function copiaPDFs(idioma) {
+function OLD_copiaPDFs(idioma) {
     if(!esIOS())
     {
         asset2sd.copyDir({
@@ -149,6 +149,19 @@ function copiaPDFs(idioma) {
             }
         );
    }
+}
+
+function copiaPDFs(idioma) {
+    if (!esIOS()) {
+        $cordovaFile.copyDir(cordova.file.dataDirectory, "www/content/" + idioma + "/PDF", cordova.file.tempDirectory, "infCateter/" + idioma)
+     .then(function (success) {
+         // success
+     }, function (error) {
+         // error
+         aviso(40, 43, '');
+     });
+
+    }
 }
 
 function TryParseInt(str,defaultValue) {
