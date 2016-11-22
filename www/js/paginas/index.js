@@ -43,7 +43,7 @@ function deviceReady() {
         
        
 
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, null);
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, onRequestFileSystemFail);
         
         //INICIO InfCateter
        // copiaPDFs('es-es');
@@ -56,19 +56,18 @@ function deviceReady() {
 }
 
 //inici per copiar
-function gotFS(fileSystem) {
-    fileSystem.root.getDirectory("InfCateter/es-ca", { create: true }, gotDir);
+function onRequestFileSystemSuccess(fileSystem) {
+    var entry = fileSystem.root;
+    entry.getDirectory("es-es", { create: true }, onGetDirectorySuccess);
 }
 
-function gotDir(dirEntry) {
-    dirEntry.getFile("lockfile.txt", { create: true, exclusive: true }, gotFile);
+function onGetDirectorySuccess(dirEntry) {
+    alert("created dir " + dirEntry.name);
 }
 
-function gotFile(fileEntry) {
-    // Do something with fileEntry here
-
+function onGetDirectoryFail() {
+    alert("sera que no ");
 }
-
 //fi per copiar
 
 
