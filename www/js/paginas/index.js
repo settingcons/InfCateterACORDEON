@@ -65,7 +65,7 @@ function onGetDirectorySuccess(dirEntry) {
     alert("created dir " + dirEntry.name);
 }
 
-function onGetDirectoryFail() {
+function onRequestFileSystemFail() {
     alert("sera que no ");
 }
 //fi per copiar
