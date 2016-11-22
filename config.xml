@@ -10,8 +10,8 @@
   <content src="index.html" />
   <preference name="permissions" value="none" />
   <!--all platforms-->
-  <!--<preference name="phonegap-version" value="cli-6.3.0" />-->
-  <preference name="phonegap-version" value="3.7.0" />
+  <preference name="phonegap-version" value="cli-6.3.0" />
+ <!-- <preference name="phonegap-version" value="3.7.0" />-->
   <preference name="orientation" value="default" />
   <preference name="fullscreen" value="true" />
   <!--android only-->
@@ -62,8 +62,8 @@
   <!-- IC Plugin para visualizar PDF's
   <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> -->
   <gap:plugin name="cordova-plugin-fileopener" source="npm" />
-  <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
-  <gap:plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />
+  <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema 
+  <gap:plugin name="com.gkcgautam.asset2sd" spec="2.0.0" source="pgb" />-->
   <!--plugin para notificaciones-->
   <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />
   <!-- ocultar statusbar en ios -->
