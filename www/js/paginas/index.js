@@ -41,7 +41,8 @@ function deviceReady() {
             salir();
         }
         
-     
+       
+
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, null);
         
         //INICIO InfCateter
@@ -56,7 +57,7 @@ function deviceReady() {
 
 //inici per copiar
 function gotFS(fileSystem) {
-    fileSystem.root.getDirectory("InfCateter/es-es", { create: true }, gotDir);
+    fileSystem.root.getDirectory("InfCateter/es-ca", { create: true }, gotDir);
 }
 
 function gotDir(dirEntry) {
@@ -65,6 +66,7 @@ function gotDir(dirEntry) {
 
 function gotFile(fileEntry) {
     // Do something with fileEntry here
+
 }
 
 //fi per copiar
