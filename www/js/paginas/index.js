@@ -56,14 +56,14 @@ function deviceReady() {
 
 //inici per copiar
 function onRequestFileSystemSuccess(fileSystem) {
-    alert('onRequestFileSystemSuccess');
+    alert('onRequestFileSystemSuccess!!');
     var entry = fileSystem.root;
-    alert('entry');
-    entry.getDirectory("example", { create: true, exclusive: false }, onGetDirectorySuccess, onGetDirectoryFail);
+    alert('entry: ' + entry);
+    entry.getDirectory("www/content/" + idioma + "/PDF", { create: true, exclusive: false }, onGetDirectorySuccess, onGetDirectoryFail);
 }
 
 function onGetDirectorySuccess(dir) {
-    alert("Created dir " + dir.name);
+    alert("Created dir: " + dir.name);
 }
 
 function onGetDirectoryFail(error) {
