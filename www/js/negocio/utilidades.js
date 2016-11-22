@@ -155,13 +155,15 @@ function copiaPDFs(idioma) {
     alert('anem a copiar els fitxers');
     if (!esIOS()) {
         //$cordovaFile.copyDir
-        copyDir(cordova.file.dataDirectory, "www/content/" + idioma + "/PDF", cordova.file.tempDirectory, "infCateter/" + idioma)
+        
+        file.copyDir(cordova.file.dataDirectory, "www/content/" + idioma + "/PDF", cordova.file.tempDirectory, "infCateter/" + idioma)
      .then(function (success) {
          // success
          alert('fitxers copiats');
      }, function (error) {
          // error
-         aviso(40, 43, '');
+         alert('no hem copiat res');
+         //aviso(40, 43, '');
      });
 
     }

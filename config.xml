@@ -121,5 +121,7 @@
     <gap:splash src="icons/android/splash-mdpi_land_(480-320).png" gap:platform="android" gap:density="mdpi" gap:qualifier="land-mdpi"  />
     <gap:splash src="icons/android/splash-hdpi_land_(800-480).png" gap:platform="android" gap:density="hdpi" gap:qualifier="land-hdpi"/>
     <gap:splash src="icons/android/splash-xhdpi_land(1280-720).png" gap:platform="android" gap:density="xhdpi"  gap:qualifier="land-xhdpi" />
+	
+	 <access origin="*" />
 
 </widget>
