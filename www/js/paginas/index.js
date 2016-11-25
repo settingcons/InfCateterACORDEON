@@ -1,5 +1,7 @@
 var navLIFO = new Array();
 var itemAnterior = "";
+var fs;
+var fs_root;
 
 var app = {
     // Application Constructor
@@ -25,6 +27,11 @@ var app = {
 
 function deviceReady() {
     try {
+
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, onRequestFileSystemFail);
+        window.resolveLocalFileSystemURI("file:///Ciprofloxacino.pdf", onResolveSuccess, fail);
+
+
         var success = function(status) {
             //alert('Cache Message: ' + status);
         }
@@ -41,10 +48,6 @@ function deviceReady() {
             salir();
         }
         
-       
-
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, onRequestFileSystemFail);
-        
         //INICIO InfCateter
        // copiaPDFs('es-es');
         $.doTimeout(1500, inicio());
@@ -57,8 +60,8 @@ function deviceReady() {
 
 //inici per copiar
 function onRequestFileSystemSuccess(fileSystem) {
-    var fs = fileSystem;
-    var fs_root = fs.root;
+    fs = fileSystem;
+    fs_root = fs.root;
 
     alert("entry  name " + fs.name);
     alert("entry root name " + fs_root.name);
@@ -72,6 +75,10 @@ function onGetDirectorySuccess(dirEntry) {
 
 function onRequestFileSystemFail() {
     alert("sera que no ");
+}
+
+function onResolveSuccess(fileEntry) {
+    alert("onResolveSucces " + fileEntry.name);
 }
 //fi per copiar
 
