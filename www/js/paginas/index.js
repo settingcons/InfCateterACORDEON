@@ -58,7 +58,8 @@ function deviceReady() {
 //inici per copiar
 function onRequestFileSystemSuccess(fileSystem) {
     var entry = fileSystem.root;
-    entry.getDirectory("es-es", { create: true }, onGetDirectorySuccess);
+    //entry.getDirectory("infcateter/es-es", { create: true, exclusive: false }, onGetDirectorySuccess);
+    entry.getDirectory("infcateter/TEST", { create: true, exclusive: false }, onGetDirectorySuccess);
 }
 
 function onGetDirectorySuccess(dirEntry) {
