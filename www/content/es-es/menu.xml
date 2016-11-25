@@ -203,11 +203,11 @@
   <itemMenu id="2211">
     <titol>Vancomicina: salvar catéter en 84% de los casos</titol>
     <idPadre>2210</idPadre>
-    <idFarmaco>9</idFarmaco>
-    <ficAsociado>TXT</ficAsociado>
+    <idFarmaco></idFarmaco>
+    <ficAsociado>Vancomicina.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>dossier.png</icono>
+    <icono>pdf.png</icono>
   </itemMenu>
   <itemMenu id="2212">
     <titol>Alternativa: teicoplanina, daptomicina</titol>
@@ -248,11 +248,11 @@
   <itemMenu id="2222">
     <titol>SAMS - cefazolina</titol>
     <idPadre>2220</idPadre>
-    <idFarmaco>7</idFarmaco>
-    <ficAsociado>TXT</ficAsociado>
+    <idFarmaco></idFarmaco>
+    <ficAsociado>Cefazolina.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>dossier.png</icono>
+    <icono>pdf.png</icono>
   </itemMenu>
   <itemMenu id="2223">
     <titol>SARM: vancomicina |PDF,vancomicina.pdf| teicoplanina |PDF,Ciprofloxacino.pdf|.</titol>
@@ -302,11 +302,11 @@
   <itemMenu id="2241">
     <titol>vancomicina</titol>
     <idPadre>2240</idPadre>
-    <idFarmaco>9</idFarmaco>
-    <ficAsociado>TXT</ficAsociado>
+    <idFarmaco></idFarmaco>
+    <ficAsociado>Vancomicina.pdf</ficAsociado>
     <nivel>ACORDEON</nivel>
     <esPadre>0</esPadre>
-    <icono>dossier.png</icono>
+    <icono>pdf.png</icono>
   </itemMenu>
   <itemMenu id="2242">
     <titol>alternativas (en caso de resistencia vanco):daptomicina |PDF,daptomicina.pdf| linezolid |PDF,Ciprofloxacino.pdf| teicoplanina |PDF,Ciprofloxacino.pdf|.</titol>
