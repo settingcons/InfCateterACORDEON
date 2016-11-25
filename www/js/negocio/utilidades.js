@@ -135,7 +135,20 @@ function getPath() {
     return 'file://' + path;
 }
 
-function OLD_copiaPDFs(idioma) {
+function TryParseInt(str, defaultValue) {
+    var retValue = defaultValue;
+    if (str !== null) {
+        if (str.length > 0) {
+            if (!isNaN(str)) {
+                retValue = parseInt(str);
+            }
+        }
+    }
+    return retValue;
+}
+
+
+function ORIGINAL_copiaPDFs(idioma) {
     if(!esIOS())
     {
         asset2sd.copyDir({
@@ -156,6 +169,8 @@ function copiaPDFs(idioma) {
     if (!esIOS()) {
         //$cordovaFile.copyDir
         
+        var file = new File();
+        
         file.copyDir(cordova.file.dataDirectory, "www/content/" + idioma + "/PDF", cordova.file.tempDirectory, "infCateter/" + idioma)
      .then(function (success) {
          // success
@@ -169,15 +184,4 @@ function copiaPDFs(idioma) {
     }
 }
 
-function TryParseInt(str,defaultValue) {
-    var retValue = defaultValue;
-    if(str !== null) {
-        if(str.length > 0) {
-            if (!isNaN(str)) {
-                retValue = parseInt(str);
-            }
-        }
-    }
-    return retValue;
-}
 

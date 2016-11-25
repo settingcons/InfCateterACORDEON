@@ -28,8 +28,8 @@ var app = {
 function deviceReady() {
     try {
 
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, onRequestFileSystemFail);
-        window.resolveLocalFileSystemURI("file:///Ciprofloxacino.pdf", onResolveSuccess, fail);
+        //hgs Quitar   window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, onRequestFileSystemFail);
+        //hgs Quitar   window.resolveLocalFileSystemURI("file:///Ciprofloxacino.pdf", onResolveSuccess, fail);
 
 
         var success = function(status) {
@@ -49,7 +49,7 @@ function deviceReady() {
         }
         
         //INICIO InfCateter
-       // copiaPDFs('es-es');
+         copiaPDFs('es-es');
         $.doTimeout(1500, inicio());
 
     }
@@ -59,27 +59,31 @@ function deviceReady() {
 }
 
 //inici per copiar
-function onRequestFileSystemSuccess(fileSystem) {
-    fs = fileSystem;
-    fs_root = fs.root;
+//function onRequestFileSystemSuccess(fileSystem) {
+//    fs = fileSystem;
+//    fs_root = fs.root;
 
-    alert("entry  name " + fs.name);
-    alert("entry root name " + fs_root.name);
+//    alert("entry  name " + fs.name);
+//    alert("entry root name " + fs_root.name);
 
-    fs_root.getDirectory("infcateter/es-es", { create: true, exclusive: false }, onGetDirectorySuccess);
-}
+//    fs_root.getDirectory("infcateter/es-es", { create: true, exclusive: false }, onGetDirectorySuccess);
+//}
 
-function onGetDirectorySuccess(dirEntry) {
-    alert("created dir " + dirEntry.name);
-}
+//function onGetDirectorySuccess(dirEntry) {
+//    alert("created dir " + dirEntry.name);
+//}
 
-function onRequestFileSystemFail() {
-    alert("sera que no ");
-}
+//function onRequestFileSystemFail() {
+//    alert("sera que no ");
+//}
 
-function onResolveSuccess(fileEntry) {
-    alert("onResolveSucces " + fileEntry.name);
-}
+//function onResolveSuccess(fileEntry) {
+//    alert("onResolveSucces " + fileEntry.name);
+//}
+
+//function fail() {
+//    alert("sera que tampoco no ");
+//}
 //fi per copiar
 
 
