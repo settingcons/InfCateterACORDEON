@@ -203,9 +203,16 @@ function copiaPDFs(idioma) {
             root = fileSystem.root;
         });
 
+        ////crear dir destino
+        //window.resolveLocalFileSystemURL(cordova.file.applicationDirectory, function (dir) {
+        //    var newDir = 'infCateter/' + sIdioma;
+        //    dir.getDirectory(newDir, { create: true }, getDirectoryWin, getDirectoryFail);
+        //});
+
+        //leer dir origen
         window.resolveLocalFileSystemURL(cordova.file.applicationDirectory, function (dir) {
                 var srcDir = "www/content/" + idioma + "/PDF";
-                dir.getDirectory(srcDir, {create: true, exclusive: false }, getDirectoryWin, getDirectoryFail);
+                dir.getDirectory(srcDir, {create: false }, getDirectoryWin, getDirectoryFail);
          });
 
 
@@ -231,10 +238,9 @@ function getDirectoryWin(directory){
     var parentDir = root;
 
     // name of the destination directory within the parentDir
-    var dstDir = 'infCateter/' + sIdioma; 
+    var dstDir = '/infCateter/' + sIdioma; 
 
     // use copyWin/copyFail to launch callbacks when it works/fails
-    
     directory.copyTo(root, dstDir, copyWin, copyFail);
 }
 
