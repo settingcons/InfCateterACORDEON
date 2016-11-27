@@ -195,7 +195,7 @@ function copiaPDFs(idioma) {
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
         function (fileSystem) {
             root = fileSystem.root;
-            var srcDir = cordova.file.applicationStorageDirectory + "www/content/" + idioma + "/PDF";
+            var srcDir = cordova.file.applicationDirectory + "www/content/" + idioma + "/PDF";
 alert(srcDir);
             root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
         });
