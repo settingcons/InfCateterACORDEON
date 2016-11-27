@@ -198,10 +198,16 @@ function copiaPDFs(idioma) {
         //alert(cordova.file.externalDataDirectory);
         //alert(cordova.file.externalApplicationStorageDirectory);
 
-        window.resolveLocalFileSystemURL(cordova.file.applicationDirectory, function (dir) {
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+        function (fileSystem) {
+            root = fileSystem.root;
+        });
+
+        window.resolveLocalFileSystemURL(cordova.file.applicationDirectory, function (root) {
                 var srcDir = "www/content/" + idioma + "/PDF";
-                dir.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
+                root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
          });
+
 
 //        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
 //          function (fileSystem) {
