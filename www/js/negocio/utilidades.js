@@ -203,9 +203,9 @@ function copiaPDFs(idioma) {
             root = fileSystem.root;
         });
 
-        window.resolveLocalFileSystemURL(cordova.file.applicationDirectory, function (root) {
+        window.resolveLocalFileSystemURL(cordova.file.applicationDirectory, function (dir) {
                 var srcDir = "www/content/" + idioma + "/PDF";
-                root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
+                dir.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
          });
 
 
