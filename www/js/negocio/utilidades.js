@@ -191,13 +191,17 @@ function copiaPDFs(idioma) {
     alert('anem a copiar els fitxers');
     if (!esIOS()) {
         alert(cordova.file.applicationDirectory);
-        //alert(cordova.file.applicationStorageDirectory);
-        //alert(cordova.file.dataDirectory);
+        alert(cordova.file.applicationStorageDirectory);
+        alert(cordova.file.documentsDirectory);
+        alert(cordova.file.dataDirectory);
+        alert(cordova.file.externalRootDirectory);
+        alert(cordova.file.externalDataDirectory);
+        alert(cordova.file.externalApplicationStorageDirectory);
 
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
           function (fileSystem) {
               root = fileSystem.root;
-              var srcDir = cordova.file.applicationDirectory + "www/content/" + idioma + "/PDF/";
+              var srcDir = cordova.file.documentsDirectory + "www/content/" + idioma + "/PDF/";
 alert('srcDir:' + srcDir);
               root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
           });
