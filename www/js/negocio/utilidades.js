@@ -190,11 +190,12 @@ function copiaPDFs(idioma) {
     sIdioma = idioma;
     alert('anem a copiar els fitxers');
     if (!esIOS()) {
-        var srcDir = "www/content/" + idioma + "/PDF";
-
+        alert(cordova.file.applicationDirectory);
+        alert(cordova.file.applicationStorageDirectory);
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
         function (fileSystem) {
             root = fileSystem.root;
+            var srcDir = cordova.file.applicationDirectory  + "/content/" + idioma + "/PDF";
             root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
         });
     }
