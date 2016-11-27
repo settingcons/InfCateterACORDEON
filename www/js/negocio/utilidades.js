@@ -164,24 +164,67 @@ function ORIGINAL_copiaPDFs(idioma) {
    }
 }
 
+//function copiaPDFs(idioma) {
+//    alert('anem a copiar els fitxers');
+//    if (!esIOS()) {
+//        //$cordovaFile.copyDir
+        
+//        var file = new File();
+        
+//        file.copyDir(cordova.file.dataDirectory, "www/content/" + idioma + "/PDF", cordova.file.tempDirectory, "infCateter/" + idioma)
+//     .then(function (success) {
+//         // success
+//         alert('fitxers copiats');
+//     }, function (error) {
+//         // error
+//         alert('no hem copiat res');
+//         //aviso(40, 43, '');
+//     });
+
+//    }
+//}
+
+var sIdioma;
+var root;
 function copiaPDFs(idioma) {
+    sIdioma = idioma;
     alert('anem a copiar els fitxers');
     if (!esIOS()) {
-        //$cordovaFile.copyDir
-        
-        var file = new File();
-        
-        file.copyDir(cordova.file.dataDirectory, "www/content/" + idioma + "/PDF", cordova.file.tempDirectory, "infCateter/" + idioma)
-     .then(function (success) {
-         // success
-         alert('fitxers copiats');
-     }, function (error) {
-         // error
-         alert('no hem copiat res');
-         //aviso(40, 43, '');
-     });
+        var srcDir = "www/content/" + idioma + "/PDF";
 
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+        function (fileSystem) {
+            root = fileSystem.root;
+            root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
+        });
     }
 }
 
 
+// the directory param should be a DirectoryEntry object that points to the srcDir    
+function getDirectoryWin(directory){
+    alert('got the directory');
+
+    // path to the parent directory that holds the dir that we want to copy to
+    // we'll set it as the root, but otherwise you'll
+    // need parentDir be a DirectoryEntry object
+    var parentDir = root;
+
+    // name of the destination directory within the parentDir
+    var dstDir = 'infCateter/' + sIdioma; 
+
+    // use copyWin/copyFail to launch callbacks when it works/fails
+    directory.copyTo(root, dstDir, copyWin, copyFail);
+}
+
+function getDirectoryFail(){
+    alert("I failed at getting a directory");
+}
+
+function copyWin(){
+   alert('Copying worked!');
+}
+
+function copyFail(){
+    alert('I failed copying');
+}

@@ -48,8 +48,11 @@ function deviceReady() {
             salir();
         }
         
+        alert(cordova.file);
+
         //INICIO InfCateter
-         copiaPDFs('es-es');
+        copiaPDFs('es-es');
+
         $.doTimeout(1500, inicio());
 
     }
