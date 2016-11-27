@@ -228,7 +228,8 @@ function getDirectoryWin(directory){
     var dstDir = 'infCateter/' + sIdioma; 
 
     // use copyWin/copyFail to launch callbacks when it works/fails
-    directory.copyTo(root, dstDir, copyWin, copyFail);
+    
+    directory.copyTo(fileSystem.root, dstDir, copyWin, copyFail);
 }
 
 function getDirectoryFail(){
