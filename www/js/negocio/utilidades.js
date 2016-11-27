@@ -214,8 +214,9 @@ function gotFS(fileSystem) {
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
       function (fileSystem) {
           root = fileSystem.root;
+          alert('root:' + root);
           var srcDir = rootFS.fullPath + "www/content/" + idioma + "/PDF";
-          alert(srcDir);
+          alert('srcDir:' + srcDir);
           root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
       });
 
