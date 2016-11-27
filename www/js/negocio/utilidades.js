@@ -235,7 +235,7 @@ function getDirectoryWin(directory){
 
     // use copyWin/copyFail to launch callbacks when it works/fails
     
-    directory.copyTo(fileSystem.root, dstDir, copyWin, copyFail);
+    directory.copyTo(root, dstDir, copyWin, copyFail);
 }
 
 function getDirectoryFail(){
