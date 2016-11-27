@@ -214,13 +214,12 @@ function gotFS(fileSystem) {
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
       function (fileSystem) {
           root = fileSystem.root;
-          var srcDir = rootFS.fullPath + "/content/" + idioma + "/PDF";
+          var srcDir = rootFS.fullPath + "www/content/" + idioma + "/PDF";
           alert(srcDir);
           root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
       });
 
 }
-
 
 // the directory param should be a DirectoryEntry object that points to the srcDir    
 function getDirectoryWin(directory){
