@@ -190,16 +190,15 @@ function copiaPDFs(idioma) {
     sIdioma = idioma;
     alert('anem a copiar els fitxers');
     if (!esIOS()) {
-        alert(cordova.file.applicationDirectory);
-        alert(cordova.file.applicationStorageDirectory);
-        alert(cordova.file.documentsDirectory);
-        alert(cordova.file.dataDirectory);
-        alert(cordova.file.externalRootDirectory);
-        alert(cordova.file.externalDataDirectory);
-        alert(cordova.file.externalApplicationStorageDirectory);
+        //alert(cordova.file.applicationDirectory);
+        //alert(cordova.file.applicationStorageDirectory);
+        //alert(cordova.file.documentsDirectory);
+        //alert(cordova.file.dataDirectory);
+        //alert(cordova.file.externalRootDirectory);
+        //alert(cordova.file.externalDataDirectory);
+        //alert(cordova.file.externalApplicationStorageDirectory);
 
-        window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function (dir) {
-            alert('dtaDir=' + cordova.file.dataDirectory);
+        window.resolveLocalFileSystemURL(cordova.file.applicationDirectory, function (dir) {
                 var srcDir = "www/content/" + idioma + "/PDF";
                 dir.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
          });
