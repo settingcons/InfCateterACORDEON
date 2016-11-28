@@ -207,6 +207,8 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
 
     try
     {
+        alert('leer Menu');
+
         $(xmlFic).find('menu').each(function () {
             $(this).find('itemMenu').each(function () {
                 idPadre = $(this).find('idPadre').text();
@@ -246,7 +248,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                 }
 
                 nivelAnt = nivel;
-
+                alert('fet');
             });
         });
 
