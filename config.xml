@@ -47,8 +47,8 @@
 	<gap:plugin name="cordova-plugin-device-orientation" source="npm" version="1.0.4"/>
 	-->
   <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4" />
-  <!-- el plugin device se instala con el plugin de notificaciones -->
-  <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
+  <!-- el plugin device se instala con el plugin de notificaciones 
+  <gap:plugin name="org.apache.cordova.device" version="0.2.12" />-->
   <gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0" />
   <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0" />
   <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0" />
