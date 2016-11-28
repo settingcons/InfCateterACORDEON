@@ -11,8 +11,8 @@
   
     <preference name="permissions" value="none" />
   
-    <preference name="phonegap-version" value="cli-6.3.0" />
-    <!--<preference name="phonegap-version" value="3.7.0" />-->
+    <!--<preference name="phonegap-version" value="cli-6.3.0" />-->
+    <preference name="phonegap-version" value="3.7.0" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
@@ -62,7 +62,7 @@
     abans <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> 
 	NO FUNCIONA <gap:plugin name="cordova-plugin-fileopener" source="npm"/>-->
 	<gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
-	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
+	<gap:plugin name="cordova-plugin-fileopener" source="npm" version="1.0.1"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema 
     <gap:plugin name="com.gkcgautam.asset2sd" source="pgb" />-->
 	<plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
