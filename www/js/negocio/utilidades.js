@@ -161,7 +161,7 @@ function copiaPDFs(idioma) {
                 aviso(40, 43, '');
             }
         );
-    } else { alert('me largo pq no es ios');}
+    }
 
     alert('5.2');
 }

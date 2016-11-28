@@ -1,7 +1,5 @@
 var navLIFO = new Array();
 var itemAnterior = "";
-var fs;
-var fs_root;
 
 var app = {
     // Application Constructor
@@ -31,11 +29,9 @@ function deviceReady() {
         var success = function(status) {
             //alert('Cache Message: ' + status);
         }
-
         var error = function(status) {
             //alert('Cache Error: ' + status);
         }
-
         //Evento q se dispara cuando se pulsa el botón atrás 
         document.addEventListener("backbutton", handleBackButton, false);
 
@@ -44,11 +40,9 @@ function deviceReady() {
             salir();
         }
         
-        //test --> alert(cordova.file);
-
         //INICIO InfCateter
         copiaPDFs('es-es');
-
+        alert('6');
         $.doTimeout(1500, inicio());
 
     }
@@ -59,14 +53,18 @@ function deviceReady() {
 
 
 /*inicia InfCateter*/
-function inicio(){
+function inicio() {
+    alert('7');
+
     cargaLabels('es-es');
+
+    alert('8');
 
     //titulo programa
     $("#txtHeaderTitulo").html(Etiqueta(1));
 
     //Menú lateral
-    $("#menuversion").html(Etiqueta(0) + " v1.0");
+    $("#menuversion").html(Etiqueta(0) + " v1.10");
     $("#menuInicio").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(11) + "<br/>");
     $("#menuGeneralidades").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(12) + "<br/>");
     $("#menuManejo").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(13) + "<br/>");

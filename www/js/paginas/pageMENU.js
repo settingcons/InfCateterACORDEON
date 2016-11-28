@@ -9,8 +9,10 @@ function paginaInfoPDF(idioma,fichero){
     var fic = "";
     try
     {
+        alert('llego a aqui?');
         if(esIOS())
         {
+            alert('Doncs si, llego');
             ruta = window.location.href;
             ruta = ruta.substr(0,ruta.lastIndexOf('/'));
             fic = ruta + "/content/" + idioma + "/PDF/" + fichero;
