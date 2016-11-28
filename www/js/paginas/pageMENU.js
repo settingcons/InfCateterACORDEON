@@ -11,12 +11,14 @@ function paginaInfoPDF(idioma,fichero){
     {
         if(esIOS())
         {
+            alert('abro en ios');
             ruta = window.location.href;
             ruta = ruta.substr(0,ruta.lastIndexOf('/'));
             fic = ruta + "/content/" + idioma + "/PDF/" + fichero;
             window.open(fic, '_blank' ,'location=no' );
         }
         else {
+            alert('abro en android');
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
             window.plugins.fileOpener.open(fic); //aquest no funciona comentat 28/11/2016
