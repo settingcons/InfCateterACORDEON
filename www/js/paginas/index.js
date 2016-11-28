@@ -42,7 +42,6 @@ function deviceReady() {
         
         //INICIO InfCateter
         copiaPDFs('es-es');
-        alert('6');
         $.doTimeout(1500, inicio());
 
     }
@@ -54,14 +53,12 @@ function deviceReady() {
 
 /*inicia InfCateter*/
 function inicio() {
-    alert('7');
 
     cargaLabels('es-es');
 
-    alert('8');
-
     //titulo programa
     $("#txtHeaderTitulo").html(Etiqueta(1));
+    alert('9');
 
     //Menú lateral
     $("#menuversion").html(Etiqueta(0) + " v1.10");
@@ -73,11 +70,21 @@ function inicio() {
     $("#menuInfo").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(16) + "<br/>");
     $("#menuSalir").html(Etiqueta(17) + "<br/>");
 
+    alert('10');
+
     navLIFO.push("pageMENU|0|");
+
+    alert('11');
 
     cargaPaginaInfoCateter('es-es', 0);
 
-    if(esIOS()) $("#liMenuSalir").attr('class', 'ui-screen-hidden');
+    alert('12');
+
+    if (esIOS()) {
+        alert('13');
+        $("#liMenuSalir").attr('class', 'ui-screen-hidden');
+        alert('14');
+    }
 }
 
 function Menu() {
