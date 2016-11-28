@@ -57,37 +57,6 @@ function deviceReady() {
     }
 }
 
-//inici per copiar
-//function onRequestFileSystemSuccess(fileSystem) {
-//    fs = fileSystem;
-//    fs_root = fs.root;
-
-//    alert("entry  name " + fs.name);
-//    alert("entry root name " + fs_root.name);
-
-//    fs_root.getDirectory("infcateter/es-es", { create: true, exclusive: false }, onGetDirectorySuccess);
-//}
-
-//function onGetDirectorySuccess(dirEntry) {
-//    alert("created dir " + dirEntry.name);
-//}
-
-//function onRequestFileSystemFail() {
-//    alert("sera que no ");
-//}
-
-//function onResolveSuccess(fileEntry) {
-//    alert("onResolveSucces " + fileEntry.name);
-//}
-
-//function fail() {
-//    alert("sera que tampoco no ");
-//}
-//fi per copiar
-
-
-
-
 
 /*inicia InfCateter*/
 function inicio(){
