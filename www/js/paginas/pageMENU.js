@@ -248,10 +248,11 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                 }
 
                 nivelAnt = nivel;
-                alert('fet');
+               
             });
         });
 
+        alert('fet');
     }
     catch(ex)
     {
