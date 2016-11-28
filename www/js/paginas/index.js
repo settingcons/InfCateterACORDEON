@@ -44,7 +44,7 @@ function deviceReady() {
             salir();
         }
         
-        alert(cordova.file);
+        //test --> alert(cordova.file);
 
         //INICIO InfCateter
         copiaPDFs('es-es');
