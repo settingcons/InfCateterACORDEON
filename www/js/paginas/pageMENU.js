@@ -18,11 +18,10 @@ function paginaInfoPDF(idioma,fichero){
             window.open(fic, '_blank' ,'location=no' );
         }
         else {
-            alert('abro en android');
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
-            window.plugins.fileOpener.open(fic); //aquest no funciona comentat 28/11/2016
-            //cordova.plugins.fileOpener2.open(fic, 'application/pdf'); 
+            //window.plugins.fileOpener.open(fic); //aquest no funciona comentat 28/11/2016
+            cordova.plugins.fileOpener2.open(fic, 'application/pdf'); 
         }
     }
     catch(ex)
