@@ -19,9 +19,8 @@ function paginaInfoPDF(idioma,fichero){
         else {
             ruta = "file:///sdcard/infCateter/" + idioma + "/";
             fic = ruta + fichero;
-            window.plugins.fileOpener2.open(fic);
-            //window.plugins.fileOpener.open(fic); //descomentat 28/11/2016
-            //cordova.plugins.fileOpener2.open(fic, 'application/pdf'); //comentat 28/11/2016
+            //window.plugins.fileOpener.open(fic); //comentat 28/11/2016
+            cordova.plugins.fileOpener2.open(fic, 'application/pdf'); 
         }
     }
     catch(ex)
