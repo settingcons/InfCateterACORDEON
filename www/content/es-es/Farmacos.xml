@@ -14,42 +14,42 @@
   </farmaco>
     <farmaco id="4">
       <nom>Ciprofloxacino 2mg/ml</nom>
-        <fic></fic>
+      <fic>Ciprofloxacino.pdf</fic>
     </farmaco>
 	<farmaco id="5">
     <nom>Gentamicina 5mg/ml</nom>
-        <fic></fic>
+        <fic>Gentamicina.pdf</fic>
     </farmaco>
   <farmaco id="6">
     <nom>Amikacina 2,5mg/ml</nom>
-    <fic></fic>
+    <fic>Amikacina.pdf</fic>
   </farmaco>
 	<farmaco id="7">
     <nom>Cefazolina 5mg/ml + heparina 2500 UI/ml</nom>
-        <fic></fic>
+        <fic>Gentamicina.pdf</fic>
     </farmaco>
   <farmaco id="8">
     <nom>Ceftazidima 5mg/ml</nom>
-    <fic></fic>
+    <fic>Ceftazidima.pdf</fic>
   </farmaco>
   <farmaco id="9">
     <nom>Vancomicina 5mg/ml</nom>
-    <fic></fic>
+    <fic>Vancomicina.pdf</fic>
   </farmaco>
   <farmaco id="10">
     <nom>Vancomicina 5mg/ml y heparina 4500 UI/mL</nom>
-    <fic></fic>
+    <fic>Vancomicina.pdf</fic>
   </farmaco>
   <farmaco id="11">
     <nom>Daptomicina 3,5 mg/ml + heparina 100 ui/ml en Ringer Lactato</nom>
-    <fic></fic>
+    <fic>Gentamicina.pdf</fic>
   </farmaco>
   <farmaco id="12">
     <nom>Colistina 2mg/ml y heparina 100ui/ml</nom>
-    <fic></fic>
+    <fic>Gentamicina.pdf</fic>
   </farmaco>
   <farmaco id="13">
     <nom>Etanol 70º</nom>
-    <fic></fic>
+    <fic>Gentamicina.pdf</fic>
   </farmaco>
 </farmacos>
