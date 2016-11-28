@@ -21,7 +21,7 @@
     <preference name="stay-in-webview" value="false" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
-    <preference name="exit-on-suspend" value="true" /> <!--abans false-->
+    <preference name="exit-on-suspend" value="false" /> 
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="false" />
     <preference name="disable-cursor" value="false" />
@@ -34,11 +34,10 @@
 	
 	<!--<feature name="http://api.phonegap.com/1.0/device" />
 	<feature name="http://api.phonegap.com/1.0/media"/>
-	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>	-->
 	
-	-->
   <feature name="http://api.phonegap.com/1.0/file"/>
-	<feature name="http://api.phonegap.com/1.0/notification"/>
+  <feature name="http://api.phonegap.com/1.0/notification"/>
 
 	<!-- No son requerits
 	<plugin name="cordova-plugin-battery-status" source="npm" version="1.2.0"/>
@@ -50,21 +49,16 @@
 	-->
 	
 	<gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
-	<!-- el plugin device se instala con el plugin de notificaciones 
-  <gap:plugin name="org.apache.cordova.device" version="0.2.12" />	-->
 	<gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0"/>
 	<gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0"/>
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
 	<gap:plugin name="cordova-plugin-file" source="npm"/>
 	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-    <!-- IC Plugin para visualizar PDF's
-    abans <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> 
-	NO FUNCIONA <gap:plugin name="cordova-plugin-fileopener" source="npm"/>-->
+    <!-- IC Plugin para visualizar PDF's-->
 	<gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
 	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
-    <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema 
-    <gap:plugin name="com.gkcgautam.asset2sd" source="pgb" />-->
+    <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
 	<plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
 	
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
@@ -81,14 +75,13 @@
    <!-- ocultar statusbar en ios -->
    <gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
     
-      <plugin name="sc-cordova-diagnostic-plugin-npm" version="1.0.0" source="npm" />
+    <plugin name="sc-cordova-diagnostic-plugin-npm" version="1.0.0" source="npm" />
     <!--para utilizar el plugin de diagnóstico-->
     <feature name="Diagnostic" >
         <param name="ios-package" value="Diagnostic" />
         <param name="android-package" value="cordova.plugins.diagnostic"/>
     </feature>
   
-    <!--<feature name="http://api.phonegap.com/1.0/file" />-->
     <feature name="File">
     <param name="android-package" value="org.apache.cordova.file.FileUtils" />
     <param name="ios-package" value="CDVFile" />
