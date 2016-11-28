@@ -48,6 +48,7 @@
 	<plugin name="cordova-plugin-device-motion" source="npm" version="1.2.2"/>
 	<gap:plugin name="cordova-plugin-device-orientation" source="npm" version="1.0.4"/>
 	-->
+	
 	<gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
 	<!-- el plugin device se instala con el plugin de notificaciones 
   <gap:plugin name="org.apache.cordova.device" version="0.2.12" />	-->
@@ -60,7 +61,8 @@
     <!-- IC Plugin para visualizar PDF's
     abans <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> 
 	NO FUNCIONA <gap:plugin name="cordova-plugin-fileopener" source="npm"/>-->
-	<gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
+	<!--FUNCIONA <gap:plugin name="cordova-plugin-file-opener2" source="npm"/>-->
+	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema 
     <gap:plugin name="com.gkcgautam.asset2sd" source="pgb" />-->
 	<plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
