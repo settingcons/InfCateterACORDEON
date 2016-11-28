@@ -186,7 +186,26 @@ function ORIGINAL_copiaPDFs(idioma) {
 
 var sIdioma;
 var root;
+
 function copiaPDFs(idioma) {
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, creatingFolder, error);
+}
+function creatingFolder(fileSystem) {
+    var entry = fileSystem.root;
+    entry.getDirectory("test", { create: true, exclusive: false }, win, error);
+}
+
+
+function win(dir) {
+    alert("Created dir name: " + dir.name);
+    alert("Created dir fullpath: " + dir.fullPath);
+    alert("Created dir NativePath: " + dir.nativeURL);
+}
+
+
+
+
+function CLG_copiaPDFs(idioma) {
     sIdioma = idioma;
     alert('anem a copiar els fitxers');
     if (!esIOS()) {
@@ -211,47 +230,54 @@ function copiaPDFs(idioma) {
 
         //leer dir origen
         window.resolveLocalFileSystemURL(cordova.file.applicationDirectory, function (dir) {
-                var srcDir = "www/content/" + idioma + "/PDF";
-                dir.getDirectory(srcDir, {create: false }, getDirectoryWin, getDirectoryFail);
-         });
+            var srcDir = "www/content/" + idioma + "/PDF";
+            dir.getDirectory(srcDir, {create: false }, getDirectoryWin, getDirectoryFail);
+        });
 
 
-//        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
-//          function (fileSystem) {
-//              root = fileSystem.root;
-//              var srcDir = cordova.file.externalApplicationStorageDirectory + "www/content/" + idioma + "/PDF/";
-//alert('srcDir:' + srcDir);
-//              root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
-//          });
+        //        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+        //          function (fileSystem) {
+        //              root = fileSystem.root;
+        //              var srcDir = cordova.file.externalApplicationStorageDirectory + "www/content/" + idioma + "/PDF/";
+        //alert('srcDir:' + srcDir);
+        //              root.getDirectory(srcDir, { create: false }, getDirectoryWin, getDirectoryFail);
+        //          });
 
     }
 }
 
 
-// the directory param should be a DirectoryEntry object that points to the srcDir    
-function getDirectoryWin(directory){
-    alert('got the directory');
+    // the directory param should be a DirectoryEntry object that points to the srcDir    
+    function getDirectoryWin(directory){
+        alert('got the directory');
 
-    // path to the parent directory that holds the dir that we want to copy to
-    // we'll set it as the root, but otherwise you'll
-    // need parentDir be a DirectoryEntry object
-    var parentDir = root;
+        // path to the parent directory that holds the dir that we want to copy to
+        // we'll set it as the root, but otherwise you'll
+        // need parentDir be a DirectoryEntry object
+        var parentDir = root;
 
-    // name of the destination directory within the parentDir
-    var dstDir = '/infCateter/' + sIdioma; 
+        // name of the destination directory within the parentDir
+        var dstDir = "/infCateter/" + sIdioma; 
 
-    // use copyWin/copyFail to launch callbacks when it works/fails
-    directory.copyTo(root, dstDir, copyWin, copyFail);
-}
+    
+        var a = new DirManager();
+        a.create(dstDir, alert('CREATED!'));
 
-function getDirectoryFail(){
-    alert("I failed at getting a directory");
-}
 
-function copyWin(){
-   alert('Copying worked!');
-}
 
-function copyFail(){
-    alert('I failed copying');
-}
+        //Esto es de carlos. Descomentar despues
+        //// use copyWin/copyFail to launch callbacks when it works/fails
+        //directory.copyTo(root, dstDir, copyWin, copyFail);
+    }
+
+    function getDirectoryFail(){
+        alert("I failed at getting a directory");
+    }
+
+    function copyWin(){
+        alert('Copying worked!');
+    }
+
+    function copyFail(){
+        alert('I failed copying');
+    }
