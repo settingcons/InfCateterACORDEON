@@ -150,19 +150,18 @@ function TryParseInt(str, defaultValue) {
 
 function copiaPDFs(idioma) {
 
-    if(!esIOS())
-    {
+    if (!esIOS()) {
         asset2sd.copyDir({
-                asset_directory: "www/content/" + idioma + "/PDF",
-                destination_directory: "infCateter/" + idioma
-            },
+            asset_directory: "www/content/" + idioma + "/PDF",
+            destination_directory: "infCateter/" + idioma
+        },
             function () {
             },
             function () {
-                aviso(40,43,'');
+                aviso(40, 43, '');
             }
         );
-    }
+    } else { alert('me largo pq no es ios');}
 
     alert('5.2');
 }
