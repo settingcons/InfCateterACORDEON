@@ -62,7 +62,7 @@
     abans <plugin name="com.cordova.plugins.fileopener" spec="1.0.1" source="pgb" /> 
 	NO FUNCIONA <gap:plugin name="cordova-plugin-fileopener" source="npm"/>-->
 	<gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
-	<gap:plugin name="cordova-plugin-fileopener" source="npm" version="1.0.1"/>
+	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema 
     <gap:plugin name="com.gkcgautam.asset2sd" source="pgb" />-->
 	<plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
