@@ -102,7 +102,7 @@
   </itemMenu>
   <itemMenu id="2211">
     <!--<titol>Cepas sensibles: amikacina 2mg/ml |TXT,6.txt| gentamicina 5mg/ml |PDF,Gentamicina.pdf| ciprofloxacino 2mg/ml |PDF,Ciprofloxacino.pdf|.</titol>-->
-    <titol>Cepas sensibles: amikacina 2mg/ml |PDF,amikacina.pdf| gentamicina 5mg/ml |PDF,Gentamicina.pdf| ciprofloxacino 2mg/ml |PDF,Ciprofloxacino.pdf|.</titol>
+    <titol>Cepas sensibles: amikacina 2mg/ml |PDF,Amikacina.pdf| gentamicina 5mg/ml |PDF,Gentamicina.pdf| ciprofloxacino 2mg/ml |PDF,Ciprofloxacino.pdf|.</titol>
     <idPadre>2110</idPadre>
     <idFarmaco></idFarmaco>
     <ficAsociado>POPUP</ficAsociado>
@@ -156,7 +156,7 @@
     <icono></icono>
   </itemMenu>
   <itemMenu id="2123">
-    <titol>Stenotrophomonas maltophilia:ceftazidima |PDF,ceftazidima.pdf| ciprofloxacino |PDF,Ciprofloxacino.pdf|.</titol>
+    <titol>Stenotrophomonas maltophilia:ceftazidima |PDF,Ceftazidima.pdf| ciprofloxacino |PDF,Ciprofloxacino.pdf|.</titol>
     <idPadre>2122</idPadre>
     <idFarmaco></idFarmaco>
     <ficAsociado>POPUP</ficAsociado>
@@ -309,7 +309,7 @@
     <icono>pdf.png</icono>
   </itemMenu>
   <itemMenu id="2242">
-    <titol>alternativas (en caso de resistencia vanco):daptomicina |PDF,daptomicina.pdf| linezolid |PDF,Ciprofloxacino.pdf| teicoplanina |PDF,Ciprofloxacino.pdf|.</titol>
+    <titol>alternativas (en caso de resistencia vanco):daptomicina |PDF,Ciprofloxacino.pdf| linezolid |PDF,Ciprofloxacino.pdf| teicoplanina |PDF,Ciprofloxacino.pdf|.</titol>
     <idPadre>2240</idPadre>
     <idFarmaco></idFarmaco>
     <ficAsociado>POPUP</ficAsociado>
