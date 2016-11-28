@@ -148,7 +148,7 @@ function TryParseInt(str, defaultValue) {
 }
 
 
-function ORIGINAL_copiaPDFs(idioma) {
+function copiaPDFs(idioma) {
     if(!esIOS())
     {
         asset2sd.copyDir({
@@ -186,25 +186,6 @@ function ORIGINAL_copiaPDFs(idioma) {
 
 var sIdioma;
 var root;
-
-function copiaPDFs(idioma) {
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, creatingFolder, error);
-}
-function creatingFolder(fileSystem) {
-    var entry = fileSystem.root;
-    entry.getDirectory("test", { create: true, exclusive: false }, win, error);
-}
-
-
-function win(dir) {
-    alert("Created dir name: " + dir.name);
-    alert("Created dir fullpath: " + dir.fullPath);
-    alert("Created dir NativePath: " + dir.nativeURL);
-}
-
-
-
-
 function CLG_copiaPDFs(idioma) {
     sIdioma = idioma;
     alert('anem a copiar els fitxers');
@@ -259,15 +240,8 @@ function CLG_copiaPDFs(idioma) {
         // name of the destination directory within the parentDir
         var dstDir = "/infCateter/" + sIdioma; 
 
-    
-        var a = new DirManager();
-        a.create(dstDir, alert('CREATED!'));
-
-
-
-        //Esto es de carlos. Descomentar despues
-        //// use copyWin/copyFail to launch callbacks when it works/fails
-        //directory.copyTo(root, dstDir, copyWin, copyFail);
+        // use copyWin/copyFail to launch callbacks when it works/fails
+        directory.copyTo(root, dstDir, copyWin, copyFail);
     }
 
     function getDirectoryFail(){

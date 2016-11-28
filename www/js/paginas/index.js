@@ -28,10 +28,6 @@ var app = {
 function deviceReady() {
     try {
 
-        //hgs Quitar   window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, onRequestFileSystemFail);
-        //hgs Quitar   window.resolveLocalFileSystemURI("file:///Ciprofloxacino.pdf", onResolveSuccess, fail);
-
-
         var success = function(status) {
             //alert('Cache Message: ' + status);
         }
