@@ -149,7 +149,7 @@ function TryParseInt(str, defaultValue) {
 
 
 function copiaPDFs(idioma) {
-    alert('5.1');
+
     if(!esIOS())
     {
         asset2sd.copyDir({
@@ -163,5 +163,6 @@ function copiaPDFs(idioma) {
             }
         );
     }
+
     alert('5.2');
 }
