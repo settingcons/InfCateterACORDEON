@@ -9,10 +9,10 @@ function paginaInfoPDF(idioma,fichero){
     var fic = "";
     try
     {
-        alert('llego a aqui?');
+   //     alert('llego a aqui?');
         if(esIOS())
         {
-            alert('Doncs si, llego');
+   //         alert('Doncs si, llego');
             ruta = window.location.href;
             ruta = ruta.substr(0,ruta.lastIndexOf('/'));
             fic = ruta + "/content/" + idioma + "/PDF/" + fichero;
@@ -207,7 +207,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
 
     try
     {
-        alert('leer Menu');
+ //       alert('leer Menu');
 
         $(xmlFic).find('menu').each(function () {
             $(this).find('itemMenu').each(function () {
@@ -252,7 +252,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
             });
         });
 
-        alert('fet');
+ //       alert('fet');
     }
     catch(ex)
     {

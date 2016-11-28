@@ -107,8 +107,8 @@ function Etiqueta(n)
 
 //Devuelve un objeto XML document (el XML entero)
 function leeXML(idioma, fichero) {
+
     //DEBUG: alert("content/" + idioma + "/" + fichero);
-    alert('leeXML');
     try
     {
         $.ajax({
@@ -117,7 +117,6 @@ function leeXML(idioma, fichero) {
             dataType: "xml",
             success: function (xml) {
                 xmlFic = xml;
-                alert('smlFic '+xmlFic);
             },
             error: function () {
                 aviso(40,41,'');
@@ -165,6 +164,6 @@ function copiaPDFs(idioma) {
         );
     }
 
-    alert('5.2');
+  //  alert('5.2');
 
 }
