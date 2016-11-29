@@ -59,9 +59,12 @@ function mensaje(p_idmsg,p_idtitulo,p_exc) {
         alert(v_texto);
 }*/
 
-function aviso(nIdTitulo,nIdMensaje, sMsg) {
+function aviso(nIdTitulo, nIdMensaje, sMsg) {
     var sTitulo = Etiqueta(nIdTitulo);
     var sTexto = Etiqueta(nIdMensaje);
+
+    alert("HGS aviso " + nIdTitulo + "-"+nIdMensaje +"-"+sMsg);
+
     sTexto += " " + sMsg;
     if (phoneGapRun())
         navigator.notification.alert(sTexto, null, sTitulo);
@@ -79,7 +82,7 @@ var labels = [];
 //Carga array de labels según idioma
 function cargaLabels(idioma)
 {
-    alert("HGS cargaLables " + idioma);
+    //alert("HGS cargaLables " + idioma);
     var id = "";
     var texto = "";
 
@@ -109,7 +112,7 @@ function Etiqueta(n)
 //Devuelve un objeto XML document (el XML entero)
 function leeXML(idioma, fichero) {
 
-    alert("HGS leeXML content/" + idioma + "/" + fichero);
+    //alert("HGS leeXML content/" + idioma + "/" + fichero);
 
     try
     {
@@ -166,6 +169,6 @@ function copiaPDFs(idioma) {
         );
     }
 
-    alert("HGS 5.2");
+    //alert("HGS 5.2");
 
 }

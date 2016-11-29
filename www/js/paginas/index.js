@@ -54,7 +54,7 @@ function deviceReady() {
 /*inicia InfCateter*/
 function inicio() {
 
-    alert("HGS inicio");
+    //alert("HGS inicio");
 
     cargaLabels('es-es');
 
@@ -74,7 +74,7 @@ function inicio() {
 
     //HGS pujat dues linees
     if (esIOS()) {
-        alert("HGS esIos para no pintar el salir");
+        //alert("HGS esIos para no pintar el salir");
         $("#liMenuSalir").attr('class', 'ui-screen-hidden');
     }
     
@@ -109,7 +109,7 @@ function Atras() {
 
 function abrirPagina(sPag, id, titulo) {
 
-    alert("HGS abrir pagina sPag: " + sPag + " id:" + id + " titulo: " + titulo);
+    //alert("HGS abrir pagina sPag: " + sPag + " id:" + id + " titulo: " + titulo);
 
     var nomApp = "Información sellado catéter";
     try {
