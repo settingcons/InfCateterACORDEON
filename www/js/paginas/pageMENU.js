@@ -188,6 +188,9 @@ function inicioSellado(sPag, id, titulo) {
 }
 
 function cargaPaginaInfoCateter(idioma, idPadreSel) {
+
+    alert("HGS Cargapaginainfocateter "+ idioma + " idPadreSel:" + idPadreSel);
+
     var menu = leeXML(idioma,'menu.xml');
     var img = "";
     var id, idPadre,idPadreAnt,titol, tieneLink, nivel, nivelAnt, esPadre, icono;
@@ -207,8 +210,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
 
     try
     {
- //       alert('leer Menu');
-
+        alert("HGS leer Menu");
         $(xmlFic).find('menu').each(function () {
             $(this).find('itemMenu').each(function () {
                 idPadre = $(this).find('idPadre').text();
@@ -251,8 +253,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                
             });
         });
-
- //       alert('fet');
+        //alert('fet');
     }
     catch(ex)
     {

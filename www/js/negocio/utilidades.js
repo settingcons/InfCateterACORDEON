@@ -79,6 +79,7 @@ var labels = [];
 //Carga array de labels según idioma
 function cargaLabels(idioma)
 {
+    alert("HGS cargaLables " + idioma);
     var id = "";
     var texto = "";
 
@@ -108,7 +109,8 @@ function Etiqueta(n)
 //Devuelve un objeto XML document (el XML entero)
 function leeXML(idioma, fichero) {
 
-    //DEBUG: alert("content/" + idioma + "/" + fichero);
+    alert("HGS leeXML content/" + idioma + "/" + fichero);
+
     try
     {
         $.ajax({
@@ -164,6 +166,6 @@ function copiaPDFs(idioma) {
         );
     }
 
-  //  alert('5.2');
+    alert("HGS 5.2");
 
 }
