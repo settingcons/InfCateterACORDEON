@@ -9,7 +9,7 @@
     <esPadre>1</esPadre>
   <icono>Generalidades.png</icono>
   </itemMenu>
-  <itemMenu  id="110">
+  <itemMenu id="110">
     <titol>Generalidades</titol>
     <idPadre>100</idPadre>
     <idFarmaco></idFarmaco>
@@ -27,7 +27,7 @@
     <esPadre>0</esPadre>
     <icono>text.png</icono>
   </itemMenu>
-  <itemMenu  id="130">
+  <itemMenu id="130">
     <titol>Técnica</titol>
     <idPadre>100</idPadre>
     <idFarmaco></idFarmaco>
@@ -36,7 +36,7 @@
     <esPadre>0</esPadre>
     <icono>text.png</icono>
   </itemMenu>
-  <itemMenu  id="140">
+  <itemMenu id="140">
     <titol>Duración</titol>
     <idPadre>100</idPadre>
     <idFarmaco></idFarmaco>
@@ -45,7 +45,7 @@
     <esPadre>0</esPadre>
     <icono>text.png</icono>
   </itemMenu>
-  <itemMenu  id="150">
+  <itemMenu id="150">
     <titol>Reacciones adversas relacionadas</titol>
     <idPadre>100</idPadre>
     <idFarmaco></idFarmaco>
@@ -54,7 +54,7 @@
     <esPadre>0</esPadre>
     <icono>text.png</icono>
   </itemMenu>
-  <itemMenu  id="160">
+  <itemMenu id="160">
     <titol>Conclusiones</titol>
     <idPadre>100</idPadre>
     <idFarmaco></idFarmaco>
@@ -64,7 +64,7 @@
     <icono>text.png</icono>
   </itemMenu>
 
-  <itemMenu  id="200">
+  <itemMenu id="200">
     <titol>Manejo de infecciones asociadas a catéteres</titol>
     <idPadre>0</idPadre>
     <idFarmaco></idFarmaco>
@@ -73,7 +73,7 @@
     <esPadre>1</esPadre>
     <icono>Manejo.png</icono>
   </itemMenu>
-  <itemMenu  id="205">
+  <itemMenu id="205">
     <titol>Bacterias gram negativas</titol>
     <idPadre>200</idPadre>
     <idFarmaco></idFarmaco>
@@ -82,7 +82,7 @@
     <esPadre>1</esPadre>
     <icono>bgn.png</icono>
   </itemMenu>
-  <itemMenu  id="210">
+  <itemMenu id="210">
     <titol>Sellado de catéter gram negativos</titol>
     <idPadre>205</idPadre>
     <idFarmaco></idFarmaco>
@@ -344,7 +344,7 @@
     <esPadre>0</esPadre>
     <icono>itemFinal.png</icono>
   </itemMenu>
-  <itemMenu  id="225">
+  <itemMenu id="225">
     <titol>Infección por hongos</titol>
     <idPadre>200</idPadre>
     <idFarmaco></idFarmaco>
@@ -353,7 +353,7 @@
     <esPadre>1</esPadre>
     <icono>hongos.png</icono>
   </itemMenu>
-  <itemMenu  id="230">
+  <itemMenu id="230">
     <titol>Tratamiento de la infección por hongos</titol>
     <idPadre>225</idPadre>
     <idFarmaco></idFarmaco>
@@ -416,7 +416,7 @@
     <esPadre>0</esPadre>
     <icono>pdf.png</icono>
   </itemMenu>
-  <itemMenu  id="300">
+  <itemMenu id="300">
     <titol>Fichas de preparación</titol>
     <idPadre>0</idPadre>
     <idFarmaco></idFarmaco>
