@@ -59,8 +59,8 @@
 	<gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
 	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
-	<!--descomentar per android
-	<plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />-->
+	<!--descomentar per android-->
+	<plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
 	
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" /> <!--fa falta?-->
