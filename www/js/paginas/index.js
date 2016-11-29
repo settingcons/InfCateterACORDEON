@@ -72,15 +72,15 @@ function inicio() {
     $("#menuInfo").html("&nbsp;&nbsp;&nbsp;" + Etiqueta(16) + "<br/>");
     $("#menuSalir").html(Etiqueta(17) + "<br/>");
 
-
+    //HGS pujat dues linees
+    if (esIOS()) {
+        alert("HGS esIos para no pintar el salir");
+        $("#liMenuSalir").attr('class', 'ui-screen-hidden');
+    }
+    
     navLIFO.push("pageMENU|0|");
 
     cargaPaginaInfoCateter('es-es', 0);
-
-    if (esIOS()) {
-        alert('esIos para no pintar el salir');
-        $("#liMenuSalir").attr('class', 'ui-screen-hidden');
-    }
 }
 
 function Menu() {
