@@ -86,7 +86,7 @@
     <gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
     <plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
-    <plugin spec="https://github.com/willyboy/cordova-plugin-local-notifications.git" source="git" />
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 
 
 	<!--<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
