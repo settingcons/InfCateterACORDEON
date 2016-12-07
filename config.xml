@@ -79,6 +79,7 @@
         <activity android:launchMode="singleInstance" />
     </gap:config-file>
 
+    <gap:plugin name="cordova-plugin-file-opener2" source="npm"/> <!--provant-->
     <gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
     <plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
