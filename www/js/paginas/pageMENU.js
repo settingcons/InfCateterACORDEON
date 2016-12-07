@@ -214,11 +214,11 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
         $(xmlFic).find('menu').each(function () {
             $(this).find('itemMenu').each(function () {
 
-                alert("HGS itemMenu");
+               // alert("HGS itemMenu");
                 idPadre = $(this).find('idPadre').text();
 
                 if (idPadre == idPadreSel) {
-                    alert("HGS idPadre == idPadreSel: " + idPadre + "=="+idPadreSel);
+                    //     alert("HGS idPadre == idPadreSel: " + idPadre + "=="+idPadreSel);
                     sItem = "";
                     id = $(this).attr('id');
                     titol = $(this).find('titol').text();
@@ -230,7 +230,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
 
                     if(esPadre==1)
                     {
-                        alert("HGS esPadre==1 " + esPadre);
+                      //  alert("HGS esPadre==1 " + esPadre);
 
                         if (nivel == 'INI-ACORDEON') {
                             alert("HGS nivel == INI-ACORDEON " + nivel);
@@ -240,7 +240,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                         }
                         else
                         {
-                            alert("HGS nivel != INI-ACORDEON ");
+                        //    alert("HGS nivel != INI-ACORDEON ");
                             if (idPadre == 0)
                                 sItem = tipoItem(false,'DESPLEGA_NO_PADRE',idioma,id,titol,icono);
                             else
@@ -251,7 +251,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                     }
                     else
                     {
-                        alert("HGS esPadre!=1");
+                        //alert("HGS esPadre!=1");
 
                         sItem = tipoItem(false, tieneLink, idioma, id, titol, icono);
                         $("#ulMenu").append(sItem).listview('refresh');
@@ -262,7 +262,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                
             });
         });
-        alert("HGS fet CargaPaginaInfoCateter");
+        //alert("HGS fet CargaPaginaInfoCateter");
     }
     catch(ex)
     {
