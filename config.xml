@@ -1,8 +1,8 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <widget id="com.settingconsultoria.InfCateterACORDEON" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"  xmlns:android = "http://schemas.android.com/apk/res/android">
-    <name>InfCateterACORDEON</name>
+    <name>InfCateter</name>
     <description>
-        Información sellado cateter (ACORDEON)
+        Información sellado cateter
     </description>
     <author email="settingcons@gmail.com" href="http://www.settingconsultoria.com">
         Setting Consultoria PhoneGap Team
@@ -79,7 +79,7 @@
         <activity android:launchMode="singleInstance" />
     </gap:config-file>
 
-    <gap:plugin name="cordova-plugin-file-opener2" source="npm"/> <!--provant-->
+    <gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
     <gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
     <plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />

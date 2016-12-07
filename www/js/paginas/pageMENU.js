@@ -214,11 +214,9 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
         $(xmlFic).find('menu').each(function () {
             $(this).find('itemMenu').each(function () {
 
-               // alert("HGS itemMenu");
                 idPadre = $(this).find('idPadre').text();
 
                 if (idPadre == idPadreSel) {
-                    //     alert("HGS idPadre == idPadreSel: " + idPadre + "=="+idPadreSel);
                     sItem = "";
                     id = $(this).attr('id');
                     titol = $(this).find('titol').text();
@@ -230,8 +228,6 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
 
                     if(esPadre==1)
                     {
-                      //  alert("HGS esPadre==1 " + esPadre);
-
                         if (nivel == 'INI-ACORDEON') {
                             //alert("HGS nivel == INI-ACORDEON " + nivel);
                             xmlFic = null;
@@ -240,7 +236,6 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                         }
                         else
                         {
-                        //    alert("HGS nivel != INI-ACORDEON ");
                             if (idPadre == 0)
                                 sItem = tipoItem(false,'DESPLEGA_NO_PADRE',idioma,id,titol,icono);
                             else
@@ -251,8 +246,6 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                     }
                     else
                     {
-                        //alert("HGS esPadre!=1");
-
                         sItem = tipoItem(false, tieneLink, idioma, id, titol, icono);
                         $("#ulMenu").append(sItem).listview('refresh');
                     }
@@ -297,18 +290,16 @@ function crearPopPup(txt, idioma)
   
         else{
             if(sTipo == "TXT"){
-               //canviar amb la seguent liniea si no va img = "<img src='images/dossier.png'  onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">";
-                img = "<img src='images/dossier.png'  onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">";
-                sLinks += "<ul  style='list-style-type:none'>" + img ;
-                //canviar amb la seguent liniea si no va sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoTXT('" + idioma + "','" + sVal + "','" + sNombres.split(",")[i] + "')\">" + sNombres.split(",")[i];
+               img = "<img src='images/dossier.png'  onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">";
+               sLinks += "<ul  style='list-style-type:none'>" + img ;
                sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaObrirTXT('" + idioma + "','" + sVal + "')\">" + sNombres.split(",")[i];
-                sLinks += "</ul>";
+               sLinks += "</ul>";
             }
             else if(sTipo == "PDF"){
-                img = "<img src='images/pdf.png' align='center' onclick=\"paginaInfoPDF('" + idioma + "','" + sVal + "')\" >";
-                sLinks += "<ul  style='list-style-type:none'>" + img;
-                sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + sVal + "')\" >" + sNombres.split(",")[i];
-                sLinks += "</ul>";
+               img = "<img src='images/pdf.png' align='center' onclick=\"paginaInfoPDF('" + idioma + "','" + sVal + "')\" >";
+               sLinks += "<ul  style='list-style-type:none'>" + img;
+               sLinks += "<a href='#' style='text-decoration:none;' onclick=\"paginaInfoPDF('" + idioma + "','" + sVal + "')\" >" + sNombres.split(",")[i];
+               sLinks += "</ul>";
             }
         }
     }
@@ -359,10 +350,8 @@ function tipoItem(bAcordeon,sTipo,idioma,id,titol,icono,idFarmaco){
     {
 
         case 'DESPLEGA_SI_PADRE':
-            //alert('soy Si_Padre + id: ' + id);
             sItem += "<li>";
-           
-          
+
             if(!bAcordeon)
             {
                 /*Botons nivell 1 esquemes*/
