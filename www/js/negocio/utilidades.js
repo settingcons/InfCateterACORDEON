@@ -63,7 +63,7 @@ function aviso(nIdTitulo, nIdMensaje, sMsg) {
     var sTitulo = Etiqueta(nIdTitulo);
     var sTexto = Etiqueta(nIdMensaje);
 
-    alert("HGS aviso " + nIdTitulo + "-"+nIdMensaje +"-"+sMsg);
+    //alert("HGS aviso " + nIdTitulo + "-"+nIdMensaje +"-"+sMsg);
 
     sTexto += " " + sMsg;
     if (phoneGapRun())

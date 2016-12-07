@@ -38,7 +38,7 @@ function paginaObrirTXT(idioma, fichero) {
     var fic = "";
     
     try {
-        alert('llego aqui ' + fichero);
+        //alert('llego aqui ' + fichero);
         if (esIOS()) {
             ruta = window.location.href;
             ruta = ruta.substr(0, ruta.lastIndexOf('/'));
@@ -189,7 +189,7 @@ function inicioSellado(sPag, id, titulo) {
 
 function cargaPaginaInfoCateter(idioma, idPadreSel) {
 
-    alert("HGS Cargapaginainfocateter "+ idioma + " idPadreSel:" + idPadreSel);
+    //alert("HGS Cargapaginainfocateter "+ idioma + " idPadreSel:" + idPadreSel);
 
     var menu = leeXML(idioma,'menu.xml');
     var img = "";
@@ -210,7 +210,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
 
     try
     {
-        alert("HGS leer Menu de CargaPaginaInfoCateter");
+        //alert("HGS leer Menu de CargaPaginaInfoCateter");
         $(xmlFic).find('menu').each(function () {
             $(this).find('itemMenu').each(function () {
 
@@ -233,7 +233,7 @@ function cargaPaginaInfoCateter(idioma, idPadreSel) {
                       //  alert("HGS esPadre==1 " + esPadre);
 
                         if (nivel == 'INI-ACORDEON') {
-                            alert("HGS nivel == INI-ACORDEON " + nivel);
+                            //alert("HGS nivel == INI-ACORDEON " + nivel);
                             xmlFic = null;
                             idPadreSel = -1;
                             CargaArcodeon(id, idioma);
