@@ -8,12 +8,10 @@
         Setting Consultoria PhoneGap Team
     </author>
     <content src="index.html" />
-  
-    <preference name="permissions" value="none" />
-  
+	
+    <preference name="permissions" value="none" /> 
     <preference name="phonegap-version" value="cli-6.5.0" />
-	<!--   <preference name="phonegap-version" value="cli-6.3.0" />
-    <preference name="phonegap-version" value="3.7.0" />-->
+	<!-- <preference name="phonegap-version" value="cli-6.3.0" />-->
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <!--si se pone fullscreen a true se oculta la barra de estado de la parte superior -->
@@ -27,12 +25,10 @@
     <preference name="show-splash-screen-spinner" value="false" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
-   <!--<preference name="android-minSdkVersion" value="7" />-->
-  <preference name="android-minSdkVersion" value="14" />
-  <preference name="android-targetSdkVersion" value="22" /> <!-- nou-->
-  <preference name="tools-overrideLibrary" value="android.support.v4"/><!-- nou-->
-	
-	
+	<!--<preference name="android-minSdkVersion" value="7" />-->
+	<preference name="android-minSdkVersion" value="14" /> <!-- modificat-->
+	<preference name="android-targetSdkVersion" value="22" /> <!-- nou-->
+	<preference name="tools-overrideLibrary" value="android.support.v4"/> <!-- nou-->
     <preference name="android-installLocation" value="auto" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
     <preference name="KeepRunning" value="true"/>
@@ -41,6 +37,7 @@
 
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
+	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
 	<!--<feature name="http://api.phonegap.com/1.0/network"/>	-->
     <feature name="http://api.phonegap.com/1.0/device" /> <!--en android funcionava sense aquesta-->
