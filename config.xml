@@ -10,12 +10,10 @@
     <content src="index.html" />
 	
     <preference name="permissions" value="none" /> 
-    <preference name="phonegap-version" value="cli-6.5.0" />
-	<!-- <preference name="phonegap-version" value="cli-6.3.0" />-->
+    <preference name="phonegap-version" value="cli-6.5.0" /> <!-- abans value="cli-6.3.0" />-->
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
-    <!--si se pone fullscreen a true se oculta la barra de estado de la parte superior -->
-    <preference name="Fullscreen" value="false" />
+    <preference name="Fullscreen" value="false" />  <!--si se pone fullscreen a true se oculta la barra de estado de la parte superior -->
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
@@ -25,50 +23,33 @@
     <preference name="show-splash-screen-spinner" value="false" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
-	<!--<preference name="android-minSdkVersion" value="7" />-->
-	<preference name="android-minSdkVersion" value="14" /> <!-- modificat-->
+	<preference name="android-minSdkVersion" value="14" /> <!-- abans 7-->
 	<preference name="android-targetSdkVersion" value="22" /> <!-- nou-->
 	<preference name="tools-overrideLibrary" value="android.support.v4"/> <!-- nou-->
     <preference name="android-installLocation" value="auto" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
     <preference name="KeepRunning" value="true"/>
 	<preference name="android-build-tool" value="ant|gradle" /> <!--"ant"-->
-
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
 	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
-	<!--<feature name="http://api.phonegap.com/1.0/network"/>	-->
-    <feature name="http://api.phonegap.com/1.0/device" /> <!--en android funcionava sense aquesta-->
+	<feature name="http://api.phonegap.com/1.0/device" /> <!--en android funcionava sense aquesta-->
     <feature name="http://api.phonegap.com/1.0/media"/><!--en android funcionava sense aquesta-->
     <feature name="http://api.phonegap.com/1.0/file"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
-
     <feature name="SplashScreen">
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
     </feature>
-
     <feature name="File">
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="ios-package" value="CDVFile" />
     </feature>
-
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
 
-    <!-- No son requerits
-	<plugin name="cordova-plugin-battery-status" source="npm" version="1.2.0"/>
-	<plugin name="cordova-plugin-media-capture" source="npm" version="1.4.0"/>
-    <plugin name="cordova-plugin-device-motion" source="npm" version="1.2.2"/>
-    <gap:plugin name="cordova-plugin-device-orientation" source="npm" version="1.0.4"/>
-    <gap:plugin name="cordova-plugin-media" source="npm" version="2.4.0"/>
-    <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.3.0" />
-	-->
-
-    <!--    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />-->
-    <!--<gap:plugin name="cordova-plugin-device" source="npm"/>-->
     <gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0"/>
     <gap:plugin name="cordova-plugin-file" source="npm"/>
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0"/>
@@ -76,7 +57,6 @@
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
     <!-- ocultar statusbar en ios -->
     <gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
-    <!--para que no abra más de una instancia en android-->
     <gap:config-file platform="android" parent="/manifest/application">
         <activity android:launchMode="singleInstance" />
     </gap:config-file>
