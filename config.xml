@@ -56,12 +56,16 @@
     <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
     <!-- ocultar statusbar en ios -->
-    <!-- comentamos estos 5 para probar
+    <!-- comentamos estos 3 para probar
+	
 	<gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
-	<gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
-	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
 	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/> -->
+		<gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
+	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
+
+	
+	
 	<!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
     <plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
 	 <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />
