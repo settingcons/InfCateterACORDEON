@@ -55,12 +55,14 @@
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0"/>
     <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
-    <!-- ocultar statusbar en ios -->
-	<gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
-	<gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
+    <gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
 	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
-<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
+	
+	
+	<!-- ocultar statusbar en ios -->
+	<gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
     <!-- comentamos este para probar
+	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/> -->
 		
 	
