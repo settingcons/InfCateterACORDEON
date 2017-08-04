@@ -50,28 +50,29 @@
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
 
-    <gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0"/>
+    <!-- probamos a ver si uno de estos es el que no compila
+	<gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0"/>
     <gap:plugin name="cordova-plugin-file" source="npm"/>
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0"/>
     <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
-	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
+	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>-->
     <!-- ocultar statusbar en ios -->
     <gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
+	<gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
+	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
+	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
+	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
+	<!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
+    <plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
+	 <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />
+	 
+    <!--para que no abra más de una instancia en android-->
     <gap:config-file platform="android" parent="/manifest/application">
         <activity android:launchMode="singleInstance" />
     </gap:config-file>
 
-    <gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
-    <gap:plugin name="cordova-plugin-fileopener" source="npm"/>
-    <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
-    <plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
-
-    <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />
-
-
-	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
-	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-
+	
+	
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
     <icon gap:platform="ios" height="57" src="icons/ios/icon-57.png" width="57" />
