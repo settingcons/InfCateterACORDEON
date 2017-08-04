@@ -58,9 +58,11 @@
     <gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
 	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
 	
-	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
+	
+	
 	<!-- ocultar statusbar en ios -->
-	  <!-- comentamos este para probar
+	  <!-- comentamos estos 3 i funciona!
+	  <gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
 	<gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 	
