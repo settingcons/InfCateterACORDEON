@@ -2,18 +2,20 @@
 <widget id="com.settingconsultoria.InfCateterACORDEON" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"  xmlns:android = "http://schemas.android.com/apk/res/android">
     <name>InfCateter</name>
     <description>
-        Información sellado cateter
+        Informacion sellado cateter
     </description>
     <author email="settingcons@gmail.com" href="http://www.settingconsultoria.com">
         Setting Consultoria PhoneGap Team
     </author>
     <content src="index.html" />
-	
-    <preference name="permissions" value="none" /> 
-    <preference name="phonegap-version" value="cli-6.5.0" /> <!-- abans value="cli-6.3.0" />-->
+  
+    <preference name="permissions" value="none" />
+  
+    <preference name="phonegap-version" value="cli-6.5.0" /><!-- abans value="cli-6.3.0" />-->
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
-    <preference name="Fullscreen" value="false" />  <!--si se pone fullscreen a true se oculta la barra de estado de la parte superior -->
+    <!--si se pone fullscreen a true se oculta la barra de estado de la parte superior -->
+    <preference name="Fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
@@ -22,62 +24,71 @@
     <preference name="exit-on-suspend" value="false" /> 
     <preference name="show-splash-screen-spinner" value="false" />
     <preference name="auto-hide-splash-screen" value="true" />
-    <preference name="disable-cursor" value="false" />
-	<preference name="android-minSdkVersion" value="14" /> <!-- abans 7-->
-	<preference name="android-targetSdkVersion" value="22" /> <!-- nou-->
-	<preference name="tools-overrideLibrary" value="android.support.v4"/> <!-- nou-->
+    <preference name="disable-cursor" value="false" /> 
+    <preference name="android-minSdkVersion" value="14" /> <!-- abans"7" -->
+    <preference name="android-targetSdkVersion" value="22" /> <!-- nou-->
+    <preference name="tools-overrideLibrary" value="android.support.v4"/><!-- nou-->
     <preference name="android-installLocation" value="auto" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
     <preference name="KeepRunning" value="true"/>
-	<preference name="android-build-tool" value="ant|gradle" /> <!--"ant"-->
+  	<preference name="android-build-tool" value="ant|gradle" /> <!--"ant"-->
     <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
-	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
-
-	<feature name="http://api.phonegap.com/1.0/device" /> <!--en android funcionava sense aquesta-->
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+  
+	  <!--feature name=h t t p : //api.phonegap.com/1.0/network"-->
+    <feature name="http://api.phonegap.com/1.0/device" /> <!--en android funcionava sense aquesta-->
     <feature name="http://api.phonegap.com/1.0/media"/><!--en android funcionava sense aquesta-->
     <feature name="http://api.phonegap.com/1.0/file"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
+
     <feature name="SplashScreen">
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
     </feature>
+
     <feature name="File">
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="ios-package" value="CDVFile" />
     </feature>
+
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
 
+    <!-- No son requerits
+	<plugin name="cordova-plugin-battery-status" source="npm" version="1.2.0"/>
+	<plugin name="cordova-plugin-media-capture" source="npm" version="1.4.0"/>
+    <plugin name="cordova-plugin-device-motion" source="npm" version="1.2.2"/>
+    <gap:plugin name="cordova-plugin-device-orientation" source="npm" version="1.0.4"/>
+    <gap:plugin name="cordova-plugin-media" source="npm" version="2.4.0"/>
+    <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.3.0" />
+	-->
+
+    <!--    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />-->
+    <!--<gap:plugin name="cordova-plugin-device" source="npm"/>-->
     <gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0"/>
     <gap:plugin name="cordova-plugin-file" source="npm"/>
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0"/>
     <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
-	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
+	  <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
     <gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
-	<gap:plugin name="cordova-plugin-fileopener" source="npm"/>
-		
-	<!-- ocultar statusbar en ios -->
-	<!-- comentamos estos 3 i funciona!
-	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
-	<gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
-	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-	-->
-		
-	
-	
-	<!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
+    <gap:plugin name="cordova-plugin-fileopener" source="npm"/>
+    <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
     <plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
-	 <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />
-	 
+    <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />
     <!--para que no abra más de una instancia en android-->
     <gap:config-file platform="android" parent="/manifest/application">
         <activity android:launchMode="singleInstance" />
     </gap:config-file>
 
-	
-	
+       
+  <!-- ocultar statusbar en ios 
+    <gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
+	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
+	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
+-->
+
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
     <icon gap:platform="ios" height="57" src="icons/ios/icon-57.png" width="57" />
