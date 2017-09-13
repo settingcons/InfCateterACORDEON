@@ -10,7 +10,7 @@
     <content src="index.html" />
   
     <preference name="permissions" value="none" />
-    <preference name="phonegap-version" value="cli-6.3.0" /><!-- abans value="cli-6.3.0" />-->
+    <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <!--si se pone fullscreen a true se oculta la barra de estado de la parte superior -->
@@ -31,8 +31,8 @@
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
     <preference name="KeepRunning" value="true"/>
   	<preference name="android-build-tool" value="ant|gradle" /> <!--"ant"-->
-   <!-- <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
-    <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />-->
+   <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
+    <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
   
 	  <!--feature name=h t t p : //api.phonegap.com/1.0/network"-->
@@ -70,16 +70,19 @@
     <gap:plugin name="cordova-plugin-file" source="npm"/>
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0"/>
     <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
-	  <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
+	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
     <gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
     <gap:plugin name="cordova-plugin-fileopener" source="npm"/>
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
     <plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
-    <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />
-    <!--para que no abra más de una instancia en android-->
-    <gap:config-file platform="android" parent="/manifest/application">
+	
+    <!--de momento comento <plugin name="cordova-plugin-local-notifications-npm" spec="1.0.3" source="npm" />-->
+    
+	
+	<!--para que no abra más de una instancia en android-->
+    <!-- de momento comento <gap:config-file platform="android" parent="/manifest/application">
         <activity android:launchMode="singleInstance" />
-    </gap:config-file>
+    </gap:config-file>-->
 
        
   <!-- ocultar statusbar en ios -->
