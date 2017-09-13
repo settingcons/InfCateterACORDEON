@@ -34,7 +34,6 @@
    <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-  <!---->
   
 	  <!--feature name=h t t p : //api.phonegap.com/1.0/network"-->
     <feature name="http://api.phonegap.com/1.0/device" /> <!--en android funcionava sense aquesta-->
@@ -56,8 +55,19 @@
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
 
-   
-<!---->
+
+	
+     <!--para que no abra más de una instancia en android-->
+    <gap:config-file platform="android" parent="/manifest/application">
+        <activity android:launchMode="singleInstance" />
+    </gap:config-file>
+
+       
+  <!-- ocultar statusbar en ios -->
+    <gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
+	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
+	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
+
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
