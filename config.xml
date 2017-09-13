@@ -56,6 +56,15 @@
     </feature>
 
 
+    <!--    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />-->
+    <!--<gap:plugin name="cordova-plugin-device" source="npm"/>-->
+    <gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0"/>
+    <gap:plugin name="cordova-plugin-file" source="npm"/>
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.0"/>
+    <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.4"/>
+	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
+    <gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
+    <gap:plugin name="cordova-plugin-fileopener" source="npm"/>
 	
      <!--para que no abra más de una instancia en android-->
     <gap:config-file platform="android" parent="/manifest/application">
