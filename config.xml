@@ -25,9 +25,9 @@
     <preference name="show-splash-screen-spinner" value="false" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" /> 
-    <preference name="android-minSdkVersion" value="7" /> <!-- abans"14" -->
+    <preference name="android-minSdkVersion" value="7" /> <!-- "14" -->
     <!--<preference name="android-targetSdkVersion" value="22" />  nou-->
-    <!--<preference name="tools-overrideLibrary" value="android.support.v4"/> nou-->
+   <preference name="tools-overrideLibrary" value="android.support.v4"/>  <!--nou-->
     <preference name="android-installLocation" value="auto" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
     <preference name="KeepRunning" value="true"/>
@@ -83,11 +83,11 @@
     </gap:config-file>
 
        
-  <!-- ocultar statusbar en ios 
+  <!-- ocultar statusbar en ios -->
     <gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
 	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
--->
+
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />

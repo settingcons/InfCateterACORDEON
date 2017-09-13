@@ -44,20 +44,6 @@ function esIOS() {
     return(navigator.userAgent.match(/(iPhone|iPod|iPad)/));
 }
 
-/*
-function mensaje(p_idmsg,p_idtitulo,p_exc) {
-    OcultarEspera();
-    $.mobile.loading( "hide" );
-    var v_titulo=ObtenerTexto(p_idtitulo);
-    var v_texto = ObtenerTexto(p_idmsg);
-    if(p_exc!=null){
-        v_texto=v_texto+'\n'+p_exc;
-    }
-    if(phoneGapRun())
-        navigator.notification.alert(v_texto, null, v_titulo);
-    else
-        alert(v_texto);
-}*/
 
 function aviso(nIdTitulo, nIdMensaje, sMsg) {
     var sTitulo = Etiqueta(nIdTitulo);
@@ -156,7 +142,8 @@ function TryParseInt(str, defaultValue) {
 
 function copiaPDFs(idioma) {
 
-    if (!esIOS()) {
+    //if (!esIOS()) { <--tendria que ser asi...
+    if (esIOS()) {
         asset2sd.copyDir({
             asset_directory: "www/content/" + idioma + "/PDF",
             destination_directory: "infCateter/" + idioma
@@ -167,8 +154,21 @@ function copiaPDFs(idioma) {
                 aviso(40, 43, '');
             }
         );
-    }
-
-    //alert("HGS 5.2");
-
+    } 
 }
+
+
+/*
+function mensaje(p_idmsg,p_idtitulo,p_exc) {
+    OcultarEspera();
+    $.mobile.loading( "hide" );
+    var v_titulo=ObtenerTexto(p_idtitulo);
+    var v_texto = ObtenerTexto(p_idmsg);
+    if(p_exc!=null){
+        v_texto=v_texto+'\n'+p_exc;
+    }
+    if(phoneGapRun())
+        navigator.notification.alert(v_texto, null, v_titulo);
+    else
+        alert(v_texto);
+}*/

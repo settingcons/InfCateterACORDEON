@@ -109,7 +109,7 @@ function Atras() {
 
 function abrirPagina(sPag, id, titulo) {
 
-    //alert("HGS abrir pagina sPag: " + sPag + " id:" + id + " titulo: " + titulo);
+    alert("HGS abrir pagina sPag: " + sPag + " id:" + id + " titulo: " + titulo);
 
     var nomApp = "Información sellado catéter";
     try {

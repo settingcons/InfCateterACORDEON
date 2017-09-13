@@ -37,46 +37,46 @@
 
     <body style="margin: auto; width: 100%;">
 
-    <!-- Página PRINCIPAL : CONTENIDO ÁRBOL nivel 0 **************************************************************** -->
-    <div data-role="page" id="pageMENU" class="mi-fondoPagina" >
+            <!-- Página PRINCIPAL : CONTENIDO ÁRBOL nivel 0 **************************************************************** -->
+            <div data-role="page" id="pageMENU" class="mi-fondoPagina">
 
-        <div data-role="header" style="border: 0px" class="centerTable">
-            <table width="100%" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                    <td width="5%" style="text-align: left;vertical-align: middle;">
-                        <!--<img id="imgHeaderAtras" alt="" src="images/back.png" width='40' height='40' onclick="Atras()"/>-->
-                        <img id="imgHeaderAtras" alt="" src="images/back.png" width='40' height='40' onclick="handleBackButton()" />
-                    </td>
-                    <td width="90%" style="text-align:center;vertical-align: middle">
-                        <div style="width: 100%;">
-                            <h3 id="txtHeaderTitulo" style="margin: 0em">Información sellado catéter</h3>
-                        </div>
-                    </td>
-                    <td width="5%" style="text-align: left;vertical-align: middle;">
-                        <img  id="imgHeaderMenu" src="images/menu.png" width='40' height='40' onclick="Menu()" >
-                    </td>
-                </tr>
-            </table>
-        </div>
+                <div data-role="header" style="border: 0px" class="centerTable">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td width="5%" style="text-align: left;vertical-align: middle;">
+                                <!--<img id="imgHeaderAtras" alt="" src="images/back.png" width='40' height='40' onclick="Atras()"/>-->
+                                <img id="imgHeaderAtras" alt="" src="images/back.png" width='40' height='40' onclick="handleBackButton()" />
+                            </td>
+                            <td width="90%" style="text-align:center;vertical-align: middle">
+                                <div style="width: 100%;">
+                                    <h3 id="txtHeaderTitulo" style="margin: 0em">Información sellado catéter</h3>
+                                </div>
+                            </td>
+                            <td width="5%" style="text-align: left;vertical-align: middle;">
+                                <img id="imgHeaderMenu" src="images/menu.png" width='40' height='40' onclick="Menu()">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
-        <div id="divContenido" data-role="main" class="mi-fondoPagina">
-            <!--<H3 id="tituloMenu" class="mi-titulo-menu"></H3>-->
-            <div data-role="content" data-theme="c" class="mi-fondoPagina" style="width: 95%" >
-                <ul data-role="listview" data-inset="true" id="ulMenu" ></ul>
+                <div id="divContenido" data-role="main" class="mi-fondoPagina">
+                    <!--<H3 id="tituloMenu" class="mi-titulo-menu"></H3>-->
+                    <div data-role="content" data-theme="c" class="mi-fondoPagina" style="width: 95%">
+                        <ul data-role="listview" data-inset="true" id="ulMenu"></ul>
+                    </div>
+                </div>
+
+                <!--Proves <a href="#popupBasic" data-rel="popup">Open Popup</a>-->
+                <div data-role="popup" id="popupBasic">
+                    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                    <!--<p>This is a completely basic popup, no options set.<p>-->
+                    <div id="changehere"></div>
+                </div>
+
             </div>
-        </div>
 
-        <!--Proves <a href="#popupBasic" data-rel="popup">Open Popup</a>-->
-        <div data-role="popup" id="popupBasic">
-            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-            <!--<p>This is a completely basic popup, no options set.<p>-->
-            <div id="changehere"></div>
-        </div>
-       
-    </div>
-
-    <!--Página de filtro para mostrar fichas *********************************************************************** -->
-    <div data-role="page" id="pageFiltro" class="mi-fondoPagina">
+            <!--Página de filtro para mostrar fichas *********************************************************************** -->
+            <div data-role="page" id="pageFiltro" class="mi-fondoPagina">
 
                 <div data-role="header" style="border: 0px" class="centerTable">
                     <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -129,8 +129,8 @@
 
             </div>
 
-    <!--Página para mostrar los textos XML ************************************************************************* -->
-    <div data-role="page" id="pageInfoXML" class="mi-fondoPaginaTXT">
+            <!--Página para mostrar los textos XML ************************************************************************* -->
+            <div data-role="page" id="pageInfoXML" class="mi-fondoPaginaTXT">
 
                 <div data-role="header" style="border: 0px" class="centerTable">
                     <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -158,8 +158,8 @@
 
             </div>
 
-    <!--Página que muestra el menu lateral ************************************************************************* -->
-    <div data-role="panel" id="pageMenuLateral" data-theme="none" data-display="overlay" data-position="right" style="top:0px;bottom:1px;background-color:#f3f3f3;">
+            <!--Página que muestra el menu lateral ************************************************************************* -->
+            <div data-role="panel" id="pageMenuLateral" data-theme="none" data-display="overlay" data-position="right" style="top:0px;bottom:1px;background-color:#f3f3f3;">
                 <div class="mi-cab-menu">
                     <img alt="" src="" />
                     <div id="menuversion" style="float: right; color: #A83587;">InfCateterTest v1.0<br /></div>
@@ -188,8 +188,8 @@
                 </div>
             </div>
 
-    <!--Página que muestra la ayuda ******************************************************************************** -->
-    <div data-role="page" id="pageAYUDA" class="mi-fondoPagina">
+            <!--Página que muestra la ayuda ******************************************************************************** -->
+            <div data-role="page" id="pageAYUDA" class="mi-fondoPagina">
 
                 <div data-role="header" style="border: 0px" class="centerTable">
                     <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -218,8 +218,8 @@
 
             </div>
 
-    <!--Página que muestra la info ********************************************************************************* -->
-    <div data-role="page" id="pageINFO" class="mi-fondoPagina">
+            <!--Página que muestra la info ********************************************************************************* -->
+            <div data-role="page" id="pageINFO" class="mi-fondoPagina">
 
                 <div data-role="header" style="border: 0px" class="centerTable">
                     <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -248,11 +248,11 @@
 
             </div>
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/paginas/index.js"></script>
-    <script type="text/javascript">
-         app.initialize();
-    </script>
-     
-</body>
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="js/paginas/index.js"></script>
+            <script type="text/javascript">
+                app.initialize();
+            </script>
+
+        </body>
 </html>
