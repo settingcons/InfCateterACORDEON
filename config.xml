@@ -34,9 +34,30 @@
    <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+  <!---->
   
-	
+	  <!--feature name=h t t p : //api.phonegap.com/1.0/network"-->
+    <feature name="http://api.phonegap.com/1.0/device" /> <!--en android funcionava sense aquesta-->
+    <feature name="http://api.phonegap.com/1.0/media"/><!--en android funcionava sense aquesta-->
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
 
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
+
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="ios-package" value="CDVFile" />
+    </feature>
+
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+
+   
+<!---->
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
