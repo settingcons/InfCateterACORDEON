@@ -65,13 +65,7 @@
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0"/>
     <gap:plugin name="cordova-plugin-file-opener2" source="npm"/>
     <gap:plugin name="cordova-plugin-fileopener" source="npm"/>
-	
-     <!--para que no abra más de una instancia en android-->
-    <gap:config-file platform="android" parent="/manifest/application">
-        <activity android:launchMode="singleInstance" />
-    </gap:config-file>
 
-       
   <!-- ocultar statusbar en ios -->
     <gap:plugin name="cordova-plugin-statusbar-hide-on-startup" source="npm"/>
 	<gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0"/>
