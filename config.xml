@@ -55,7 +55,13 @@
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
 
-
+	
+    <!--<gap:plugin name="org.apache.cordova.device" version="0.2.12" />-->
+    <!--<gap:plugin name="cordova-plugin-device" source="npm"/>-->
+    <gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.3.0"/>
+    <gap:plugin name="cordova-plugin-file" source="npm"/>
+    
+	
     <!-- IC para copiar directorios de carpetas de la App a carpetas del sistema -->
     <plugin spec="https://github.com/gkcgautam/Asset2SD.git" source="git" />
 	
